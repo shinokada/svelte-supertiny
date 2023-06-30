@@ -1,0 +1,43 @@
+<script>
+  export let size = '24';
+  export let role = 'img';
+</script>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  aria-label="Drone"
+  {role}
+  width={size}
+  height={size}
+  {...$$restProps}
+  on:click
+  on:keydown
+  on:keyup
+  on:focus
+  on:blur
+  on:mouseenter
+  on:mouseleave
+  on:mouseover
+  on:mouseout
+  viewBox="0 0 512 512"
+  ><rect width="512" height="512" fill="#fff" /><path
+    fill="#1E375A"
+    d="m211 176a89 89 0 00125 125l62 63A178 178 0 11150 112zM179 95a178 178 0 01238 238l-56-57A90 90 0 00236 151m50 129a1 1 0 010-107 1 1 0 010 107z"
+  /></svg
+>
+<!--
+@component
+[Go to Document](https://shinokada.github.io/svelte-supertiny/)
+## Props
+@prop size = '24';
+## Event
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
+-->

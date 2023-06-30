@@ -1,0 +1,49 @@
+<script>
+  export let size = '24';
+  export let role = 'img';
+</script>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  aria-label="Google Podcasts"
+  {role}
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  stroke-width="43"
+  width={size}
+  height={size}
+  {...$$restProps}
+  on:click
+  on:keydown
+  on:keyup
+  on:focus
+  on:blur
+  on:mouseenter
+  on:mouseleave
+  on:mouseover
+  on:mouseout
+  viewBox="0 0 512 512"
+  ><rect width="512" height="512" fill="#fff" /><path
+    stroke="#fab908"
+    d="m256 109v22zm0 86v122m0 64v22z"
+  /><path stroke="#ea4335" d="m181 176v75zm0 139v21z" /><path
+    stroke="#34a853"
+    d="m331 176v21zm0 85v75z"
+  /><path stroke="#4285f4" d="m405 245v22" /><path stroke="#0066d9" d="m107 245v22" /></svg
+>
+<!--
+@component
+[Go to Document](https://shinokada.github.io/svelte-supertiny/)
+## Props
+@prop size = '24';
+## Event
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
+-->

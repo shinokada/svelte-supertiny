@@ -1,0 +1,50 @@
+<script>
+  export let size = '24';
+  export let role = 'img';
+</script>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  aria-label="Gitpod"
+  {role}
+  width={size}
+  height={size}
+  {...$$restProps}
+  on:click
+  on:keydown
+  on:keyup
+  on:focus
+  on:blur
+  on:mouseenter
+  on:mouseleave
+  on:mouseover
+  on:mouseout
+  viewBox="0 0 512 512"
+  ><rect width="512" height="512" fill="#fff" /><defs
+    ><linearGradient id="a" x1=".79" y1=".16" x2=".21" y2=".84"
+      ><stop offset="0" stop-color="#FFB45B" /><stop
+        offset="1"
+        stop-color="#FF8A00"
+      /></linearGradient
+    ></defs
+  ><path
+    d="M237 69a1 1 60 0137 66l-111 64c-3 2-5 5-5 9v101c0 4 2 7 5 9l88 51c3 2 7 2 10 0l88-51c3-2 5-5 5-9v-63l-80 45A1 1 0 01237 225l115-64c34-20 77 5 77 45v111c0 25-13 50-37 63l-101 58c-22 13-49 13-71 0L119 380c-23-14-36-38-36-63V200c0-26 13-50 36-63"
+    fill="url(#a)"
+  /></svg
+>
+<!--
+@component
+[Go to Document](https://shinokada.github.io/svelte-supertiny/)
+## Props
+@prop size = '24';
+## Event
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
+-->

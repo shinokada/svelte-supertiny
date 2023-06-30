@@ -1,0 +1,43 @@
+<script>
+  export let size = '24';
+  export let role = 'img';
+</script>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  aria-label="Git"
+  {role}
+  width={size}
+  height={size}
+  {...$$restProps}
+  on:click
+  on:keydown
+  on:keyup
+  on:focus
+  on:blur
+  on:mouseenter
+  on:mouseleave
+  on:mouseover
+  on:mouseout
+  viewBox="0 0 512 512"
+  ><rect width="512" height="512" fill="#fff" /><path
+    fill="#f05133"
+    d="m441 240L272 71a24 24 0 00-34 0l-35 35 44 44a29 29 0 0137 37l43 43a29 29 0 11-18 17l-40-40v104a29 29 0 11-24-1V205a29 29 0 01-15-38l-44-44L71 238a24 24 0 000 34l168 169a24 24 0 0033 0L441 272a25 25 0 000-32"
+  /></svg
+>
+<!--
+@component
+[Go to Document](https://shinokada.github.io/svelte-supertiny/)
+## Props
+@prop size = '24';
+## Event
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
+-->

@@ -1,0 +1,49 @@
+<script>
+  export let size = '24';
+  export let role = 'img';
+</script>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  aria-label="Intercom"
+  {role}
+  width={size}
+  height={size}
+  {...$$restProps}
+  on:click
+  on:keydown
+  on:keyup
+  on:focus
+  on:blur
+  on:mouseenter
+  on:mouseleave
+  on:mouseover
+  on:mouseout
+  viewBox="0 0 512 512"
+  ><rect width="512" height="512" fill="#0E24D1" /><path
+    fill="#fff"
+    d="M139 105a38 38 0 00-38 38v228a38 38 0 0038 38h228A38 38 0 00405 371V143a38 38 0 00-38-38"
+  /><path
+    fill="none"
+    stroke="#0E24D1"
+    stroke-width="20"
+    stroke-linecap="round"
+    d="M151 327c52 41 157 41 203 0M152 181v91m203 0v-91M202 161v135m102 0v-135m-51-5v146"
+  /></svg
+>
+<!--
+@component
+[Go to Document](https://shinokada.github.io/svelte-supertiny/)
+## Props
+@prop size = '24';
+## Event
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
+-->

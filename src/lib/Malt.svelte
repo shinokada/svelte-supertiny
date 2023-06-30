@@ -1,0 +1,43 @@
+<script>
+  export let size = '24';
+  export let role = 'img';
+</script>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  aria-label="Malt"
+  {role}
+  width={size}
+  height={size}
+  {...$$restProps}
+  on:click
+  on:keydown
+  on:keyup
+  on:focus
+  on:blur
+  on:mouseenter
+  on:mouseleave
+  on:mouseover
+  on:mouseout
+  viewBox="0 0 512 512"
+  ><rect width="512" height="512" fill="#fff" /><path
+    fill="#FC5656"
+    d="m120 313q-56 52-16 94t93-14L399 192q48-51 8-89t-90 14zM256 139l53-53q-9-44-53-44t-53 44zm0 234-53 53q9 45 53 45t53-45zM194 201H106q-65 3-65 52t45 56zm124 111h82q69-2 70-52t-44-57zM236 158l-14 15H99q-28-36 7-70t78 3zm39 196 43 43q49 47 86 15t10-73H291z"
+  /></svg
+>
+<!--
+@component
+[Go to Document](https://shinokada.github.io/svelte-supertiny/)
+## Props
+@prop size = '24';
+## Event
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
+-->

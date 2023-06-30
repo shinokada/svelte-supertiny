@@ -1,0 +1,44 @@
+<script>
+  export let size = '24';
+  export let role = 'img';
+</script>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  aria-label="ProtonMail"
+  {role}
+  width={size}
+  height={size}
+  {...$$restProps}
+  on:click
+  on:keydown
+  on:keyup
+  on:focus
+  on:blur
+  on:mouseenter
+  on:mouseleave
+  on:mouseover
+  on:mouseout
+  viewBox="0 0 512 512"
+  ><rect width="512" height="512" fill="#8A90C7" /><g fill="#fff"
+    ><path
+      d="M259 77s-108-6-131 114v79s0 12 23 29c28 17 91 68 108 68s74-51 102-69c23-16 23-28 23-28v-79C361 71 259 77 259 77zm68 159H185v-45c11-57 74-57 74-57s57 0 68 57v45z"
+    /><path d="M259 384l-34-12-97-68v120s0 11 17 11h222c11 0 17-11 17-11V304l-97 69-28 11z" /></g
+  ></svg
+>
+<!--
+@component
+[Go to Document](https://shinokada.github.io/svelte-supertiny/)
+## Props
+@prop size = '24';
+## Event
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
+-->
