@@ -1,6 +1,15 @@
 {
-  "name": "svelte-supertiny",
-  "version": "0.0.1",
+  "name": "svelte-supertinyicons",
+  "version": "0.1.0",
+  "description": "Svelte SVG Supertinyicons components",
+  "author": {
+    "name": "Shinichi Okada",
+    "email": "connect@codewithshin.com",
+    "url": "https://blog.codewithshin.com"
+  },
+  "bugs": "https://github.com/shinokada/svelte-supertinyicons/issues",
+  "homepage": "https://shinokada.github.io/svelte-supertinyicons",
+  "license": "MIT",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && npm run package",
@@ -12,12 +21,1419 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "test:unit": "vitest",
     "lint": "prettier --plugin-search-dir . --check . && eslint .",
-    "format": "prettier --plugin-search-dir . --write ."
+    "format": "prettier --plugin-search-dir . --write .",
+    "write-package-json": "node ./scripts/package-json-writer.js",
+    "add-exports": "node ./scripts/add-exports-to-package-json.js",
+    "package:publish": "standard-version && git push --follow-tags origin main && npm run package && npm run add-exports && npm run write-package-json && npm publish"
   },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "svelte": "./dist/index.js"
+    },
+    "./A1Password.svelte": {
+      "types": "./dist/A1Password.svelte.d.ts",
+      "svelte": "./dist/A1Password.svelte"
+    },
+    "./Acast.svelte": {
+      "types": "./dist/Acast.svelte.d.ts",
+      "svelte": "./dist/Acast.svelte"
+    },
+    "./Access.svelte": {
+      "types": "./dist/Access.svelte.d.ts",
+      "svelte": "./dist/Access.svelte"
+    },
+    "./Activitypub.svelte": {
+      "types": "./dist/Activitypub.svelte.d.ts",
+      "svelte": "./dist/Activitypub.svelte"
+    },
+    "./Adobe.svelte": {
+      "types": "./dist/Adobe.svelte.d.ts",
+      "svelte": "./dist/Adobe.svelte"
+    },
+    "./Airbnb.svelte": {
+      "types": "./dist/Airbnb.svelte.d.ts",
+      "svelte": "./dist/Airbnb.svelte"
+    },
+    "./Amazon.svelte": {
+      "types": "./dist/Amazon.svelte.d.ts",
+      "svelte": "./dist/Amazon.svelte"
+    },
+    "./Amazon_alexa.svelte": {
+      "types": "./dist/Amazon_alexa.svelte.d.ts",
+      "svelte": "./dist/Amazon_alexa.svelte"
+    },
+    "./Amazon_s3.svelte": {
+      "types": "./dist/Amazon_s3.svelte.d.ts",
+      "svelte": "./dist/Amazon_s3.svelte"
+    },
+    "./Amberframework.svelte": {
+      "types": "./dist/Amberframework.svelte.d.ts",
+      "svelte": "./dist/Amberframework.svelte"
+    },
+    "./Andotp.svelte": {
+      "types": "./dist/Andotp.svelte.d.ts",
+      "svelte": "./dist/Andotp.svelte"
+    },
+    "./Android.svelte": {
+      "types": "./dist/Android.svelte.d.ts",
+      "svelte": "./dist/Android.svelte"
+    },
+    "./Angellist.svelte": {
+      "types": "./dist/Angellist.svelte.d.ts",
+      "svelte": "./dist/Angellist.svelte"
+    },
+    "./Angular.svelte": {
+      "types": "./dist/Angular.svelte.d.ts",
+      "svelte": "./dist/Angular.svelte"
+    },
+    "./Ansible.svelte": {
+      "types": "./dist/Ansible.svelte.d.ts",
+      "svelte": "./dist/Ansible.svelte"
+    },
+    "./Apereo.svelte": {
+      "types": "./dist/Apereo.svelte.d.ts",
+      "svelte": "./dist/Apereo.svelte"
+    },
+    "./Apple.svelte": {
+      "types": "./dist/Apple.svelte.d.ts",
+      "svelte": "./dist/Apple.svelte"
+    },
+    "./Apple_music.svelte": {
+      "types": "./dist/Apple_music.svelte.d.ts",
+      "svelte": "./dist/Apple_music.svelte"
+    },
+    "./Arch_linux.svelte": {
+      "types": "./dist/Arch_linux.svelte.d.ts",
+      "svelte": "./dist/Arch_linux.svelte"
+    },
+    "./Atom.svelte": {
+      "types": "./dist/Atom.svelte.d.ts",
+      "svelte": "./dist/Atom.svelte"
+    },
+    "./Auth0.svelte": {
+      "types": "./dist/Auth0.svelte.d.ts",
+      "svelte": "./dist/Auth0.svelte"
+    },
+    "./Authy.svelte": {
+      "types": "./dist/Authy.svelte.d.ts",
+      "svelte": "./dist/Authy.svelte"
+    },
+    "./Backbone.svelte": {
+      "types": "./dist/Backbone.svelte.d.ts",
+      "svelte": "./dist/Backbone.svelte"
+    },
+    "./Badoo.svelte": {
+      "types": "./dist/Badoo.svelte.d.ts",
+      "svelte": "./dist/Badoo.svelte"
+    },
+    "./Baidu.svelte": {
+      "types": "./dist/Baidu.svelte.d.ts",
+      "svelte": "./dist/Baidu.svelte"
+    },
+    "./Bandcamp.svelte": {
+      "types": "./dist/Bandcamp.svelte.d.ts",
+      "svelte": "./dist/Bandcamp.svelte"
+    },
+    "./Bash.svelte": {
+      "types": "./dist/Bash.svelte.d.ts",
+      "svelte": "./dist/Bash.svelte"
+    },
+    "./Behance.svelte": {
+      "types": "./dist/Behance.svelte.d.ts",
+      "svelte": "./dist/Behance.svelte"
+    },
+    "./Bing.svelte": {
+      "types": "./dist/Bing.svelte.d.ts",
+      "svelte": "./dist/Bing.svelte"
+    },
+    "./Bitbucket.svelte": {
+      "types": "./dist/Bitbucket.svelte.d.ts",
+      "svelte": "./dist/Bitbucket.svelte"
+    },
+    "./Bitcoin.svelte": {
+      "types": "./dist/Bitcoin.svelte.d.ts",
+      "svelte": "./dist/Bitcoin.svelte"
+    },
+    "./Bitwarden.svelte": {
+      "types": "./dist/Bitwarden.svelte.d.ts",
+      "svelte": "./dist/Bitwarden.svelte"
+    },
+    "./Blender.svelte": {
+      "types": "./dist/Blender.svelte.d.ts",
+      "svelte": "./dist/Blender.svelte"
+    },
+    "./Blogger.svelte": {
+      "types": "./dist/Blogger.svelte.d.ts",
+      "svelte": "./dist/Blogger.svelte"
+    },
+    "./Bluetooth.svelte": {
+      "types": "./dist/Bluetooth.svelte.d.ts",
+      "svelte": "./dist/Bluetooth.svelte"
+    },
+    "./Brave.svelte": {
+      "types": "./dist/Brave.svelte.d.ts",
+      "svelte": "./dist/Brave.svelte"
+    },
+    "./Briar.svelte": {
+      "types": "./dist/Briar.svelte.d.ts",
+      "svelte": "./dist/Briar.svelte"
+    },
+    "./Buffer.svelte": {
+      "types": "./dist/Buffer.svelte.d.ts",
+      "svelte": "./dist/Buffer.svelte"
+    },
+    "./Bugcrowd.svelte": {
+      "types": "./dist/Bugcrowd.svelte.d.ts",
+      "svelte": "./dist/Bugcrowd.svelte"
+    },
+    "./Bun.svelte": {
+      "types": "./dist/Bun.svelte.d.ts",
+      "svelte": "./dist/Bun.svelte"
+    },
+    "./Calendar.svelte": {
+      "types": "./dist/Calendar.svelte.d.ts",
+      "svelte": "./dist/Calendar.svelte"
+    },
+    "./Centos.svelte": {
+      "types": "./dist/Centos.svelte.d.ts",
+      "svelte": "./dist/Centos.svelte"
+    },
+    "./Chrome.svelte": {
+      "types": "./dist/Chrome.svelte.d.ts",
+      "svelte": "./dist/Chrome.svelte"
+    },
+    "./Chromium.svelte": {
+      "types": "./dist/Chromium.svelte.d.ts",
+      "svelte": "./dist/Chromium.svelte"
+    },
+    "./Citrix.svelte": {
+      "types": "./dist/Citrix.svelte.d.ts",
+      "svelte": "./dist/Citrix.svelte"
+    },
+    "./Citrix_compact.svelte": {
+      "types": "./dist/Citrix_compact.svelte.d.ts",
+      "svelte": "./dist/Citrix_compact.svelte"
+    },
+    "./Clojure.svelte": {
+      "types": "./dist/Clojure.svelte.d.ts",
+      "svelte": "./dist/Clojure.svelte"
+    },
+    "./Cloudflare.svelte": {
+      "types": "./dist/Cloudflare.svelte.d.ts",
+      "svelte": "./dist/Cloudflare.svelte"
+    },
+    "./Codeberg.svelte": {
+      "types": "./dist/Codeberg.svelte.d.ts",
+      "svelte": "./dist/Codeberg.svelte"
+    },
+    "./Codepen.svelte": {
+      "types": "./dist/Codepen.svelte.d.ts",
+      "svelte": "./dist/Codepen.svelte"
+    },
+    "./Coffeescript.svelte": {
+      "types": "./dist/Coffeescript.svelte.d.ts",
+      "svelte": "./dist/Coffeescript.svelte"
+    },
+    "./Coil.svelte": {
+      "types": "./dist/Coil.svelte.d.ts",
+      "svelte": "./dist/Coil.svelte"
+    },
+    "./Coinpot.svelte": {
+      "types": "./dist/Coinpot.svelte.d.ts",
+      "svelte": "./dist/Coinpot.svelte"
+    },
+    "./Colaboratory.svelte": {
+      "types": "./dist/Colaboratory.svelte.d.ts",
+      "svelte": "./dist/Colaboratory.svelte"
+    },
+    "./Cplusplus.svelte": {
+      "types": "./dist/Cplusplus.svelte.d.ts",
+      "svelte": "./dist/Cplusplus.svelte"
+    },
+    "./Crystal.svelte": {
+      "types": "./dist/Crystal.svelte.d.ts",
+      "svelte": "./dist/Crystal.svelte"
+    },
+    "./Css3.svelte": {
+      "types": "./dist/Css3.svelte.d.ts",
+      "svelte": "./dist/Css3.svelte"
+    },
+    "./Dart.svelte": {
+      "types": "./dist/Dart.svelte.d.ts",
+      "svelte": "./dist/Dart.svelte"
+    },
+    "./Datacamp.svelte": {
+      "types": "./dist/Datacamp.svelte.d.ts",
+      "svelte": "./dist/Datacamp.svelte"
+    },
+    "./Debian.svelte": {
+      "types": "./dist/Debian.svelte.d.ts",
+      "svelte": "./dist/Debian.svelte"
+    },
+    "./Deezer.svelte": {
+      "types": "./dist/Deezer.svelte.d.ts",
+      "svelte": "./dist/Deezer.svelte"
+    },
+    "./Delicious.svelte": {
+      "types": "./dist/Delicious.svelte.d.ts",
+      "svelte": "./dist/Delicious.svelte"
+    },
+    "./Dev_to.svelte": {
+      "types": "./dist/Dev_to.svelte.d.ts",
+      "svelte": "./dist/Dev_to.svelte"
+    },
+    "./Deviantart.svelte": {
+      "types": "./dist/Deviantart.svelte.d.ts",
+      "svelte": "./dist/Deviantart.svelte"
+    },
+    "./Digidentity.svelte": {
+      "types": "./dist/Digidentity.svelte.d.ts",
+      "svelte": "./dist/Digidentity.svelte"
+    },
+    "./Digitalocean.svelte": {
+      "types": "./dist/Digitalocean.svelte.d.ts",
+      "svelte": "./dist/Digitalocean.svelte"
+    },
+    "./Discord.svelte": {
+      "types": "./dist/Discord.svelte.d.ts",
+      "svelte": "./dist/Discord.svelte"
+    },
+    "./Disqus.svelte": {
+      "types": "./dist/Disqus.svelte.d.ts",
+      "svelte": "./dist/Disqus.svelte"
+    },
+    "./Djangoproject.svelte": {
+      "types": "./dist/Djangoproject.svelte.d.ts",
+      "svelte": "./dist/Djangoproject.svelte"
+    },
+    "./Docker.svelte": {
+      "types": "./dist/Docker.svelte.d.ts",
+      "svelte": "./dist/Docker.svelte"
+    },
+    "./Dribbble.svelte": {
+      "types": "./dist/Dribbble.svelte.d.ts",
+      "svelte": "./dist/Dribbble.svelte"
+    },
+    "./Drone.svelte": {
+      "types": "./dist/Drone.svelte.d.ts",
+      "svelte": "./dist/Drone.svelte"
+    },
+    "./Dropbox.svelte": {
+      "types": "./dist/Dropbox.svelte.d.ts",
+      "svelte": "./dist/Dropbox.svelte"
+    },
+    "./Drupal.svelte": {
+      "types": "./dist/Drupal.svelte.d.ts",
+      "svelte": "./dist/Drupal.svelte"
+    },
+    "./Duckduckgo.svelte": {
+      "types": "./dist/Duckduckgo.svelte.d.ts",
+      "svelte": "./dist/Duckduckgo.svelte"
+    },
+    "./Ea.svelte": {
+      "types": "./dist/Ea.svelte.d.ts",
+      "svelte": "./dist/Ea.svelte"
+    },
+    "./Ebay.svelte": {
+      "types": "./dist/Ebay.svelte.d.ts",
+      "svelte": "./dist/Ebay.svelte"
+    },
+    "./Edge.svelte": {
+      "types": "./dist/Edge.svelte.d.ts",
+      "svelte": "./dist/Edge.svelte"
+    },
+    "./Elastic.svelte": {
+      "types": "./dist/Elastic.svelte.d.ts",
+      "svelte": "./dist/Elastic.svelte"
+    },
+    "./Element.svelte": {
+      "types": "./dist/Element.svelte.d.ts",
+      "svelte": "./dist/Element.svelte"
+    },
+    "./Elementaryos.svelte": {
+      "types": "./dist/Elementaryos.svelte.d.ts",
+      "svelte": "./dist/Elementaryos.svelte"
+    },
+    "./Email.svelte": {
+      "types": "./dist/Email.svelte.d.ts",
+      "svelte": "./dist/Email.svelte"
+    },
+    "./Endeavouros.svelte": {
+      "types": "./dist/Endeavouros.svelte.d.ts",
+      "svelte": "./dist/Endeavouros.svelte"
+    },
+    "./Epub.svelte": {
+      "types": "./dist/Epub.svelte.d.ts",
+      "svelte": "./dist/Epub.svelte"
+    },
+    "./Espressif.svelte": {
+      "types": "./dist/Espressif.svelte.d.ts",
+      "svelte": "./dist/Espressif.svelte"
+    },
+    "./Ethereum.svelte": {
+      "types": "./dist/Ethereum.svelte.d.ts",
+      "svelte": "./dist/Ethereum.svelte"
+    },
+    "./Etsy.svelte": {
+      "types": "./dist/Etsy.svelte.d.ts",
+      "svelte": "./dist/Etsy.svelte"
+    },
+    "./Evernote.svelte": {
+      "types": "./dist/Evernote.svelte.d.ts",
+      "svelte": "./dist/Evernote.svelte"
+    },
+    "./Expressionengine.svelte": {
+      "types": "./dist/Expressionengine.svelte.d.ts",
+      "svelte": "./dist/Expressionengine.svelte"
+    },
+    "./Facebook.svelte": {
+      "types": "./dist/Facebook.svelte.d.ts",
+      "svelte": "./dist/Facebook.svelte"
+    },
+    "./Filestash.svelte": {
+      "types": "./dist/Filestash.svelte.d.ts",
+      "svelte": "./dist/Filestash.svelte"
+    },
+    "./Finder.svelte": {
+      "types": "./dist/Finder.svelte.d.ts",
+      "svelte": "./dist/Finder.svelte"
+    },
+    "./Firefox.svelte": {
+      "types": "./dist/Firefox.svelte.d.ts",
+      "svelte": "./dist/Firefox.svelte"
+    },
+    "./Flattr.svelte": {
+      "types": "./dist/Flattr.svelte.d.ts",
+      "svelte": "./dist/Flattr.svelte"
+    },
+    "./Flickr.svelte": {
+      "types": "./dist/Flickr.svelte.d.ts",
+      "svelte": "./dist/Flickr.svelte"
+    },
+    "./Floatplane.svelte": {
+      "types": "./dist/Floatplane.svelte.d.ts",
+      "svelte": "./dist/Floatplane.svelte"
+    },
+    "./Flutter.svelte": {
+      "types": "./dist/Flutter.svelte.d.ts",
+      "svelte": "./dist/Flutter.svelte"
+    },
+    "./Foobar2000.svelte": {
+      "types": "./dist/Foobar2000.svelte.d.ts",
+      "svelte": "./dist/Foobar2000.svelte"
+    },
+    "./Freebsd.svelte": {
+      "types": "./dist/Freebsd.svelte.d.ts",
+      "svelte": "./dist/Freebsd.svelte"
+    },
+    "./Freecodecamp.svelte": {
+      "types": "./dist/Freecodecamp.svelte.d.ts",
+      "svelte": "./dist/Freecodecamp.svelte"
+    },
+    "./Friendica.svelte": {
+      "types": "./dist/Friendica.svelte.d.ts",
+      "svelte": "./dist/Friendica.svelte"
+    },
+    "./Fritz.svelte": {
+      "types": "./dist/Fritz.svelte.d.ts",
+      "svelte": "./dist/Fritz.svelte"
+    },
+    "./Gandi.svelte": {
+      "types": "./dist/Gandi.svelte.d.ts",
+      "svelte": "./dist/Gandi.svelte"
+    },
+    "./Gatehub.svelte": {
+      "types": "./dist/Gatehub.svelte.d.ts",
+      "svelte": "./dist/Gatehub.svelte"
+    },
+    "./Ghost.svelte": {
+      "types": "./dist/Ghost.svelte.d.ts",
+      "svelte": "./dist/Ghost.svelte"
+    },
+    "./Git.svelte": {
+      "types": "./dist/Git.svelte.d.ts",
+      "svelte": "./dist/Git.svelte"
+    },
+    "./Gitea.svelte": {
+      "types": "./dist/Gitea.svelte.d.ts",
+      "svelte": "./dist/Gitea.svelte"
+    },
+    "./Github.svelte": {
+      "types": "./dist/Github.svelte.d.ts",
+      "svelte": "./dist/Github.svelte"
+    },
+    "./Gitlab.svelte": {
+      "types": "./dist/Gitlab.svelte.d.ts",
+      "svelte": "./dist/Gitlab.svelte"
+    },
+    "./Gitpod.svelte": {
+      "types": "./dist/Gitpod.svelte.d.ts",
+      "svelte": "./dist/Gitpod.svelte"
+    },
+    "./Glitch.svelte": {
+      "types": "./dist/Glitch.svelte.d.ts",
+      "svelte": "./dist/Glitch.svelte"
+    },
+    "./Gmail.svelte": {
+      "types": "./dist/Gmail.svelte.d.ts",
+      "svelte": "./dist/Gmail.svelte"
+    },
+    "./Gmail_old.svelte": {
+      "types": "./dist/Gmail_old.svelte.d.ts",
+      "svelte": "./dist/Gmail_old.svelte"
+    },
+    "./Go.svelte": {
+      "types": "./dist/Go.svelte.d.ts",
+      "svelte": "./dist/Go.svelte"
+    },
+    "./Godot.svelte": {
+      "types": "./dist/Godot.svelte.d.ts",
+      "svelte": "./dist/Godot.svelte"
+    },
+    "./Gogcom.svelte": {
+      "types": "./dist/Gogcom.svelte.d.ts",
+      "svelte": "./dist/Gogcom.svelte"
+    },
+    "./Gojek.svelte": {
+      "types": "./dist/Gojek.svelte.d.ts",
+      "svelte": "./dist/Gojek.svelte"
+    },
+    "./Goodreads.svelte": {
+      "types": "./dist/Goodreads.svelte.d.ts",
+      "svelte": "./dist/Goodreads.svelte"
+    },
+    "./Google.svelte": {
+      "types": "./dist/Google.svelte.d.ts",
+      "svelte": "./dist/Google.svelte"
+    },
+    "./Google_assistant.svelte": {
+      "types": "./dist/Google_assistant.svelte.d.ts",
+      "svelte": "./dist/Google_assistant.svelte"
+    },
+    "./Google_calendar.svelte": {
+      "types": "./dist/Google_calendar.svelte.d.ts",
+      "svelte": "./dist/Google_calendar.svelte"
+    },
+    "./Google_collaborative_content_tools.svelte": {
+      "types": "./dist/Google_collaborative_content_tools.svelte.d.ts",
+      "svelte": "./dist/Google_collaborative_content_tools.svelte"
+    },
+    "./Google_docs_editors.svelte": {
+      "types": "./dist/Google_docs_editors.svelte.d.ts",
+      "svelte": "./dist/Google_docs_editors.svelte"
+    },
+    "./Google_drive.svelte": {
+      "types": "./dist/Google_drive.svelte.d.ts",
+      "svelte": "./dist/Google_drive.svelte"
+    },
+    "./Google_drive_old.svelte": {
+      "types": "./dist/Google_drive_old.svelte.d.ts",
+      "svelte": "./dist/Google_drive_old.svelte"
+    },
+    "./Google_maps.svelte": {
+      "types": "./dist/Google_maps.svelte.d.ts",
+      "svelte": "./dist/Google_maps.svelte"
+    },
+    "./Google_maps_old.svelte": {
+      "types": "./dist/Google_maps_old.svelte.d.ts",
+      "svelte": "./dist/Google_maps_old.svelte"
+    },
+    "./Google_meet.svelte": {
+      "types": "./dist/Google_meet.svelte.d.ts",
+      "svelte": "./dist/Google_meet.svelte"
+    },
+    "./Google_play.svelte": {
+      "types": "./dist/Google_play.svelte.d.ts",
+      "svelte": "./dist/Google_play.svelte"
+    },
+    "./Google_plus.svelte": {
+      "types": "./dist/Google_plus.svelte.d.ts",
+      "svelte": "./dist/Google_plus.svelte"
+    },
+    "./Google_podcasts.svelte": {
+      "types": "./dist/Google_podcasts.svelte.d.ts",
+      "svelte": "./dist/Google_podcasts.svelte"
+    },
+    "./Google_scholar.svelte": {
+      "types": "./dist/Google_scholar.svelte.d.ts",
+      "svelte": "./dist/Google_scholar.svelte"
+    },
+    "./Gradle.svelte": {
+      "types": "./dist/Gradle.svelte.d.ts",
+      "svelte": "./dist/Gradle.svelte"
+    },
+    "./Grafana.svelte": {
+      "types": "./dist/Grafana.svelte.d.ts",
+      "svelte": "./dist/Grafana.svelte"
+    },
+    "./Guacamole.svelte": {
+      "types": "./dist/Guacamole.svelte.d.ts",
+      "svelte": "./dist/Guacamole.svelte"
+    },
+    "./Guilded.svelte": {
+      "types": "./dist/Guilded.svelte.d.ts",
+      "svelte": "./dist/Guilded.svelte"
+    },
+    "./Hackernews.svelte": {
+      "types": "./dist/Hackernews.svelte.d.ts",
+      "svelte": "./dist/Hackernews.svelte"
+    },
+    "./Hackerone.svelte": {
+      "types": "./dist/Hackerone.svelte.d.ts",
+      "svelte": "./dist/Hackerone.svelte"
+    },
+    "./Haml.svelte": {
+      "types": "./dist/Haml.svelte.d.ts",
+      "svelte": "./dist/Haml.svelte"
+    },
+    "./Heroku.svelte": {
+      "types": "./dist/Heroku.svelte.d.ts",
+      "svelte": "./dist/Heroku.svelte"
+    },
+    "./Homekit.svelte": {
+      "types": "./dist/Homekit.svelte.d.ts",
+      "svelte": "./dist/Homekit.svelte"
+    },
+    "./Hp.svelte": {
+      "types": "./dist/Hp.svelte.d.ts",
+      "svelte": "./dist/Hp.svelte"
+    },
+    "./Html5.svelte": {
+      "types": "./dist/Html5.svelte.d.ts",
+      "svelte": "./dist/Html5.svelte"
+    },
+    "./Hulu.svelte": {
+      "types": "./dist/Hulu.svelte.d.ts",
+      "svelte": "./dist/Hulu.svelte"
+    },
+    "./Humblebundle.svelte": {
+      "types": "./dist/Humblebundle.svelte.d.ts",
+      "svelte": "./dist/Humblebundle.svelte"
+    },
+    "./I18next.svelte": {
+      "types": "./dist/I18next.svelte.d.ts",
+      "svelte": "./dist/I18next.svelte"
+    },
+    "./Ibm.svelte": {
+      "types": "./dist/Ibm.svelte.d.ts",
+      "svelte": "./dist/Ibm.svelte"
+    },
+    "./Iheartradio.svelte": {
+      "types": "./dist/Iheartradio.svelte.d.ts",
+      "svelte": "./dist/Iheartradio.svelte"
+    },
+    "./Imdb.svelte": {
+      "types": "./dist/Imdb.svelte.d.ts",
+      "svelte": "./dist/Imdb.svelte"
+    },
+    "./Imgur.svelte": {
+      "types": "./dist/Imgur.svelte.d.ts",
+      "svelte": "./dist/Imgur.svelte"
+    },
+    "./Instagram.svelte": {
+      "types": "./dist/Instagram.svelte.d.ts",
+      "svelte": "./dist/Instagram.svelte"
+    },
+    "./Intel.svelte": {
+      "types": "./dist/Intel.svelte.d.ts",
+      "svelte": "./dist/Intel.svelte"
+    },
+    "./Intercom.svelte": {
+      "types": "./dist/Intercom.svelte.d.ts",
+      "svelte": "./dist/Intercom.svelte"
+    },
+    "./Internet_archive.svelte": {
+      "types": "./dist/Internet_archive.svelte.d.ts",
+      "svelte": "./dist/Internet_archive.svelte"
+    },
+    "./Itch_io.svelte": {
+      "types": "./dist/Itch_io.svelte.d.ts",
+      "svelte": "./dist/Itch_io.svelte"
+    },
+    "./Itunes_podcasts.svelte": {
+      "types": "./dist/Itunes_podcasts.svelte.d.ts",
+      "svelte": "./dist/Itunes_podcasts.svelte"
+    },
+    "./Jacobin.svelte": {
+      "types": "./dist/Jacobin.svelte.d.ts",
+      "svelte": "./dist/Jacobin.svelte"
+    },
+    "./Java.svelte": {
+      "types": "./dist/Java.svelte.d.ts",
+      "svelte": "./dist/Java.svelte"
+    },
+    "./Javascript.svelte": {
+      "types": "./dist/Javascript.svelte.d.ts",
+      "svelte": "./dist/Javascript.svelte"
+    },
+    "./Jellyfin.svelte": {
+      "types": "./dist/Jellyfin.svelte.d.ts",
+      "svelte": "./dist/Jellyfin.svelte"
+    },
+    "./Json.svelte": {
+      "types": "./dist/Json.svelte.d.ts",
+      "svelte": "./dist/Json.svelte"
+    },
+    "./JsonLd.svelte": {
+      "types": "./dist/JsonLd.svelte.d.ts",
+      "svelte": "./dist/JsonLd.svelte"
+    },
+    "./Jsonfeed.svelte": {
+      "types": "./dist/Jsonfeed.svelte.d.ts",
+      "svelte": "./dist/Jsonfeed.svelte"
+    },
+    "./Julia.svelte": {
+      "types": "./dist/Julia.svelte.d.ts",
+      "svelte": "./dist/Julia.svelte"
+    },
+    "./Kaggle.svelte": {
+      "types": "./dist/Kaggle.svelte.d.ts",
+      "svelte": "./dist/Kaggle.svelte"
+    },
+    "./Keepassdx.svelte": {
+      "types": "./dist/Keepassdx.svelte.d.ts",
+      "svelte": "./dist/Keepassdx.svelte"
+    },
+    "./Kemal.svelte": {
+      "types": "./dist/Kemal.svelte.d.ts",
+      "svelte": "./dist/Kemal.svelte"
+    },
+    "./Keskonfai.svelte": {
+      "types": "./dist/Keskonfai.svelte.d.ts",
+      "svelte": "./dist/Keskonfai.svelte"
+    },
+    "./Keybase.svelte": {
+      "types": "./dist/Keybase.svelte.d.ts",
+      "svelte": "./dist/Keybase.svelte"
+    },
+    "./Kickstarter.svelte": {
+      "types": "./dist/Kickstarter.svelte.d.ts",
+      "svelte": "./dist/Kickstarter.svelte"
+    },
+    "./KoFi.svelte": {
+      "types": "./dist/KoFi.svelte.d.ts",
+      "svelte": "./dist/KoFi.svelte"
+    },
+    "./Kodi.svelte": {
+      "types": "./dist/Kodi.svelte.d.ts",
+      "svelte": "./dist/Kodi.svelte"
+    },
+    "./Kotlin.svelte": {
+      "types": "./dist/Kotlin.svelte.d.ts",
+      "svelte": "./dist/Kotlin.svelte"
+    },
+    "./Laravel.svelte": {
+      "types": "./dist/Laravel.svelte.d.ts",
+      "svelte": "./dist/Laravel.svelte"
+    },
+    "./Lastpass.svelte": {
+      "types": "./dist/Lastpass.svelte.d.ts",
+      "svelte": "./dist/Lastpass.svelte"
+    },
+    "./Liberapay.svelte": {
+      "types": "./dist/Liberapay.svelte.d.ts",
+      "svelte": "./dist/Liberapay.svelte"
+    },
+    "./Line.svelte": {
+      "types": "./dist/Line.svelte.d.ts",
+      "svelte": "./dist/Line.svelte"
+    },
+    "./Linearapp.svelte": {
+      "types": "./dist/Linearapp.svelte.d.ts",
+      "svelte": "./dist/Linearapp.svelte"
+    },
+    "./Linkedin.svelte": {
+      "types": "./dist/Linkedin.svelte.d.ts",
+      "svelte": "./dist/Linkedin.svelte"
+    },
+    "./Linux.svelte": {
+      "types": "./dist/Linux.svelte.d.ts",
+      "svelte": "./dist/Linux.svelte"
+    },
+    "./Linux_mint.svelte": {
+      "types": "./dist/Linux_mint.svelte.d.ts",
+      "svelte": "./dist/Linux_mint.svelte"
+    },
+    "./Lobsters.svelte": {
+      "types": "./dist/Lobsters.svelte.d.ts",
+      "svelte": "./dist/Lobsters.svelte"
+    },
+    "./Lock.svelte": {
+      "types": "./dist/Lock.svelte.d.ts",
+      "svelte": "./dist/Lock.svelte"
+    },
+    "./Logitech.svelte": {
+      "types": "./dist/Logitech.svelte.d.ts",
+      "svelte": "./dist/Logitech.svelte"
+    },
+    "./Luckyframework.svelte": {
+      "types": "./dist/Luckyframework.svelte.d.ts",
+      "svelte": "./dist/Luckyframework.svelte"
+    },
+    "./Macos.svelte": {
+      "types": "./dist/Macos.svelte.d.ts",
+      "svelte": "./dist/Macos.svelte"
+    },
+    "./Mail.svelte": {
+      "types": "./dist/Mail.svelte.d.ts",
+      "svelte": "./dist/Mail.svelte"
+    },
+    "./Mailchimp.svelte": {
+      "types": "./dist/Mailchimp.svelte.d.ts",
+      "svelte": "./dist/Mailchimp.svelte"
+    },
+    "./Malt.svelte": {
+      "types": "./dist/Malt.svelte.d.ts",
+      "svelte": "./dist/Malt.svelte"
+    },
+    "./Manjaro.svelte": {
+      "types": "./dist/Manjaro.svelte.d.ts",
+      "svelte": "./dist/Manjaro.svelte"
+    },
+    "./Markdown.svelte": {
+      "types": "./dist/Markdown.svelte.d.ts",
+      "svelte": "./dist/Markdown.svelte"
+    },
+    "./Mastodon.svelte": {
+      "types": "./dist/Mastodon.svelte.d.ts",
+      "svelte": "./dist/Mastodon.svelte"
+    },
+    "./Matrix.svelte": {
+      "types": "./dist/Matrix.svelte.d.ts",
+      "svelte": "./dist/Matrix.svelte"
+    },
+    "./Mattermost.svelte": {
+      "types": "./dist/Mattermost.svelte.d.ts",
+      "svelte": "./dist/Mattermost.svelte"
+    },
+    "./Medium.svelte": {
+      "types": "./dist/Medium.svelte.d.ts",
+      "svelte": "./dist/Medium.svelte"
+    },
+    "./Meetup.svelte": {
+      "types": "./dist/Meetup.svelte.d.ts",
+      "svelte": "./dist/Meetup.svelte"
+    },
+    "./Messenger.svelte": {
+      "types": "./dist/Messenger.svelte.d.ts",
+      "svelte": "./dist/Messenger.svelte"
+    },
+    "./Microformats.svelte": {
+      "types": "./dist/Microformats.svelte.d.ts",
+      "svelte": "./dist/Microformats.svelte"
+    },
+    "./Microsoft.svelte": {
+      "types": "./dist/Microsoft.svelte.d.ts",
+      "svelte": "./dist/Microsoft.svelte"
+    },
+    "./Minecraft.svelte": {
+      "types": "./dist/Minecraft.svelte.d.ts",
+      "svelte": "./dist/Minecraft.svelte"
+    },
+    "./Mongodb.svelte": {
+      "types": "./dist/Mongodb.svelte.d.ts",
+      "svelte": "./dist/Mongodb.svelte"
+    },
+    "./Netbeans.svelte": {
+      "types": "./dist/Netbeans.svelte.d.ts",
+      "svelte": "./dist/Netbeans.svelte"
+    },
+    "./Netflix.svelte": {
+      "types": "./dist/Netflix.svelte.d.ts",
+      "svelte": "./dist/Netflix.svelte"
+    },
+    "./Nextcloud.svelte": {
+      "types": "./dist/Nextcloud.svelte.d.ts",
+      "svelte": "./dist/Nextcloud.svelte"
+    },
+    "./Nginx.svelte": {
+      "types": "./dist/Nginx.svelte.d.ts",
+      "svelte": "./dist/Nginx.svelte"
+    },
+    "./Nhs.svelte": {
+      "types": "./dist/Nhs.svelte.d.ts",
+      "svelte": "./dist/Nhs.svelte"
+    },
+    "./Nixos.svelte": {
+      "types": "./dist/Nixos.svelte.d.ts",
+      "svelte": "./dist/Nixos.svelte"
+    },
+    "./Nodejs.svelte": {
+      "types": "./dist/Nodejs.svelte.d.ts",
+      "svelte": "./dist/Nodejs.svelte"
+    },
+    "./Npm.svelte": {
+      "types": "./dist/Npm.svelte.d.ts",
+      "svelte": "./dist/Npm.svelte"
+    },
+    "./Ok.svelte": {
+      "types": "./dist/Ok.svelte.d.ts",
+      "svelte": "./dist/Ok.svelte"
+    },
+    "./Olympics.svelte": {
+      "types": "./dist/Olympics.svelte.d.ts",
+      "svelte": "./dist/Olympics.svelte"
+    },
+    "./Openbenches.svelte": {
+      "types": "./dist/Openbenches.svelte.d.ts",
+      "svelte": "./dist/Openbenches.svelte"
+    },
+    "./Openbugbounty.svelte": {
+      "types": "./dist/Openbugbounty.svelte.d.ts",
+      "svelte": "./dist/Openbugbounty.svelte"
+    },
+    "./Opencast.svelte": {
+      "types": "./dist/Opencast.svelte.d.ts",
+      "svelte": "./dist/Opencast.svelte"
+    },
+    "./Opencollective.svelte": {
+      "types": "./dist/Opencollective.svelte.d.ts",
+      "svelte": "./dist/Opencollective.svelte"
+    },
+    "./Opencores.svelte": {
+      "types": "./dist/Opencores.svelte.d.ts",
+      "svelte": "./dist/Opencores.svelte"
+    },
+    "./Opensource.svelte": {
+      "types": "./dist/Opensource.svelte.d.ts",
+      "svelte": "./dist/Opensource.svelte"
+    },
+    "./Openstreetmap.svelte": {
+      "types": "./dist/Openstreetmap.svelte.d.ts",
+      "svelte": "./dist/Openstreetmap.svelte"
+    },
+    "./Openvpn.svelte": {
+      "types": "./dist/Openvpn.svelte.d.ts",
+      "svelte": "./dist/Openvpn.svelte"
+    },
+    "./Opera.svelte": {
+      "types": "./dist/Opera.svelte.d.ts",
+      "svelte": "./dist/Opera.svelte"
+    },
+    "./Orcid.svelte": {
+      "types": "./dist/Orcid.svelte.d.ts",
+      "svelte": "./dist/Orcid.svelte"
+    },
+    "./Origin.svelte": {
+      "types": "./dist/Origin.svelte.d.ts",
+      "svelte": "./dist/Origin.svelte"
+    },
+    "./Outlook.svelte": {
+      "types": "./dist/Outlook.svelte.d.ts",
+      "svelte": "./dist/Outlook.svelte"
+    },
+    "./Overcast.svelte": {
+      "types": "./dist/Overcast.svelte.d.ts",
+      "svelte": "./dist/Overcast.svelte"
+    },
+    "./Overleaf.svelte": {
+      "types": "./dist/Overleaf.svelte.d.ts",
+      "svelte": "./dist/Overleaf.svelte"
+    },
+    "./Patreon.svelte": {
+      "types": "./dist/Patreon.svelte.d.ts",
+      "svelte": "./dist/Patreon.svelte"
+    },
+    "./Paypal.svelte": {
+      "types": "./dist/Paypal.svelte.d.ts",
+      "svelte": "./dist/Paypal.svelte"
+    },
+    "./Pdf.svelte": {
+      "types": "./dist/Pdf.svelte.d.ts",
+      "svelte": "./dist/Pdf.svelte"
+    },
+    "./Phone.svelte": {
+      "types": "./dist/Phone.svelte.d.ts",
+      "svelte": "./dist/Phone.svelte"
+    },
+    "./Php.svelte": {
+      "types": "./dist/Php.svelte.d.ts",
+      "svelte": "./dist/Php.svelte"
+    },
+    "./Pinboard.svelte": {
+      "types": "./dist/Pinboard.svelte.d.ts",
+      "svelte": "./dist/Pinboard.svelte"
+    },
+    "./Pinterest.svelte": {
+      "types": "./dist/Pinterest.svelte.d.ts",
+      "svelte": "./dist/Pinterest.svelte"
+    },
+    "./Pixelfed.svelte": {
+      "types": "./dist/Pixelfed.svelte.d.ts",
+      "svelte": "./dist/Pixelfed.svelte"
+    },
+    "./Plex.svelte": {
+      "types": "./dist/Plex.svelte.d.ts",
+      "svelte": "./dist/Plex.svelte"
+    },
+    "./Pocket.svelte": {
+      "types": "./dist/Pocket.svelte.d.ts",
+      "svelte": "./dist/Pocket.svelte"
+    },
+    "./Pocketcasts.svelte": {
+      "types": "./dist/Pocketcasts.svelte.d.ts",
+      "svelte": "./dist/Pocketcasts.svelte"
+    },
+    "./Popos.svelte": {
+      "types": "./dist/Popos.svelte.d.ts",
+      "svelte": "./dist/Popos.svelte"
+    },
+    "./Pornhub.svelte": {
+      "types": "./dist/Pornhub.svelte.d.ts",
+      "svelte": "./dist/Pornhub.svelte"
+    },
+    "./Powershell.svelte": {
+      "types": "./dist/Powershell.svelte.d.ts",
+      "svelte": "./dist/Powershell.svelte"
+    },
+    "./Preact.svelte": {
+      "types": "./dist/Preact.svelte.d.ts",
+      "svelte": "./dist/Preact.svelte"
+    },
+    "./Print.svelte": {
+      "types": "./dist/Print.svelte.d.ts",
+      "svelte": "./dist/Print.svelte"
+    },
+    "./Protonmail.svelte": {
+      "types": "./dist/Protonmail.svelte.d.ts",
+      "svelte": "./dist/Protonmail.svelte"
+    },
+    "./Python.svelte": {
+      "types": "./dist/Python.svelte.d.ts",
+      "svelte": "./dist/Python.svelte"
+    },
+    "./Qq.svelte": {
+      "types": "./dist/Qq.svelte.d.ts",
+      "svelte": "./dist/Qq.svelte"
+    },
+    "./Quora.svelte": {
+      "types": "./dist/Quora.svelte.d.ts",
+      "svelte": "./dist/Quora.svelte"
+    },
+    "./Raspberry_pi.svelte": {
+      "types": "./dist/Raspberry_pi.svelte.d.ts",
+      "svelte": "./dist/Raspberry_pi.svelte"
+    },
+    "./React.svelte": {
+      "types": "./dist/React.svelte.d.ts",
+      "svelte": "./dist/React.svelte"
+    },
+    "./Reddit.svelte": {
+      "types": "./dist/Reddit.svelte.d.ts",
+      "svelte": "./dist/Reddit.svelte"
+    },
+    "./Redhat.svelte": {
+      "types": "./dist/Redhat.svelte.d.ts",
+      "svelte": "./dist/Redhat.svelte"
+    },
+    "./Researchgate.svelte": {
+      "types": "./dist/Researchgate.svelte.d.ts",
+      "svelte": "./dist/Researchgate.svelte"
+    },
+    "./Roundcube.svelte": {
+      "types": "./dist/Roundcube.svelte.d.ts",
+      "svelte": "./dist/Roundcube.svelte"
+    },
+    "./Rss.svelte": {
+      "types": "./dist/Rss.svelte.d.ts",
+      "svelte": "./dist/Rss.svelte"
+    },
+    "./Ruby.svelte": {
+      "types": "./dist/Ruby.svelte.d.ts",
+      "svelte": "./dist/Ruby.svelte"
+    },
+    "./Rubygems.svelte": {
+      "types": "./dist/Rubygems.svelte.d.ts",
+      "svelte": "./dist/Rubygems.svelte"
+    },
+    "./Rubyonrails.svelte": {
+      "types": "./dist/Rubyonrails.svelte.d.ts",
+      "svelte": "./dist/Rubyonrails.svelte"
+    },
+    "./Rust.svelte": {
+      "types": "./dist/Rust.svelte.d.ts",
+      "svelte": "./dist/Rust.svelte"
+    },
+    "./Safari.svelte": {
+      "types": "./dist/Safari.svelte.d.ts",
+      "svelte": "./dist/Safari.svelte"
+    },
+    "./Samsung.svelte": {
+      "types": "./dist/Samsung.svelte.d.ts",
+      "svelte": "./dist/Samsung.svelte"
+    },
+    "./Samsung_internet.svelte": {
+      "types": "./dist/Samsung_internet.svelte.d.ts",
+      "svelte": "./dist/Samsung_internet.svelte"
+    },
+    "./Samsung_s.svelte": {
+      "types": "./dist/Samsung_s.svelte.d.ts",
+      "svelte": "./dist/Samsung_s.svelte"
+    },
+    "./Samsung_swoop.svelte": {
+      "types": "./dist/Samsung_swoop.svelte.d.ts",
+      "svelte": "./dist/Samsung_swoop.svelte"
+    },
+    "./Sass.svelte": {
+      "types": "./dist/Sass.svelte.d.ts",
+      "svelte": "./dist/Sass.svelte"
+    },
+    "./Semaphoreci.svelte": {
+      "types": "./dist/Semaphoreci.svelte.d.ts",
+      "svelte": "./dist/Semaphoreci.svelte"
+    },
+    "./Sentry.svelte": {
+      "types": "./dist/Sentry.svelte.d.ts",
+      "svelte": "./dist/Sentry.svelte"
+    },
+    "./Signal.svelte": {
+      "types": "./dist/Signal.svelte.d.ts",
+      "svelte": "./dist/Signal.svelte"
+    },
+    "./Sketch.svelte": {
+      "types": "./dist/Sketch.svelte.d.ts",
+      "svelte": "./dist/Sketch.svelte"
+    },
+    "./Skype.svelte": {
+      "types": "./dist/Skype.svelte.d.ts",
+      "svelte": "./dist/Skype.svelte"
+    },
+    "./Slack.svelte": {
+      "types": "./dist/Slack.svelte.d.ts",
+      "svelte": "./dist/Slack.svelte"
+    },
+    "./Slideshare.svelte": {
+      "types": "./dist/Slideshare.svelte.d.ts",
+      "svelte": "./dist/Slideshare.svelte"
+    },
+    "./Snapchat.svelte": {
+      "types": "./dist/Snapchat.svelte.d.ts",
+      "svelte": "./dist/Snapchat.svelte"
+    },
+    "./Sogo.svelte": {
+      "types": "./dist/Sogo.svelte.d.ts",
+      "svelte": "./dist/Sogo.svelte"
+    },
+    "./Solidity.svelte": {
+      "types": "./dist/Solidity.svelte.d.ts",
+      "svelte": "./dist/Solidity.svelte"
+    },
+    "./Soundcloud.svelte": {
+      "types": "./dist/Soundcloud.svelte.d.ts",
+      "svelte": "./dist/Soundcloud.svelte"
+    },
+    "./Spotify.svelte": {
+      "types": "./dist/Spotify.svelte.d.ts",
+      "svelte": "./dist/Spotify.svelte"
+    },
+    "./Square_cash.svelte": {
+      "types": "./dist/Square_cash.svelte.d.ts",
+      "svelte": "./dist/Square_cash.svelte"
+    },
+    "./Stackexchange.svelte": {
+      "types": "./dist/Stackexchange.svelte.d.ts",
+      "svelte": "./dist/Stackexchange.svelte"
+    },
+    "./Stackoverflow.svelte": {
+      "types": "./dist/Stackoverflow.svelte.d.ts",
+      "svelte": "./dist/Stackoverflow.svelte"
+    },
+    "./Steam.svelte": {
+      "types": "./dist/Steam.svelte.d.ts",
+      "svelte": "./dist/Steam.svelte"
+    },
+    "./Stitcher.svelte": {
+      "types": "./dist/Stitcher.svelte.d.ts",
+      "svelte": "./dist/Stitcher.svelte"
+    },
+    "./Strava.svelte": {
+      "types": "./dist/Strava.svelte.d.ts",
+      "svelte": "./dist/Strava.svelte"
+    },
+    "./Stumbleupon.svelte": {
+      "types": "./dist/Stumbleupon.svelte.d.ts",
+      "svelte": "./dist/Stumbleupon.svelte"
+    },
+    "./Sublimemerge.svelte": {
+      "types": "./dist/Sublimemerge.svelte.d.ts",
+      "svelte": "./dist/Sublimemerge.svelte"
+    },
+    "./Sublimetext.svelte": {
+      "types": "./dist/Sublimetext.svelte.d.ts",
+      "svelte": "./dist/Sublimetext.svelte"
+    },
+    "./Subscribestar.svelte": {
+      "types": "./dist/Subscribestar.svelte.d.ts",
+      "svelte": "./dist/Subscribestar.svelte"
+    },
+    "./Svelte.svelte": {
+      "types": "./dist/Svelte.svelte.d.ts",
+      "svelte": "./dist/Svelte.svelte"
+    },
+    "./Svg.svelte": {
+      "types": "./dist/Svg.svelte.d.ts",
+      "svelte": "./dist/Svg.svelte"
+    },
+    "./Symantec.svelte": {
+      "types": "./dist/Symantec.svelte.d.ts",
+      "svelte": "./dist/Symantec.svelte"
+    },
+    "./Symfony.svelte": {
+      "types": "./dist/Symfony.svelte.d.ts",
+      "svelte": "./dist/Symfony.svelte"
+    },
+    "./Taiga.svelte": {
+      "types": "./dist/Taiga.svelte.d.ts",
+      "svelte": "./dist/Taiga.svelte"
+    },
+    "./Teamspeak.svelte": {
+      "types": "./dist/Teamspeak.svelte.d.ts",
+      "svelte": "./dist/Teamspeak.svelte"
+    },
+    "./Telegram.svelte": {
+      "types": "./dist/Telegram.svelte.d.ts",
+      "svelte": "./dist/Telegram.svelte"
+    },
+    "./Terraform.svelte": {
+      "types": "./dist/Terraform.svelte.d.ts",
+      "svelte": "./dist/Terraform.svelte"
+    },
+    "./Thisamericanlife.svelte": {
+      "types": "./dist/Thisamericanlife.svelte.d.ts",
+      "svelte": "./dist/Thisamericanlife.svelte"
+    },
+    "./Threema.svelte": {
+      "types": "./dist/Threema.svelte.d.ts",
+      "svelte": "./dist/Threema.svelte"
+    },
+    "./Tiktok.svelte": {
+      "types": "./dist/Tiktok.svelte.d.ts",
+      "svelte": "./dist/Tiktok.svelte"
+    },
+    "./Todoist.svelte": {
+      "types": "./dist/Todoist.svelte.d.ts",
+      "svelte": "./dist/Todoist.svelte"
+    },
+    "./Tox.svelte": {
+      "types": "./dist/Tox.svelte.d.ts",
+      "svelte": "./dist/Tox.svelte"
+    },
+    "./Trello.svelte": {
+      "types": "./dist/Trello.svelte.d.ts",
+      "svelte": "./dist/Trello.svelte"
+    },
+    "./Tripadvisor.svelte": {
+      "types": "./dist/Tripadvisor.svelte.d.ts",
+      "svelte": "./dist/Tripadvisor.svelte"
+    },
+    "./Tumblr.svelte": {
+      "types": "./dist/Tumblr.svelte.d.ts",
+      "svelte": "./dist/Tumblr.svelte"
+    },
+    "./Tunein.svelte": {
+      "types": "./dist/Tunein.svelte.d.ts",
+      "svelte": "./dist/Tunein.svelte"
+    },
+    "./Tutanota.svelte": {
+      "types": "./dist/Tutanota.svelte.d.ts",
+      "svelte": "./dist/Tutanota.svelte"
+    },
+    "./Twilio.svelte": {
+      "types": "./dist/Twilio.svelte.d.ts",
+      "svelte": "./dist/Twilio.svelte"
+    },
+    "./Twitch.svelte": {
+      "types": "./dist/Twitch.svelte.d.ts",
+      "svelte": "./dist/Twitch.svelte"
+    },
+    "./Twitter.svelte": {
+      "types": "./dist/Twitter.svelte.d.ts",
+      "svelte": "./dist/Twitter.svelte"
+    },
+    "./Typescript.svelte": {
+      "types": "./dist/Typescript.svelte.d.ts",
+      "svelte": "./dist/Typescript.svelte"
+    },
+    "./Uber.svelte": {
+      "types": "./dist/Uber.svelte.d.ts",
+      "svelte": "./dist/Uber.svelte"
+    },
+    "./Ubiquiti.svelte": {
+      "types": "./dist/Ubiquiti.svelte.d.ts",
+      "svelte": "./dist/Ubiquiti.svelte"
+    },
+    "./Ubisoft.svelte": {
+      "types": "./dist/Ubisoft.svelte.d.ts",
+      "svelte": "./dist/Ubisoft.svelte"
+    },
+    "./Ubuntu.svelte": {
+      "types": "./dist/Ubuntu.svelte.d.ts",
+      "svelte": "./dist/Ubuntu.svelte"
+    },
+    "./Udemy.svelte": {
+      "types": "./dist/Udemy.svelte.d.ts",
+      "svelte": "./dist/Udemy.svelte"
+    },
+    "./Unicode.svelte": {
+      "types": "./dist/Unicode.svelte.d.ts",
+      "svelte": "./dist/Unicode.svelte"
+    },
+    "./Untappd.svelte": {
+      "types": "./dist/Untappd.svelte.d.ts",
+      "svelte": "./dist/Untappd.svelte"
+    },
+    "./Uphold.svelte": {
+      "types": "./dist/Uphold.svelte.d.ts",
+      "svelte": "./dist/Uphold.svelte"
+    },
+    "./Uplay.svelte": {
+      "types": "./dist/Uplay.svelte.d.ts",
+      "svelte": "./dist/Uplay.svelte"
+    },
+    "./Upwork.svelte": {
+      "types": "./dist/Upwork.svelte.d.ts",
+      "svelte": "./dist/Upwork.svelte"
+    },
+    "./Vagrant.svelte": {
+      "types": "./dist/Vagrant.svelte.d.ts",
+      "svelte": "./dist/Vagrant.svelte"
+    },
+    "./Vegetarian.svelte": {
+      "types": "./dist/Vegetarian.svelte.d.ts",
+      "svelte": "./dist/Vegetarian.svelte"
+    },
+    "./Venmo.svelte": {
+      "types": "./dist/Venmo.svelte.d.ts",
+      "svelte": "./dist/Venmo.svelte"
+    },
+    "./Viber.svelte": {
+      "types": "./dist/Viber.svelte.d.ts",
+      "svelte": "./dist/Viber.svelte"
+    },
+    "./Vim.svelte": {
+      "types": "./dist/Vim.svelte.d.ts",
+      "svelte": "./dist/Vim.svelte"
+    },
+    "./Vimeo.svelte": {
+      "types": "./dist/Vimeo.svelte.d.ts",
+      "svelte": "./dist/Vimeo.svelte"
+    },
+    "./Visualstudiocode.svelte": {
+      "types": "./dist/Visualstudiocode.svelte.d.ts",
+      "svelte": "./dist/Visualstudiocode.svelte"
+    },
+    "./Vivino.svelte": {
+      "types": "./dist/Vivino.svelte.d.ts",
+      "svelte": "./dist/Vivino.svelte"
+    },
+    "./Vk.svelte": {
+      "types": "./dist/Vk.svelte.d.ts",
+      "svelte": "./dist/Vk.svelte"
+    },
+    "./Vlc.svelte": {
+      "types": "./dist/Vlc.svelte.d.ts",
+      "svelte": "./dist/Vlc.svelte"
+    },
+    "./Vue.svelte": {
+      "types": "./dist/Vue.svelte.d.ts",
+      "svelte": "./dist/Vue.svelte"
+    },
+    "./W3c.svelte": {
+      "types": "./dist/W3c.svelte.d.ts",
+      "svelte": "./dist/W3c.svelte"
+    },
+    "./Webassembly.svelte": {
+      "types": "./dist/Webassembly.svelte.d.ts",
+      "svelte": "./dist/Webassembly.svelte"
+    },
+    "./Webmention.svelte": {
+      "types": "./dist/Webmention.svelte.d.ts",
+      "svelte": "./dist/Webmention.svelte"
+    },
+    "./Wechat.svelte": {
+      "types": "./dist/Wechat.svelte.d.ts",
+      "svelte": "./dist/Wechat.svelte"
+    },
+    "./Wekan.svelte": {
+      "types": "./dist/Wekan.svelte.d.ts",
+      "svelte": "./dist/Wekan.svelte"
+    },
+    "./Whatsapp.svelte": {
+      "types": "./dist/Whatsapp.svelte.d.ts",
+      "svelte": "./dist/Whatsapp.svelte"
+    },
+    "./Whatwg.svelte": {
+      "types": "./dist/Whatwg.svelte.d.ts",
+      "svelte": "./dist/Whatwg.svelte"
+    },
+    "./Wifi.svelte": {
+      "types": "./dist/Wifi.svelte.d.ts",
+      "svelte": "./dist/Wifi.svelte"
+    },
+    "./Wikipedia.svelte": {
+      "types": "./dist/Wikipedia.svelte.d.ts",
+      "svelte": "./dist/Wikipedia.svelte"
+    },
+    "./Windows.svelte": {
+      "types": "./dist/Windows.svelte.d.ts",
+      "svelte": "./dist/Windows.svelte"
+    },
+    "./Wire.svelte": {
+      "types": "./dist/Wire.svelte.d.ts",
+      "svelte": "./dist/Wire.svelte"
+    },
+    "./Wireguard.svelte": {
+      "types": "./dist/Wireguard.svelte.d.ts",
+      "svelte": "./dist/Wireguard.svelte"
+    },
+    "./Wordpress.svelte": {
+      "types": "./dist/Wordpress.svelte.d.ts",
+      "svelte": "./dist/Wordpress.svelte"
+    },
+    "./Workato.svelte": {
+      "types": "./dist/Workato.svelte.d.ts",
+      "svelte": "./dist/Workato.svelte"
+    },
+    "./Xing.svelte": {
+      "types": "./dist/Xing.svelte.d.ts",
+      "svelte": "./dist/Xing.svelte"
+    },
+    "./Xmpp.svelte": {
+      "types": "./dist/Xmpp.svelte.d.ts",
+      "svelte": "./dist/Xmpp.svelte"
+    },
+    "./Yahoo.svelte": {
+      "types": "./dist/Yahoo.svelte.d.ts",
+      "svelte": "./dist/Yahoo.svelte"
+    },
+    "./Yammer.svelte": {
+      "types": "./dist/Yammer.svelte.d.ts",
+      "svelte": "./dist/Yammer.svelte"
+    },
+    "./Yarn.svelte": {
+      "types": "./dist/Yarn.svelte.d.ts",
+      "svelte": "./dist/Yarn.svelte"
+    },
+    "./Yelp.svelte": {
+      "types": "./dist/Yelp.svelte.d.ts",
+      "svelte": "./dist/Yelp.svelte"
+    },
+    "./Youtube.svelte": {
+      "types": "./dist/Youtube.svelte.d.ts",
+      "svelte": "./dist/Youtube.svelte"
+    },
+    "./Yubico.svelte": {
+      "types": "./dist/Yubico.svelte.d.ts",
+      "svelte": "./dist/Yubico.svelte"
+    },
+    "./Zoom.svelte": {
+      "types": "./dist/Zoom.svelte.d.ts",
+      "svelte": "./dist/Zoom.svelte"
+    },
+    "./Zorinos.svelte": {
+      "types": "./dist/Zorinos.svelte.d.ts",
+      "svelte": "./dist/Zorinos.svelte"
     }
   },
   "files": [
@@ -50,5 +1466,16 @@
   },
   "svelte": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "type": "module"
+  "type": "module",
+  "keywords": [
+    "svelte",
+    "sveltekit",
+    "supertinyicons",
+    "icons",
+    "svg"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shinokada/svelte-supertinyicons"
+  }
 }
