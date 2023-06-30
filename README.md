@@ -1,15 +1,15 @@
-<h1 align="center">Svelte Supertinyicons</h1>
+<h1 align="center">Svelte Supertiny</h1>
 
 <p align="center">
-<a href="https://shinokada.github.io/svelte-supertinyicons">Svelte-Supertinyicons</a>
+<a href="https://shinokada.github.io/svelte-supertiny">Svelte-Supertiny</a>
 </p>
 
 <p align="center">
 <a href="https://github.com/sponsors/shinokada" target="_blank"><img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" height="25"></a>
-<a href="https://www.npmjs.com/package/svelte-supertinyicons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/v/svelte-supertinyicons" alt="npm" height="25"></a>
+<a href="https://www.npmjs.com/package/svelte-supertiny" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/v/svelte-supertiny" alt="npm" height="25"></a>
 <a href="https://twitter.com/shinokada" rel="nofollow" target="_blank"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada" height="25"></a>
-<a href="https://opensource.org/licenses/MIT" rel="nofollow" target="_blank"><img src="https://img.shields.io/github/license/shinokada/svelte-supertinyicons" alt="License" height="25"></a>
-<a href="https://www.npmjs.com/package/svelte-supertinyicons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-supertinyicons.svg" alt="npm" height="25"></a>
+<a href="https://opensource.org/licenses/MIT" rel="nofollow" target="_blank"><img src="https://img.shields.io/github/license/shinokada/svelte-supertiny" alt="License" height="25"></a>
+<a href="https://www.npmjs.com/package/svelte-supertiny" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-supertiny.svg" alt="npm" height="25"></a>
 </p>
 
 [Supertinyicons](https://github.com/edent/SuperTinyIcons) for Svelte.
@@ -17,13 +17,13 @@
 Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on GitHub: https://github.com/sponsors/shinokada. Your support helps me maintain and improve this package for the benefit of the community.
 
 <p align="center">
-<img src="/static/images/svelte-supertinyicons-450.webp" width="450" />
+<img src="/static/images/svelte-supertiny-450.webp" width="450" />
 </p>
 
 ## Installation
 
 ```sh
-npm i -D svelte-supertinyicons
+npm i -D svelte-supertiny
 ```
 
 ## Icon list
@@ -40,7 +40,7 @@ In a svelte file:
 
 ```html
 <script>
-  import { Amazon } from 'svelte-supertinyicons';
+  import { Amazon } from 'svelte-supertiny';
 </script>
 
 <Amazon />
@@ -52,7 +52,7 @@ If you need only a few icons from this library in your Svelte app, import them d
 
 ```html
 <script>
-  import Amazon from 'svelte-supertinyicons/Amazon.svelte';
+  import Amazon from 'svelte-supertiny/Amazon.svelte';
 </script>
 
 <Amazon />
@@ -95,7 +95,7 @@ Use the `size` prop to change the size of icons.
 
 ```html
 <script>
-  import { Amazon } from 'svelte-supertinyicons';
+  import { Amazon } from 'svelte-supertiny';
 </script>
 
 <Amazon size="30" />
@@ -109,7 +109,7 @@ Tailwind example:
 
 ```html
 <script>
-  import { Amazon } from 'svelte-supertinyicons';
+  import { Amazon } from 'svelte-supertiny';
 </script>
 
 <Amazon class="m-8" />
@@ -155,7 +155,7 @@ You can pass other attibutes as well.
 
 ```html
 <script>
-  import { Amazon } from 'svelte-supertinyicons';
+  import { Amazon } from 'svelte-supertiny';
 </script>
 
 <svelte:component this="{Amazon}" />
@@ -165,11 +165,11 @@ You can pass other attibutes as well.
 
 [REPL](https://svelte.dev/repl/6b2057d58c3841fc9f37b67960f02e27)
 
-Use `import * as Icon from 'svelte-supertinyicons`.
+Use `import * as Icon from 'svelte-supertiny`.
 
 ```html
 <script>
-  import * as Icon from 'svelte-supertinyicons';
+  import * as Icon from 'svelte-supertiny';
 </script>
 
 <h1>Size</h1>

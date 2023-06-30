@@ -1,5 +1,5 @@
 {
-  "name": "svelte-supertinyicons",
+  "name": "svelte-supertiny",
   "version": "0.1.2",
   "description": "Svelte SVG Supertinyicons components",
   "author": {
@@ -7,8 +7,8 @@
     "email": "connect@codewithshin.com",
     "url": "https://blog.codewithshin.com"
   },
-  "bugs": "https://github.com/shinokada/svelte-supertinyicons/issues",
-  "homepage": "https://shinokada.github.io/svelte-supertinyicons",
+  "bugs": "https://github.com/shinokada/svelte-supertiny/issues",
+  "homepage": "https://shinokada.github.io/svelte-supertiny",
   "license": "MIT",
   "scripts": {
     "dev": "vite dev",
@@ -1476,6 +1476,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/shinokada/svelte-supertinyicons"
+    "url": "https://github.com/shinokada/svelte-supertiny"
   }
 }
