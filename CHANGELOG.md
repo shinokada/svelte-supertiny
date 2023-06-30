@@ -8,7 +8,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### 0.1.1 (2023-06-30)
 
-
 ### Features
 
-* create components ([c90dded](https://github.com/shinokada/svelte-supertinyicons/commit/c90dded76deec9172b5f5a0da67b64c0446619b5))
+- create components ([c90dded](https://github.com/shinokada/svelte-supertinyicons/commit/c90dded76deec9172b5f5a0da67b64c0446619b5))

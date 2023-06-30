@@ -26,7 +26,7 @@
       fill="#bfbfbf"
       ><g stroke="#000" stroke-width="2.5"
         ><path
-          id="a"
+          id="vim"
           d="m8 5-2 2v4l2 1h2v40l3 2h3l43-44v-3l-2-2h-17l-2 2v4l2 1h2l-1 1-17 16v-17h2l2-1v-4l-2-2z"
         /></g
       ><use xlink:href="#a" /><g stroke="#000" stroke-width="2.5"

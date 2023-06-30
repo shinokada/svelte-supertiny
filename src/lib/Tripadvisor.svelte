@@ -27,7 +27,7 @@
     stroke-width="17"
     d="M93 202a195 151 0 0 1 326 0v56h-326"
   /><g transform="translate(256 257)"
-    ><g id="a" fill="#000a12"
+    ><g id="tripadvisor" fill="#000a12"
       ><path d="M2 0h-33v45l31 47M-173-49c3-12-19-46-19-48h77" /><circle
         cx="-97"
         cy="0"

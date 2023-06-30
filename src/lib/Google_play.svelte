@@ -20,7 +20,7 @@
   on:mouseover
   on:mouseout
   viewBox="0 0 512 512"
-  ><rect width="512" height="512" fill="#fff" /><clipPath id="a"
+  ><rect width="512" height="512" fill="#fff" /><clipPath id="google_play"
     ><path
       d="M465 239L169 69c-15-9-35 2-35 20v334c0 18 20 29 35 20l296-171c13-7 13-25 0-33z"
     /></clipPath

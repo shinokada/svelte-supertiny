@@ -20,11 +20,11 @@
   on:mouseover
   on:mouseout
   viewBox="0 0 512 512"
-  ><rect width="512" height="512" fill="#fff" /><radialGradient id="a"
+  ><rect width="512" height="512" fill="#fff" /><radialGradient id="safari"
     ><stop stop-color="#0bd" offset="0" /><stop offset="1" stop-color="#17d" /></radialGradient
   ><g transform="matrix(4 0 0 4 256 256)"
     ><g stroke="#eee" fill="none"
-      ><circle r="52.5" fill="url(#a)" stroke-width="5" /><circle
+      ><circle r="52.5" fill="url(#safari)" stroke-width="5" /><circle
         r="45"
         stroke-dasharray="1.25 8.175"
         stroke-dashoffset=".5"

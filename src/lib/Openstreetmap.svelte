@@ -23,7 +23,7 @@
   ><rect width="512" height="512" fill="#fff" /><path
     d="M127 173l61.5 18-18 61.5-61.5-18"
     fill="#c6e0ad"
-    id="a"
+    id="openstreetmap"
   /><path d="M336.5 331.5l60 -17-17 60-60 17" fill="#a5d383" id="b" /><use
     href="#a"
     x="139.5"

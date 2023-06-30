@@ -32,7 +32,7 @@
       d="m9 256 207 2v-11h136v12h99V9H9"
       fill="#f79"
     /><g stroke="#2800ff"
-      ><g id="a"
+      ><g id="glitch"
         ><path
           d="m183 162q19 30 3 58m17 14c13-41 14-45 2-76m0 0c78 4 112 7 184 41"
           fill="none"

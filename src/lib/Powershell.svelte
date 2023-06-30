@@ -31,7 +31,7 @@
       stop-color="#a9c8ff"
       offset="1"
     /></linearGradient
-  ><linearGradient id="a" x1="0" x2=".9" y1=".2" y2=".73"
+  ><linearGradient id="powershell" x1="0" x2=".9" y1=".2" y2=".73"
     ><stop stop-color="#2d4664" offset="0" /><stop stop-color="#29405b" offset=".17" /><stop
       stop-color="#1e2f43"
       offset=".45"
@@ -43,7 +43,7 @@
       width="334"
       height="297"
       rx="17"
-      fill="url(#a)"
+      fill="url(#powershell)"
     /></g
   ><use xlink:href="#c" x="3" y="3.5" stroke="#2c5591" /><g stroke="#fff"
     ><g id="c" fill="none" stroke-linecap="round"

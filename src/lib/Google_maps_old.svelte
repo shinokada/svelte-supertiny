@@ -21,7 +21,7 @@
   on:mouseover
   on:mouseout
   viewBox="0 0 512 512"
-  ><rect id="a" width="512" height="512" x="0" y="0" fill="#fff" /><clipPath id="b"
+  ><rect id="google_maps_old" width="512" height="512" x="0" y="0" fill="#fff" /><clipPath id="b"
     ><use xlink:href="#a" /></clipPath
   ><g clip-path="url(#b)"
     ><path fill="#35a85b" d="M0 512V0h512z" /><path fill="#5881ca" d="M256 288L32 512h448z" /><path

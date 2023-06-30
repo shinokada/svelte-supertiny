@@ -22,7 +22,7 @@
   viewBox="0 0 512 512"
   ><rect width="512" height="512" fill="#fff" /><g fill="#f72"
     ><path
-      id="a"
+      id="pixelfed"
       d="M254 256c32-42 23-102-20-134s-108-15-140 27l11-19c52-63 143-89 210-58 50 17 78 72 62 123s-72 78-123 61"
     /></g
   ><use href="#a" transform="rotate(72 256 256)" fill="#1c3" /><use

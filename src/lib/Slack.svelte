@@ -23,7 +23,7 @@
   viewBox="0 0 512 512"
   ><rect width="512" height="512" fill="#fff" /><g fill="#e01e5a"
     ><path
-      id="a"
+      id="slack"
       d="M149 305a39 39 0 01-78 0c0-22 17 -39 39 -39h39zM168 305a39 39 0 0178 0v97a39 39 0 01-78 0z"
     /></g
   ><use xlink:href="#a" fill="#36c5f0" transform="rotate(90,256,256)" /><use

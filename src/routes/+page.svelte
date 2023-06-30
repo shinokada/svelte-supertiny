@@ -37,6 +37,7 @@
 <Icon.Blender {size} />
 <Icon.Blogger {size} />
 <Icon.Bluetooth {size} />
+
 <Icon.Brave {size} />
 <Icon.Briar {size} />
 <Icon.Buffer {size} />

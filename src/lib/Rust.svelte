@@ -25,10 +25,10 @@
     ><g id="d"
       ><g id="c"
         ><g id="b"
-          ><path id="a" d="M20-183 6-206c-3-5-9-5-12 0l-14 23m0 366 14 23c3 5 9 5 12 0l14-23" /><use
-            xlink:href="#a"
-            transform="rotate(11.25)"
-          /></g
+          ><path
+            id="rust"
+            d="M20-183 6-206c-3-5-9-5-12 0l-14 23m0 366 14 23c3 5 9 5 12 0l14-23"
+          /><use xlink:href="#a" transform="rotate(11.25)" /></g
         ><use xlink:href="#b" transform="rotate(22.5)" /></g
       ><use xlink:href="#c" transform="rotate(45)" /></g
     ><use xlink:href="#d" transform="rotate(90)" /><g id="f"

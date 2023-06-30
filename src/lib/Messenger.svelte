@@ -21,7 +21,7 @@
   on:mouseout
   viewBox="0 0 512 512"
   ><rect width="512" height="512" fill="#fff" /><linearGradient
-    id="a"
+    id="messenger"
     x1="256"
     x2="256"
     y1="78.2"
@@ -32,7 +32,7 @@
       stop-color="#006AFF"
     /></linearGradient
   ><path
-    fill="url(#a)"
+    fill="url(#messenger)"
     d="M193.6 424.6a14.5 14.5 0 019.8-.7A176.4 176.4 0 10131.2 385a14.7 14.7 0 015 10.4l1 32.3a14.6 14.6 0 0020.4 12.9z"
   /><path
     fill="#fff"

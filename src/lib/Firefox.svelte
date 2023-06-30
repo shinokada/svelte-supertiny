@@ -20,7 +20,7 @@
   on:mouseover
   on:mouseout
   viewBox="0 0 512 512"
-  ><rect width="512" height="512" fill="#fff" /><linearGradient id="a" x1=".7" x2=".3" y2=".8"
+  ><rect width="512" height="512" fill="#fff" /><linearGradient id="firefox" x1=".7" x2=".3" y2=".8"
     ><stop offset=".3" stop-color="#fd5" /><stop offset=".6" stop-color="#f85" /><stop
       offset="1"
       stop-color="#d06"
@@ -32,7 +32,7 @@
   ><g transform="scale(4)"
     ><path
       d="M48 49s-3-9-1-16c-9 2-33 35-33 35a51 48 0 1087-32s5 9 5 15c-3-9-20-25-26-37-24 13-16 39-16 39"
-      fill="url(#a)"
+      fill="url(#firefox)"
     /><circle cx="64" cy="67" r="26" fill="url(#b)" /><path
       d="M21 45l43 12c-6 11-16 3-23 14a22 22 0 1034-20s33 3 17 42H28m36 25h1"
       fill="url(#a)"

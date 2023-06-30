@@ -20,7 +20,7 @@
   on:mouseover
   on:mouseout
   viewBox="0 0 512 512"
-  ><rect width="512" height="512" fill="#fff" /><filter id="a"
+  ><rect width="512" height="512" fill="#fff" /><filter id="visualstudiocode"
     ><feFlood flood-opacity="0" result="b" /><feColorMatrix
       in="SourceAlpha"
       values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"

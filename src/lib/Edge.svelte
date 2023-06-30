@@ -20,7 +20,7 @@
   on:mouseover
   on:mouseout
   viewBox="0 0 512 512"
-  ><rect width="512" height="512" fill="#fff" /><radialGradient id="a" cx=".6" cy=".5"
+  ><rect width="512" height="512" fill="#fff" /><radialGradient id="edge" cx=".6" cy=".5"
     ><stop offset=".8" stop-color="#148" /><stop offset="1" stop-color="#137" /></radialGradient
   ><radialGradient id="b" cx=".5" cy=".6" fx=".2" fy=".6"
     ><stop offset=".8" stop-color="#38c" /><stop offset="1" stop-color="#269" /></radialGradient
@@ -31,7 +31,7 @@
     /></linearGradient
   ><path
     d="M439 374c-50 77-131 98-163 96-191-9-162-262-47-261-82 52 30 224 195 157 17-12 20 3 15 8"
-    fill="url(#a)"
+    fill="url(#edge)"
   /><path
     d="M311 255c18-82-31-135-129-135S38 212 38 259c0 124 125 253 287 203-134 39-214-116-146-210 46-66 123-68 132 3 M411 99h1"
     fill="url(#b)"

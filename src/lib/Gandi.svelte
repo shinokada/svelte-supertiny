@@ -20,8 +20,8 @@
   on:mouseover
   on:mouseout
   viewBox="0 0 512 512"
-  ><rect width="512" height="512" fill="url(#a)" /><defs
-    ><linearGradient id="a" x1="72" y1="512" x2="433" y2="12" gradientUnits="userSpaceOnUse"
+  ><rect width="512" height="512" fill="url(#gandi)" /><defs
+    ><linearGradient id="gandi" x1="72" y1="512" x2="433" y2="12" gradientUnits="userSpaceOnUse"
       ><stop offset="0" stop-color="#3daca3" /><stop
         offset="1"
         stop-color="#13526b"

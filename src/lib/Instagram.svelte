@@ -21,10 +21,10 @@
   on:mouseover
   on:mouseout
   viewBox="0 0 512 512"
-  ><rect width="512" height="512" id="b" /><use fill="url(#a)" xlink:href="#b" /><use
+  ><rect width="512" height="512" id="b" /><use fill="url(#instagram)" xlink:href="#b" /><use
     fill="url(#c)"
     xlink:href="#b"
-  /><radialGradient id="a" cx=".4" cy="1" r="1"
+  /><radialGradient id="instagram" cx=".4" cy="1" r="1"
     ><stop offset=".1" stop-color="#fd5" /><stop offset=".5" stop-color="#ff543e" /><stop
       offset="1"
       stop-color="#c837ab"

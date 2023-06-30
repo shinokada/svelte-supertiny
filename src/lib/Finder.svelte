@@ -20,8 +20,8 @@
   on:mouseover
   on:mouseout
   viewBox="0 0 512 512"
-  ><rect width="512" height="512" fill="url(#a)" /><defs
-    ><linearGradient id="a" x2="0" y1="100%"
+  ><rect width="512" height="512" fill="url(#finder)" /><defs
+    ><linearGradient id="finder" x2="0" y1="100%"
       ><stop offset="0" stop-color="#1e73f2" /><stop
         offset="1"
         stop-color="#19d3fd"

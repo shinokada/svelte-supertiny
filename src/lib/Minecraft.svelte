@@ -23,7 +23,9 @@
   viewBox="0 0 512 512"
   stroke-linecap="square"
   fill="none"
-  ><rect width="512" height="512" fill="#111" /><g id="a" transform="matrix(19 11 0 22 76 142)"
+  ><rect width="512" height="512" fill="#111" /><g
+    id="minecraft"
+    transform="matrix(19 11 0 22 76 142)"
     ><path fill="#432" d="M.5.5h9v9h-9" /><path stroke="#864" d="M2 8v1h2V8h5V7 H7V5" /><path
       stroke="#643"
       d="M1 5zM2 9zM1 8V7h2V6h1M5 9h2V8H6V4M7 6h1v1M9 9zM9 4v1"

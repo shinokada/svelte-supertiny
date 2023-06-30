@@ -21,14 +21,14 @@
   on:mouseout
   viewBox="0 0 512 512"
   ><rect width="512" height="512" fill="#fff" /><linearGradient
-    id="a"
+    id="json"
     x1=".175"
     y1=".15"
     x2="1"
     y2=".85"><stop offset="0" /><stop offset="1" stop-color="#fff" /></linearGradient
   ><path
     id="b"
-    fill="url(#a)"
+    fill="url(#json)"
     d="M256 64c-99 0-192 81-192 192 0 123 102 192 192 192-21 0-125-23-125-166 0-89 73-139 125-119 0 0 56 21 56 93s-56 93-56 93c51 20 125-27 125-119 0-129-87-166-125-166z"
   /><use transform="rotate(180 256 256)" href="#b" /></svg
 >

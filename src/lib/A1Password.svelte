@@ -37,7 +37,7 @@
       stroke="#C7C7C7"
     /><g stroke="#000"
       ><use stroke="#fff" stroke-width="20" href="#a" /><path
-        id="a"
+        id="a1password"
         fill="#0A2D4D"
         d="M232 186q0-7 4-7h39q5 0 5 7v75q0 4-6 8-7 7 0 14 6 5 6 9v34q0 7-6 7h-36q-6 0-6-7v-74q0-4 6-8 8-8 0-15-6-4-6-8z"
       /></g
