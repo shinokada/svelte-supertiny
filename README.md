@@ -1,7 +1,7 @@
 <h1 align="center">Svelte Supertiny</h1>
 
 <p align="center">
-<a href="https://shinokada.github.io/svelte-supertiny">Svelte-Supertiny</a>
+<a href="https://github.com/shinokada/svelte-supertiny">Svelte-Supertiny</a>
 </p>
 
 <p align="center">
