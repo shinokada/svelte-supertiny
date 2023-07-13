@@ -1,38 +1,23 @@
-<h1 align="center">Svelte Supertiny</h1>
+# Svelte Supertiny
 
-<p align="center">
-<a href="https://github.com/shinokada/svelte-supertiny">Svelte-Supertiny</a>
-</p>
-
-<p align="center">
-<a href="https://github.com/sponsors/shinokada" target="_blank"><img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" height="25"></a>
-<a href="https://www.npmjs.com/package/svelte-supertiny" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/v/svelte-supertiny" alt="npm" height="25"></a>
-<a href="https://twitter.com/shinokada" rel="nofollow" target="_blank"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada" height="25"></a>
-<a href="https://opensource.org/licenses/MIT" rel="nofollow" target="_blank"><img src="https://img.shields.io/github/license/shinokada/svelte-supertiny" alt="License" height="25"></a>
-<a href="https://www.npmjs.com/package/svelte-supertiny" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-supertiny.svg" alt="npm" height="25"></a>
-</p>
+<div class="flex gap-2 my-8">
+<a href="https://github.com/sponsors/shinokada" target="_blank"><img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" alt="sponsors" height="25" style="height: 25px !important;"></a>
+<a href="https://www.npmjs.com/package/svelte-supertiny" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/v/svelte-supertiny" alt="npm" height="25" style="height: 25px !important;"></a>
+<a href="https://twitter.com/shinokada" rel="nofollow" target="_blank"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada" height="25" style="height: 25px !important;"></a>
+<a href="https://opensource.org/licenses/MIT" rel="nofollow" target="_blank"><img src="https://img.shields.io/github/license/shinokada/svelte-supertiny" alt="License" height="25" style="height: 25px !important;"></a>
+<a href="https://www.npmjs.com/package/svelte-supertiny" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-supertiny.svg" alt="npm" height="25" style="height: 25px !important;"></a>
+</div>
 
 340+ SVG logos for popular brands from <a href="https://github.com/edent/SuperTinyIcons">SuperTinyIcons</a> for Svelte.
 
 Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on GitHub: https://github.com/sponsors/shinokada. Your support helps me maintain and improve this package for the benefit of the community.
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/shinokada/svelte-supertiny/main/static/images/svelte-supertiny-450.webp" width="450" />
-</p>
 
 ## Installation
 
 ```sh
-npm i -D svelte-supertiny
+pnpm i -D svelte-supertiny
 ```
-
-## Icon list
-
-[Icon list](/icon-list.md)
-
-## Icon images
-
-[Icon images](/icon-images.md)
 
 ## Usage
 
@@ -76,10 +61,6 @@ To avoid any complaints from the editor, add `node16` or `nodenext` to `moduleRe
 }
 ```
 
-## REPL
-
-[Demo](https://svelte.dev/repl/45dbe3eda1614eb9a5ce20dd1884a505?version=4.0.1)
-
 ## Props
 
 - size = '24';
@@ -101,6 +82,16 @@ Use the `size` prop to change the size of icons.
 <Amazon size="30" />
 ```
 
+If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by including the desired classes in the class prop. For example:
+
+```html
+<script>
+  import { Amazon } from 'svelte-supertiny';
+</script>
+
+<Amazon class="shrink-0 h-40 w-40" />
+```
+
 ## CSS frameworks suport
 
 Use the `class` prop to change colors and add additional css.
@@ -118,7 +109,19 @@ Tailwind example:
 Bootstrap example:
 
 ```html
+<script>
+  import { Amazon } from 'svelte-supertiny';
+</script>
+
 <Amazon class="px-4" />
+```
+
+## aria-label
+
+All icons have aria-label. For example Amazon has aria-label="amazon". Use ariaLabel prop to modify the aria-label value.
+
+```html
+<Amazon ariaLabel="amazon prime" />
 ```
 
 ## Unfocusable icon
@@ -161,9 +164,23 @@ You can pass other attibutes as well.
 <svelte:component this="{Amazon}" />
 ```
 
-## Import all
+## Using onMount
 
-[REPL](https://svelte.dev/repl/6b2057d58c3841fc9f37b67960f02e27)
+```html
+<script>
+  import { Cib500px } from 'svelte-coreui-icons';
+  import { onMount } from 'svelte';
+  const props = {
+    size: '50',
+    color: '#ff0000'
+  };
+  onMount(() => {
+    const icon = new Cib500px({ target: document.body, props });
+  });
+</script>
+```
+
+## Import all
 
 Use `import * as Icon from 'svelte-supertiny`.
 
