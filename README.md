@@ -12,6 +12,20 @@
 
 Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on GitHub: https://github.com/sponsors/shinokada. Your support helps me maintain and improve this package for the benefit of the community.
 
+## Repo
+
+[GitHub repo](https://github.com/shinokada/svelte-supertiny/)
+
+## Original source
+
+[edent/SuperTinyIcons](https://github.com/edent/SuperTinyIcons)
+
+## License
+
+[Svelte-Supertiny License](https://github.com/shinokada/svelte-supertiny/LICENSE)
+
+[SuperTinyIcons License](https://github.com/edent/SuperTinyIcons/blob/master/LICENSE)
+
 
 ## Installation
 
