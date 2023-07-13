@@ -5,7 +5,7 @@
 
   import * as Icons from '$lib';
 
-  const contentClass = ' rounded-lg dark:bg-emerald-950 mt-4';
+  const contentClass = ' rounded-lg dark:bg-slate-950 mt-4';
   let searchTerm = '';
 
   $: filteredEntries = Object.entries(Icons).filter(([name, component]) => {
@@ -23,7 +23,7 @@
   <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white">
     {#each filteredEntries as [name, component]}
       <div class="flex gap-4 items-center text-lg">
-        <svelte:component this={component} class="shrink-0 h-8 w-8" />
+        <svelte:component this={component} class="shrink-0 h-12 w-12" />
         {name}
       </div>
     {/each}

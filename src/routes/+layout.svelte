@@ -36,16 +36,16 @@
     imageAlt: "Svelte Supertiny"
   }} />
   
-<Navbar let:hidden let:toggle class="dark:bg-emerald-950" >
+<Navbar let:hidden let:toggle class="dark:bg-slate-950" >
   <NavBrand href="/">
-    <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+    <span class="self-center whitespace-nowrap text-2xl font-semibold text-primary-700 dark:text-primary-500">
       Svelte Supertiny
     </span>
   </NavBrand>
   <NavHamburger on:click={toggle} />
   <NavUl {hidden}>
     <NavLi href="/" active={activeUrl === '/'}>Home</NavLi>
-    <NavLi href="/docs" active={activeUrl === '/docs'}>Docs</NavLi>
+    <NavLi href="/icons" active={activeUrl === '/icons'}>Icons</NavLi>
     <NavLi href="https://github.com/shinokada/svelte-supertiny">GitHub</NavLi>
     <NavLi href="https://svelte-svg-icons.vercel.app/">Icon sets</NavLi>
   </NavUl>
@@ -55,11 +55,12 @@
   <slot />
 </div>
 
-<Footer footerType="logo" class="dark:bg-emerald-950">
+<Footer footerType="logo" class="dark:bg-slate-950 mx-8">
   <div class="sm:flex sm:items-center sm:justify-between">
     <FooterBrand
     href="https://svelte-supertiny.vercel.app/"
     name="Svelte Supertiny"
+    classSpan="text-primary-700 dark:text-primary-500"
   />
   <FooterLinkGroup ulClass="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
     <FooterLink href="/">Home</FooterLink>
