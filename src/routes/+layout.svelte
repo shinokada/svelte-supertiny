@@ -38,7 +38,7 @@
     imageAlt: "Svelte Supertiny"
   }} />
   
-<header class="flex-none w-full mx-auto bg-white dark:bg-sslate-950">
+<header class="flex-none w-full mx-auto bg-white dark:bg-slate-950">
   <Navbar color="default" fluid let:hidden let:toggle class="dark:bg-slate-950 ">
     <NavBrand href="/">
       <span class="self-center whitespace-nowrap text-2xl font-semibold text-primary-900 dark:text-primary-500"> Svelte CoreUI Icons </span>
