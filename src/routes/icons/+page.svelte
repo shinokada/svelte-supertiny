@@ -11,16 +11,14 @@
   $: filteredEntries = Object.entries(Icons).filter(([name, component]) => {
     return name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
   });
-  let divClass = 'mx-16';
 </script>
 
 <TableSearch
   placeholder="Search by icon name"
   hoverable={true}
   bind:inputValue={searchTerm}
-  {divClass}
 >
-  <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white">
+  <div class="grid 2xl:grid-cols-5 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white">
     {#each filteredEntries as [name, component]}
       <div class="flex gap-4 items-center text-lg">
         <svelte:component this={component} class="shrink-0 h-12 w-12" />
