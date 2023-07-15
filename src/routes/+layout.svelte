@@ -72,9 +72,9 @@
   />
   <FooterLinkGroup ulClass="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
     <FooterLink href="/">Home</FooterLink>
-    <FooterLink href="/docs">Docs</FooterLink>
-    <FooterLink href="https://github.com/shinokada/svelte-supertiny/blob/main/LICENSE">Licensing</FooterLink>
-    <FooterLink href="https://github.com/shinokada/svelte-supertiny/">GitHub</FooterLink>
+    <FooterLink href="/icons">Icons</FooterLink>
+    <FooterLink href="https://github.com/shinokada/svelte-supertiny">GitHub</FooterLink>
+    <FooterLink href="https://svelte-svg-icons.vercel.app/">Icon sets</FooterLink>
   </FooterLinkGroup>
   </div>
 </Footer>
