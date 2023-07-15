@@ -23,7 +23,7 @@
 >
 <div class="xl:w-1/3 lg:w-2/5 md:w-1/2 sm:w-3/4 w-full p-4">
   <Label class="text-lg py-4 ">Icon size: {size}</Label>
-  <Range id="range1" min="20" max="80" bind:value={size} />
+  <Range id="range1" min="20" max="50" bind:value={size} />
 </div>
   <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white pt-8 ">
     {#each filteredEntries as [name, component]}
