@@ -1,6 +1,6 @@
 <script>
-  import Tabs from 'flowbite-svelte/Tabs.svelte';
-  import TabItem from 'flowbite-svelte/TabItem.svelte';
+  import Range from 'flowbite-svelte/Range.svelte';
+  import Label from 'flowbite-svelte/Label.svelte';
   import TableSearch from 'flowbite-svelte/TableSearch.svelte';
 
   import * as Icons from '$lib';
@@ -11,6 +11,8 @@
   $: filteredEntries = Object.entries(Icons).filter(([name, component]) => {
     return name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
   });
+  let size=24;
+
 </script>
 
 <TableSearch
@@ -19,10 +21,14 @@
   bind:inputValue={searchTerm}
   divClass='relative overflow-x-auto'
 >
-  <div class="grid 2xl:grid-cols-5 xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white">
+<div class="w-1/3 p-4">
+  <Label class="text-lg py-4 ">Icon size: {size}</Label>
+  <Range id="range1" min="20" max="80" bind:value={size} />
+</div>
+  <div class="grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white pt-8 ">
     {#each filteredEntries as [name, component]}
-      <div class="flex gap-4 items-center text-lg">
-        <svelte:component this={component} class="shrink-0 h-12 w-12" />
+      <div class="flex flex-wrap gap-4 items-center">
+        <svelte:component this={component} class="shrink-0" bind:size={size} />
         {name}
       </div>
     {/each}
