@@ -15,6 +15,8 @@
 
 </script>
 
+<h1>Svelte Supertiny: Icons</h1>
+
 <TableSearch
   placeholder="Search by icon name"
   hoverable={true}
