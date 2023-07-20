@@ -8,7 +8,7 @@
     "url": "https://blog.codewithshin.com"
   },
   "bugs": "https://github.com/shinokada/svelte-supertiny/issues",
-  "homepage": "https://shinokada.github.io/svelte-supertiny",
+  "homepage": "https://svelte-supertiny.vercel.app/",
   "license": "MIT",
   "scripts": {
     "dev": "vite dev",
