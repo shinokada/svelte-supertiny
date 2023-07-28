@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/shinokada/svelte-supertiny/compare/v0.1.7...v0.2.1) (2023-07-28)
+
+
+### Features
+
+* replace with two files ([8bd394a](https://github.com/shinokada/svelte-supertiny/commit/8bd394a077bb3b5c3bf02725dbc27fc46c80e8d2))
+
 ### [0.1.7](https://github.com/shinokada/svelte-supertiny/compare/v0.1.6...v0.1.7) (2023-07-20)
 
 
