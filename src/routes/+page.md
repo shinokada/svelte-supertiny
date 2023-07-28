@@ -39,46 +39,19 @@ In a svelte file:
 
 ```html
 <script>
-  import { Amazon } from 'svelte-supertiny';
+  import { Icon } from 'svelte-supertiny';
 </script>
 
-<Amazon />
-```
-
-## Faster compiling
-
-If you need only a few icons from this library in your Svelte app, import them directly. This can optimize compilation speed and improve performance by reducing the amount of code processed during compilation.
-
-```html
-<script>
-  import Amazon from 'svelte-supertiny/Amazon.svelte';
-</script>
-
-<Amazon />
-```
-
-If you are a TypeScript user, install **typescript version 5.0.0 or above**.
-
-```sh
-pnpm i -D typescript@latest
-```
-
-To avoid any complaints from the editor, add `node16` or `nodenext` to `moduleResolution` in your tsconfig.json file.
-
-```json
-{
-  //...
-  "compilerOptions": {
-    // ...
-    "moduleResolution": "nodenext"
-  }
-}
+<Icon name="amazon" />
 ```
 
 ## Props
 
-- size = '24';
-- role = 'img';
+- @prop name;
+- @prop width = '50';
+- @prop height = '50';
+- @prop role = 'img';
+- @prop ariaLabel='icon name'
 
 ## IDE support
 
