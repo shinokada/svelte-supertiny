@@ -59,56 +59,41 @@ If you are using an LSP-compatible editor, such as VSCode, Atom, Sublime Text, o
 
 ## Size
 
-Use the `size` prop to change the size of icons.
+Use the `width` and `height` props to change the size of icons.
 
 ```html
-<script>
-  import { Amazon } from 'svelte-supertiny';
-</script>
-
-<Amazon size="30" />
+<Icon name="amazon" width="100" height="100" />
 ```
 
-If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by including the desired classes in the class prop. For example:
+If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by including the desired classes in the `class` prop. For example:
 
 ```html
-<script>
-  import { Amazon } from 'svelte-supertiny';
-</script>
-
-<Amazon class="shrink-0 h-40 w-40" />
+<Icon name="amazon" class="shrink-0 h-20 w-20" />
 ```
 
 ## CSS frameworks suport
 
-Use the `class` prop to change colors and add additional css.
+You can apply CSS framework color and other attributes directly to the icon component or its parent tag using the `class` prop.
 
-Tailwind example:
+Tailwind CSS example:
 
 ```html
-<script>
-  import { Amazon } from 'svelte-supertiny';
-</script>
-
-<Amazon class="m-8" />
+<Icon name="amazon" class="inline m-1" />
 ```
 
-Bootstrap example:
+Bootstrap examples:
 
 ```html
-<script>
-  import { Amazon } from 'svelte-supertiny';
-</script>
-
-<Amazon class="px-4" />
+<Icon name="amazon" class="position-absolute top-0 px-1" />
 ```
 
 ## aria-label
 
-All icons have aria-label. For example Amazon has aria-label="amazon". Use ariaLabel prop to modify the aria-label value.
+All icons have aria-label. For example `amazon` has `aria-label="amazon"`.
+Use `ariaLabel` prop to modify the `aria-label` value.
 
 ```html
-<Amazon ariaLabel="amazon prime" />
+<Icon name="amazon" ariaLabel="big amazon"/>
 ```
 
 ## Unfocusable icon
@@ -116,7 +101,7 @@ All icons have aria-label. For example Amazon has aria-label="amazon". Use ariaL
 If you want to make an icon unfocusable, add `tabindex="-1"`.
 
 ```html
-<Amazon tabindex="-1" />
+<Icon name="amazon" tabindex="-1" />
 ```
 
 ## Events
@@ -138,52 +123,46 @@ All icons have the following events:
 You can pass other attibutes as well.
 
 ```html
-<Amazon tabindex="0" />
+<Icon name="amazon" tabindex="0" />
 ```
 
 ## Using svelte:component
 
 ```html
-<script>
-  import { Amazon } from 'svelte-supertiny';
-</script>
-
-<svelte:component this="{Amazon}" />
+<svelte:component this="{Icon}" name="amazon"/>
 ```
 
 ## Using onMount
 
 ```html
 <script>
-  import { Cib500px } from 'svelte-coreui-icons';
+  import {Icon} from 'svelte-supertine';
   import { onMount } from 'svelte';
   const props = {
+    name: 'amazon',
     size: '50',
-    color: '#ff0000'
   };
   onMount(() => {
-    const icon = new Cib500px({ target: document.body, props });
+    const icon = new Icon({ target: document.body, props });
   });
 </script>
 ```
 
 ## Import all
 
-Use `import * as Icon from 'svelte-supertiny`.
+Use `import {Icon, icons} from 'svelte-supertiny';`.
 
 ```html
 <script>
-  import * as Icon from 'svelte-supertiny';
+  import {Icon, icons} from 'svelte-supertiny';
 </script>
 
-<h1>Size</h1>
-<Icon.Amazon size="30" />
-<Icon.Amazon size="40" />
-<Icon.Amazon size="50" />
-
-<h1>Tailwind CSS</h1>
-<Icon.Amazon class="m-4" />
-<Icon.Amazon class="m-8" />
+{#each Object.keys(icons) as name}
+<div class="flex gap-4 items-center text-lg">
+  <Icon name={name} bind:width={size} bind:height={size} class="shrink-0"/>
+  {name}
+</div>
+{/each}
 ```
 
 ## Other icons
