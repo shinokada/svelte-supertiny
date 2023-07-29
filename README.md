@@ -48,8 +48,8 @@ In a svelte file:
 ## Props
 
 - @prop name;
-- @prop width = '50';
-- @prop height = '50';
+- @prop width = "512";
+- @prop height = "512";
 - @prop role = 'img';
 - @prop ariaLabel='icon name'
 
