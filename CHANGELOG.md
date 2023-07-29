@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.5](https://github.com/shinokada/svelte-supertiny/compare/v0.2.4...v0.2.5) (2023-07-29)
+
+
+### Bug Fixes
+
+* restProps position and docs props update ([2c95523](https://github.com/shinokada/svelte-supertiny/commit/2c95523a768b1ec4de056cf015c4cf0aa9f7d46a))
+
 ### [0.2.4](https://github.com/shinokada/svelte-supertiny/compare/v0.2.3...v0.2.4) (2023-07-28)
 
 
