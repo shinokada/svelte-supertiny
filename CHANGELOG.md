@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.7](https://github.com/shinokada/svelte-supertiny/compare/v0.2.6...v0.2.7) (2023-07-29)
+
+
+### Bug Fixes
+
+* update add-exports-to-package-json ([bd89531](https://github.com/shinokada/svelte-supertiny/commit/bd8953131d559ff88e913c01b442acc19aebc22a))
+
 ### [0.2.6](https://github.com/shinokada/svelte-supertiny/compare/v0.2.5...v0.2.6) (2023-07-29)
 
 
