@@ -33,7 +33,7 @@ viewBox="0 0 {displayIcon.box} {displayIcon.box}"
 
 <!--
 @component
-[Go to Document](https://shinokada.github.io/svelte-supertiny/)
+[Go to Document](https://svelte-supertiny.vercel.app/)
 ## Props
 @prop name;
 @prop width = "512";
