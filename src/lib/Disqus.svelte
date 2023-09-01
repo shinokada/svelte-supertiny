@@ -1,0 +1,35 @@
+<script>
+  export let size = '24';
+  export let role = 'img';
+</script>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  aria-label="Disqus"
+  {role}
+  width={size}
+  height={size}
+  {...$$restProps}
+  on:click
+  on:keydown
+  on:keyup
+  on:focus
+  on:blur
+  on:mouseenter
+  on:mouseleave
+  on:mouseover
+  on:mouseout
+  viewBox="0 0 512 512"
+  ><rect width="512" height="512" fill="#fff" /><path
+    fill="#2e9fff"
+    d="m72 398 28-70a172 172 0 1146 60m109-46c127 0 127-172 3-172h-69v172m47-42v-88h21c60 0 60 88 0 88"
+  /></svg
+>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.vercel.app/)
+## Props
+@prop export let size = '24';
+@prop export let role = 'img';
+-->

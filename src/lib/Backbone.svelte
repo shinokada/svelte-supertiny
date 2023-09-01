@@ -1,0 +1,38 @@
+<script>
+  export let size = '24';
+  export let role = 'img';
+</script>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  aria-label="Backbone"
+  {role}
+  width={size}
+  height={size}
+  {...$$restProps}
+  on:click
+  on:keydown
+  on:keyup
+  on:focus
+  on:blur
+  on:mouseenter
+  on:mouseleave
+  on:mouseover
+  on:mouseout
+  viewBox="0 0 512 512"
+  fill="#0071b5"
+  ><rect width="512" height="512" fill="#fff" /><g stroke="#848484" stroke-width="2"
+    ><path d="M380 102v167l-124 70v-48l83-47v-74l-83 47v-44l124-71" /><path
+      fill="#002a41"
+      d="M132 102v167l124 70v-48l-83-47v-74l83 47v-44l-124-71M380 410V243l-124-70v48l83 47v71l-83-48v48l124 71"
+    /><path d="M132 410V243l124-70v48l-83 47v71l83-48v48l-124 71" /></g
+  ></svg
+>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.vercel.app/)
+## Props
+@prop export let size = '24';
+@prop export let role = 'img';
+-->

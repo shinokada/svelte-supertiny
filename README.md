@@ -26,7 +26,6 @@ Thank you for considering my open-source package. If you use it in a commercial 
 
 [SuperTinyIcons License](https://github.com/edent/SuperTinyIcons/blob/master/LICENSE)
 
-
 ## Installation
 
 ```sh
@@ -39,19 +38,28 @@ In a svelte file:
 
 ```html
 <script>
-  import { Icon } from 'svelte-supertiny';
+  import { Svelte } from 'svelte-supertiny';
 </script>
 
-<Icon name="amazon" />
+<Svelte />
+```
+
+## Faster compiling
+
+If you need only a few icons from this library in your Svelte app, import them directly. This can optimize compilation speed and improve performance by reducing the amount of code processed during compilation.
+
+```html
+<script>
+  import Svelte from 'svelte-supertiny/Svelte.svelte';
+</script>
+
+<Svelte />
 ```
 
 ## Props
 
-- @prop name;
-- @prop width = "512";
-- @prop height = "512";
-- @prop role = 'img';
-- @prop ariaLabel='icon name'
+- size = '24';
+- role = 'img';
 
 ## IDE support
 
@@ -59,41 +67,146 @@ If you are using an LSP-compatible editor, such as VSCode, Atom, Sublime Text, o
 
 ## Size
 
-Use the `width` and `height` props to change the size of icons.
+Use the `size` prop to change the size of icons.
 
 ```html
-<Icon name="amazon" width="100" height="100" />
+<script>
+  import { Svelte } from 'svelte-supertiny';
+</script>
+
+<Svelte size="30" />
 ```
 
-If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by including the desired classes in the `class` prop. For example:
+If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by including the desired classes in the class prop. For example:
 
 ```html
-<Icon name="amazon" class="shrink-0 h-20 w-20" />
+<script>
+  import { Svelte } from 'svelte-supertiny';
+</script>
+
+<Svelte class="shrink-0 h-40 w-40" />
 ```
+
+## Creating a Default Global Icon Setting in Svelte
+
+You can create a config file, `/src/lib/icon.config.json`.
+
+The `Icon` component serves as a wrapper for svelte:component, allowing you to establish a global default setting or expand the capabilities of a component.
+
+To create a default global icon setting, follow these steps:
+
+### Configuration File
+
+Start by creating a configuration file named `/src/lib/icon.config.json` with the following structure:
+
+```json
+{
+  "config1": {
+    "size": 40,
+  },
+  "config2": {
+    "size": 50,
+  }
+}
+```
+
+In this JSON file, you can define different configurations (config1 and config2 in this case) for your icons, specifying attributes like size, variation, and color.
+
+### Implementation
+
+In your Svelte page file, make use of the configurations from the JSON file:
+
+```html
+<script lang="ts">
+  type IconConfig = {
+    config1: {
+      size: number;
+    };
+    config2: {
+      size: number;
+    };
+  };
+  import config from '$lib/icon.config.json';
+  import { Icon, Svelte, React } from 'svelte-supertiny';
+
+  const iconConfig: IconConfig = config;
+  const config1 = iconConfig.config1;
+  const config2 = iconConfig.config2;
+</script>
+
+<Icon {...config1} icon="{Svelte}" />
+<Icon {...config2} icon="{React}" />
+```
+
+We import the configurations from the JSON file and assign them to config1 and config2. We then utilize the Icon component with the spread attributes `{...config1}` and `{...config2}` to apply the respective configurations to each icon.
+
+### Custom Default Icon
+
+If you wish to create a custom default icon, you can follow these steps:
+
+Create a Svelte component named `src/lib/MyIcon.svelte`:
+
+```html
+<script lang="ts">
+  import type { ComponentType } from 'svelte';
+  const config = {
+    size: 30,
+    color: '#FF5733'
+  };
+  import { Icon } from 'svelte-supertiny';
+  export let icon: ComponentType;
+</script>
+
+<Icon {...config} {icon} />
+```
+
+This component, `MyIcon.svelte`, accepts an `icon` prop which you can use to pass in the specific icon component you want to display. The default configuration is also applied to the icon.
+
+### Implementation in a Page
+
+To use your custom default icon in a Svelte page, do the following:
+
+```html
+<script>
+  import MyIcon from '$lib/MyIcon.svelte';
+  import { Svelte } from 'svelte-supertiny';
+</script>
+
+<MyIcon icon="{Svelte}" />
+```
+
+Here, we import the `MyIcon` component and the `Svelte` icon. By passing the `Svelte` icon to the `icon` prop of MyIcon, you apply the default configuration to the icon.
 
 ## CSS frameworks suport
 
-You can apply CSS framework color and other attributes directly to the icon component or its parent tag using the `class` prop.
+Use the `class` prop to change colors and add additional css.
 
-Tailwind CSS example:
+Tailwind example:
 
 ```html
-<Icon name="amazon" class="inline m-1" />
+<script>
+  import { Svelte } from 'svelte-supertiny';
+</script>
+
+<Svelte class="m-8" />
 ```
 
-Bootstrap examples:
+Bootstrap example:
 
 ```html
-<Icon name="amazon" class="position-absolute top-0 px-1" />
+<script>
+  import { Svelte } from 'svelte-supertiny';
+</script>
+
+<Svelte class="px-4" />
 ```
 
 ## aria-label
 
-All icons have aria-label. For example `amazon` has `aria-label="amazon"`.
-Use `ariaLabel` prop to modify the `aria-label` value.
+All icons have aria-label. For example Svelte has aria-label="amazon". Use ariaLabel prop to modify the aria-label value.
 
 ```html
-<Icon name="amazon" ariaLabel="big amazon"/>
+<Svelte ariaLabel="amazon prime" />
 ```
 
 ## Unfocusable icon
@@ -101,7 +214,7 @@ Use `ariaLabel` prop to modify the `aria-label` value.
 If you want to make an icon unfocusable, add `tabindex="-1"`.
 
 ```html
-<Icon name="amazon" tabindex="-1" />
+<Svelte tabindex="-1" />
 ```
 
 ## Events
@@ -123,46 +236,52 @@ All icons have the following events:
 You can pass other attibutes as well.
 
 ```html
-<Icon name="amazon" tabindex="0" />
+<Svelte tabindex="0" />
 ```
 
 ## Using svelte:component
 
 ```html
-<svelte:component this="{Icon}" name="amazon"/>
+<script>
+  import { Svelte } from 'svelte-supertiny';
+</script>
+
+<svelte:component this="{Svelte}" />
 ```
 
 ## Using onMount
 
 ```html
 <script>
-  import {Icon} from 'svelte-supertine';
+  import { Cib500px } from 'svelte-coreui-icons';
   import { onMount } from 'svelte';
   const props = {
-    name: 'amazon',
     size: '50',
+    color: '#ff0000'
   };
   onMount(() => {
-    const icon = new Icon({ target: document.body, props });
+    const icon = new Cib500px({ target: document.body, props });
   });
 </script>
 ```
 
 ## Import all
 
-Use `import {Icon, icons} from 'svelte-supertiny';`.
+Use `import * as Icon from 'svelte-supertiny`.
 
 ```html
 <script>
-  import {Icon, icons} from 'svelte-supertiny';
+  import * as Icon from 'svelte-supertiny';
 </script>
 
-{#each Object.keys(icons) as name}
-<div class="flex gap-4 items-center text-lg">
-  <Icon name={name} class="shrink-0"/>
-  {name}
-</div>
-{/each}
+<h1>Size</h1>
+<Icon.Svelte size="30" />
+<Icon.Svelte size="40" />
+<Icon.Svelte size="50" />
+
+<h1>Tailwind CSS</h1>
+<Icon.Svelte class="m-4" />
+<Icon.Svelte class="m-8" />
 ```
 
 ## Other icons

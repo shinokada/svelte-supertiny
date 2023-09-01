@@ -1,0 +1,46 @@
+<script>
+  export let size = '24';
+  export let role = 'img';
+</script>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  aria-label="Google Calendar"
+  {role}
+  width={size}
+  height={size}
+  {...$$restProps}
+  on:click
+  on:keydown
+  on:keyup
+  on:focus
+  on:blur
+  on:mouseenter
+  on:mouseleave
+  on:mouseover
+  on:mouseout
+  viewBox="0 0 512 512"
+  ><rect width="512" height="512" fill="#fff" /><path
+    d="m100 340h74V174h166V100H137q-37 0-37 35"
+    fill="#4285f4"
+  /><path d="m338 100v76h74v-41q0-35-35-35" fill="#1967d2" /><path
+    d="m100 338v39q0 35 35 35h41v-74"
+    fill="#188038"
+  /><path d="M348 338H174v74H338" fill="#34a853" /><path
+    d="m338 339V174h74V338"
+    fill="#fbbc04"
+  /><path d="M338 412v-74h74" fill="#ea4335" /><path
+    d="m204 229a25 22 1 1125 27h-9 9a25 22 1 11-25 27m66-52 27-19h4v96"
+    stroke="#4285f4"
+    stroke-width="15"
+    fill="none"
+  /></svg
+>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.vercel.app/)
+## Props
+@prop export let size = '24';
+@prop export let role = 'img';
+-->

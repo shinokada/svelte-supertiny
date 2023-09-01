@@ -3,17 +3,15 @@
   import Label from 'flowbite-svelte/Label.svelte';
   import TableSearch from 'flowbite-svelte/TableSearch.svelte';
 
-  import Icon from '$lib/Icon.svelte';
-  import icons from '$lib/icons.js';
+  import * as Icons from '$lib';
 
   const contentClass = ' rounded-lg dark:bg-slate-950 mt-4';
   let searchTerm = '';
 
-  $: filteredIconNames = Object.keys(icons).filter(name => {
+  $: filteredEntries = Object.entries(Icons).filter(([name, component]) => {
     return name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
   });
-  let size="24";
-
+  let size = 24;
 </script>
 
 <h1>Svelte Supertiny: Icons</h1>
@@ -22,18 +20,20 @@
   placeholder="Search by icon name"
   hoverable={true}
   bind:inputValue={searchTerm}
-  divClass='relative overflow-x-auto'
+  divClass="relative overflow-x-auto"
 >
-<div class="xl:w-1/3 lg:w-2/5 md:w-1/2 sm:w-3/4 w-full p-4">
-  <Label class="text-lg py-4 ">Icon size: {size}</Label>
-  <Range id="range1" min="20" max="50" bind:value={size} />
-</div>
-  <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white pt-8 ">
-    {#each filteredIconNames as iconName, i}
-    <div class="flex gap-4 items-center text-lg">
-      <Icon name={iconName} bind:width={size} bind:height={size} class="shrink-0" />
-      {iconName}
-    </div>
+  <div class="xl:w-1/3 lg:w-2/5 md:w-1/2 sm:w-3/4 w-full p-4">
+    <Label class="text-lg py-4 ">Icon size: {size}</Label>
+    <Range id="range1" min="20" max="50" bind:value={size} />
+  </div>
+  <div
+    class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white pt-8"
+  >
+    {#each filteredEntries as [name, component]}
+      <div class="flex flex-wrap gap-4 items-center">
+        <svelte:component this={component} class="shrink-0" bind:size />
+        {name}
+      </div>
     {/each}
   </div>
 </TableSearch>
