@@ -102,10 +102,10 @@ Start by creating a configuration file named `/src/lib/icon.config.json` with th
 ```json
 {
   "config1": {
-    "size": 40,
+    "size": 40
   },
   "config2": {
-    "size": 50,
+    "size": 50
   }
 }
 ```
