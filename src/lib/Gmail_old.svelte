@@ -1,6 +1,8 @@
 <script>
-  export let size = '24';
-  export let role = 'img';
+  import { getContext } from 'svelte';
+  const ctx = getContext('iconCtx') ?? {};
+  export let size = ctx.size || '24';
+  export let role = ctx.role || 'img';
 </script>
 
 <svg
@@ -20,16 +22,16 @@
   on:mouseover
   on:mouseout
   viewBox="0 0 512 512"
-  ><rect width="512" height="512" fill="#fff" /><path
-    fill="#f2f2f2"
-    d="M120 392V151.075h272V392"
-  /><path fill-opacity=".05" d="M256 285L120 392l-4-212" /><path
-    fill="#d54c3f"
-    d="M120 392H97c-12 0-22-10-22-23V143h45z"
-  /><path fill-opacity=".08" d="M317 392h77V159H82" /><path
-    fill="#f2f2f2"
-    d="M97 121h318L256 234"
-  /><path fill="#b63524" d="M392 392h23c12 0 22-10 22-23V143h-45z" /><path
+  ><path d="m0 0H512V512H0" fill="#fff" /><path fill="#f2f2f2" d="M120 392V151.075h272V392" /><path
+    fill-opacity=".05"
+    d="M256 285L120 392l-4-212"
+  /><path fill="#d54c3f" d="M120 392H97c-12 0-22-10-22-23V143h45z" /><path
+    fill-opacity=".08"
+    d="M317 392h77V159H82"
+  /><path fill="#f2f2f2" d="M97 121h318L256 234" /><path
+    fill="#b63524"
+    d="M392 392h23c12 0 22-10 22-23V143h-45z"
+  /><path
     fill="none"
     stroke="#de5145"
     stroke-linecap="round"
@@ -42,6 +44,6 @@
 @component
 [Go to docs](https://svelte-supertiny.vercel.app/)
 ## Props
-@prop export let size = '24';
-@prop export let role = 'img';
+@prop export let size = ctx.size || '24';
+@prop export let role = ctx.role || 'img';
 -->

@@ -1,6 +1,8 @@
 <script>
-  export let size = '24';
-  export let role = 'img';
+  import { getContext } from 'svelte';
+  const ctx = getContext('iconCtx') ?? {};
+  export let size = ctx.size || '24';
+  export let role = ctx.role || 'img';
 </script>
 
 <svg
@@ -20,7 +22,7 @@
   on:mouseover
   on:mouseout
   viewBox="0 0 512 512"
-  ><rect width="512" height="512" fill="#fff" /><g fill="#17b2e7"
+  ><path d="m0 0H512V512H0" fill="#fff" /><g fill="#17b2e7"
     ><path
       d="M441.5 269.5L383 327.9c-7 7-14.5 7-21.5 0l-60.3-60.4c-6.8-6.8-6.8-14.3 0-21.1l60.6-60.7c6.6-6.5 14.3-6.5 20.9 0l58.7 58.8c9 8.7 8.4 16.6 0 25z"
     /><path
@@ -37,6 +39,6 @@
 @component
 [Go to docs](https://svelte-supertiny.vercel.app/)
 ## Props
-@prop export let size = '24';
-@prop export let role = 'img';
+@prop export let size = ctx.size || '24';
+@prop export let role = ctx.role || 'img';
 -->

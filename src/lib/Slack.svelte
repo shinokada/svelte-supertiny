@@ -1,11 +1,12 @@
 <script>
-  export let size = '24';
-  export let role = 'img';
+  import { getContext } from 'svelte';
+  const ctx = getContext('iconCtx') ?? {};
+  export let size = ctx.size || '24';
+  export let role = ctx.role || 'img';
 </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
   aria-label="Slack"
   {role}
   width={size}
@@ -21,22 +22,21 @@
   on:mouseover
   on:mouseout
   viewBox="0 0 512 512"
-  ><rect width="512" height="512" fill="#fff" /><g fill="#e01e5a"
-    ><path
-      id="slack"
-      d="M149 305a39 39 0 01-78 0c0-22 17 -39 39 -39h39zM168 305a39 39 0 0178 0v97a39 39 0 01-78 0z"
-    /></g
-  ><use xlink:href="#a" fill="#36c5f0" transform="rotate(90,256,256)" /><use
-    xlink:href="#a"
-    fill="#2eb67d"
-    transform="rotate(180,256,256)"
-  /><use xlink:href="#a" fill="#ecb22e" transform="rotate(270,256,256)" /></svg
+  stroke-width="78"
+  stroke-linecap="round"
+  ><path d="m0 0H512V512H0" fill="#fff" /><path stroke="#36c5f0" d="m110 207h97m0-97h.1v-.1" /><path
+    stroke="#2eb67d"
+    d="m305 110v97m97 0v.1h.1"
+  /><path stroke="#ecb22e" d="m402 305h-97m0 97h-.1v.1" /><path
+    stroke="#e01e5a"
+    d="M110 305h.1v.1m97 0v97"
+  /></svg
 >
 
 <!--
 @component
 [Go to docs](https://svelte-supertiny.vercel.app/)
 ## Props
-@prop export let size = '24';
-@prop export let role = 'img';
+@prop export let size = ctx.size || '24';
+@prop export let role = ctx.role || 'img';
 -->

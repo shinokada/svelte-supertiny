@@ -1,6 +1,8 @@
 <script>
-  export let size = '24';
-  export let role = 'img';
+  import { getContext } from 'svelte';
+  const ctx = getContext('iconCtx') ?? {};
+  export let size = ctx.size || '24';
+  export let role = ctx.role || 'img';
 </script>
 
 <svg
@@ -21,7 +23,7 @@
   on:mouseover
   on:mouseout
   viewBox="0 0 512 512"
-  ><rect id="google_maps_old" width="512" height="512" x="0" y="0" fill="#fff" /><clipPath id="b"
+  ><path id="google_maps_old" d="m0 0H512V512H0" fill="#fff" /><clipPath id="b"
     ><use xlink:href="#a" /></clipPath
   ><g clip-path="url(#b)"
     ><path fill="#35a85b" d="M0 512V0h512z" /><path fill="#5881ca" d="M256 288L32 512h448z" /><path
@@ -43,6 +45,6 @@
 @component
 [Go to docs](https://svelte-supertiny.vercel.app/)
 ## Props
-@prop export let size = '24';
-@prop export let role = 'img';
+@prop export let size = ctx.size || '24';
+@prop export let role = ctx.role || 'img';
 -->
