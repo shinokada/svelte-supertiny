@@ -1,5 +1,3 @@
-
-
 # Svelte Supertiny
 
 <div class="flex gap-2 my-8">
@@ -88,7 +86,6 @@ If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by i
 
 <Svelte class="shrink-0 h-40 w-40" />
 ```
-
 
 ## Setting Global Icon using setContext
 

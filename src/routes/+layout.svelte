@@ -67,7 +67,7 @@
       </NavBrand>
 
       <NavUl
-      {activeUrl}
+        {activeUrl}
         {hidden}
         {divClass}
         {ulClass}

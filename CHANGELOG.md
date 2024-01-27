@@ -4,11 +4,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.3.2](https://github.com/shinokada/svelte-supertiny/compare/v0.3.1...v0.3.2) (2023-09-21)
 
-
 ### Features
 
-* add context ([56e5cbc](https://github.com/shinokada/svelte-supertiny/commit/56e5cbc635897d61d6320ae27992a9583816057b))
-* add sidebar menu ([fe57e1b](https://github.com/shinokada/svelte-supertiny/commit/fe57e1b66ea66e1c200e0936885280f8397bab25))
+- add context ([56e5cbc](https://github.com/shinokada/svelte-supertiny/commit/56e5cbc635897d61d6320ae27992a9583816057b))
+- add sidebar menu ([fe57e1b](https://github.com/shinokada/svelte-supertiny/commit/fe57e1b66ea66e1c200e0936885280f8397bab25))
 
 ### [0.3.1](https://github.com/shinokada/svelte-supertiny/compare/v0.2.9...v0.3.1) (2023-09-01)
 
