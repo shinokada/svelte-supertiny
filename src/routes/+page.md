@@ -20,16 +20,6 @@ Thank you for considering my open-source package. If you use it in a commercial 
 
 [GitHub repo](https://github.com/shinokada/svelte-supertiny/)
 
-## Original source
-
-[edent/SuperTinyIcons](https://github.com/edent/SuperTinyIcons)
-
-## License
-
-[Svelte-Supertiny License](https://github.com/shinokada/svelte-supertiny/LICENSE)
-
-[SuperTinyIcons License](https://github.com/edent/SuperTinyIcons/blob/master/LICENSE)
-
 ## Installation
 
 ```sh
@@ -326,6 +316,16 @@ Use `import * as Icon from 'svelte-supertiny`.
 <Icon.Svelte class="m-8" />
 ```
 
+## Original source
+
+[edent/SuperTinyIcons](https://github.com/edent/SuperTinyIcons)
+
+## License
+
+[Svelte-Supertiny License](https://github.com/shinokada/svelte-supertiny/LICENSE)
+
+[SuperTinyIcons License](https://github.com/edent/SuperTinyIcons/blob/master/LICENSE)
+
 ## Other icons
 
-- [Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
+- [Svelte-Icon-Sets](https://svelte-svg-icons.codewithshin.com/)
