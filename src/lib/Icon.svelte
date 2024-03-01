@@ -9,7 +9,7 @@
 
 <!--
 @component
-[Go to docs](https://svelte-supertiny.vercel.app/)
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
 ## Props
 @prop export let icon: ComponentType;
 @prop export let size: number = 24;

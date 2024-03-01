@@ -1527,6 +1527,7 @@
     "./Zorinos.svelte": {
       "types": "./dist/Zorinos.svelte.d.ts",
       "svelte": "./dist/Zorinos.svelte"
-    }
+    },
+    "./package.json": "./package.json"
   }
 }
