@@ -22,8 +22,20 @@ Thank you for considering my open-source package. If you use it in a commercial 
 
 ## Installation
 
+Find the latest verion 1 and 2 from the [releases website](https://github.com/shinokada/svelte-supertiny/releases).
+
+Svelte 4/5
+
 ```sh
-pnpm i -D svelte-supertiny
+// install version 1
+pnpm i -D svelte-supertiny@1.x.x
+```
+
+Svelte 5:Runes
+
+```sh
+// install version 2
+pnpm i -D svelte-supertiny@2.x.x
 ```
 
 ## Usage
