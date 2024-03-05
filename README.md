@@ -1,38 +1,57 @@
-# create-svelte
+# Svelte Supertiny
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+<div class="flex gap-2 my-8">
+<a href="https://github.com/sponsors/shinokada" target="_blank"><img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" alt="sponsors" height="25" style="height: 25px !important;"></a>
+<a href="https://www.npmjs.com/package/svelte-supertiny" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/v/svelte-supertiny" alt="npm" height="25" style="height: 25px !important;"></a>
+<a href="https://twitter.com/shinokada" rel="nofollow" target="_blank"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada" height="25" style="height: 25px !important;"></a>
+<a href="https://opensource.org/licenses/MIT" rel="nofollow" target="_blank"><img src="https://img.shields.io/github/license/shinokada/svelte-supertiny" alt="License" height="25" style="height: 25px !important;"></a>
+<a href="https://www.npmjs.com/package/svelte-supertiny" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-supertiny.svg" alt="npm" height="25" style="height: 25px !important;"></a>
+</div>
 
-## Creating a project
+340+ SVG logos for popular brands from <a href="https://github.com/edent/SuperTinyIcons">SuperTinyIcons</a> for Svelte.
 
-If you're seeing this, you've probably already done this step. Congrats!
+Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on GitHub: https://github.com/sponsors/shinokada. Your support helps me maintain and improve this package for the benefit of the community.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Docs
 
-# create a new project in my-app
-npm create svelte@latest my-app
+See the [Svelte Supertiny documentation](https://svelte-supertiny.codewithshin.com/) to learn more.
+
+## Icons
+
+[Icon names](https://svelte-supertiny.codewithshin.com/icons)
+
+## Repo
+
+[GitHub repo](https://github.com/shinokada/svelte-supertiny/)
+
+## Installation
+
+Find the latest version for version 1 and 2 at the [releases page on GitHub](https://github.com/shinokada/svelte-supertiny/releases).
+
+### Svelte 4/5
+
+```sh
+pnpm i -D svelte-supertiny@1.x.x
 ```
 
-## Developing
+### Svelte 5:Runes
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+After installing Svelte 5 and enabling `runes` in `svelte.config.js`:
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```sh
+pnpm i -D svelte-supertiny@2.x.x
 ```
 
-## Building
+## Original source
 
-To create a production version of your app:
+[edent/SuperTinyIcons](https://github.com/edent/SuperTinyIcons)
 
-```bash
-npm run build
-```
+## License
 
-You can preview the production build with `npm run preview`.
+[Svelte-Supertiny License](https://github.com/shinokada/svelte-supertiny/LICENSE)
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+[SuperTinyIcons License](https://github.com/edent/SuperTinyIcons/blob/master/LICENSE)
+
+## Other icons
+
+- [Svelte-Icon-Sets](https://svelte-svg-icons.codewithshin.com/)
