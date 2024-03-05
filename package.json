@@ -28,9 +28,10 @@
     "gen:compo-data": "svelte-lib-helpers compo-data",
     "copy:package": "svelte-lib-helpers package",
     "lib-helpers": "npm run format && npm run gen:docs5 && npm run build && npm run gen:exports && npm run copy:package",
-    "package:publish": "standard-version && git push --follow-tags origin main && npm publish"
+    "package:publish": "git push --follow-tags origin main && npm publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.1",
     "@playwright/test": "^1.42.1",
     "@sveltejs/adapter-auto": "^3.1.1",
     "@sveltejs/kit": "^2.5.2",
