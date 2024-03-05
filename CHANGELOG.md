@@ -4,6 +4,12 @@
 
 ### Patch Changes
 
+- 7819fcc: fix: run lib-helpers to package
+
+## 2.0.0
+
+### Patch Changes
+
 - e55ad75: fix: update Icon.svelte
 
 ## 2.0.0-next.1
