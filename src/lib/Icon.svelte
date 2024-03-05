@@ -3,7 +3,6 @@
   interface Props {
     icon: ComponentType;
     size?: number;
-    color?: string;
     role?: string;
     ariaLabel?: string;
     class?: string;
@@ -11,7 +10,6 @@
   let {
     icon,
     size = 24,
-    color,
     role = 'img',
     ariaLabel = 'Icon',
     class: classname,
@@ -24,7 +22,6 @@
   {...restProps}
   {role}
   {size}
-  {color}
   class={classname}
   aria-label={ariaLabel}
 />
@@ -35,7 +32,6 @@
 ## Props
 @props: icon: ComponentType;
 @props:size?:  number; = 24;
-@props:color?: string;
 @props:role?:  string; = 'img';
 @props:ariaLabel?:  string; = 'Icon';
 @props:class?: string;

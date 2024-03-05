@@ -12,7 +12,7 @@
   let filteredEntries = Object.entries(keyIcons).filter(([name, component]) => {
     return name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
   });
-  let size = $state(6);
+  let size = $state(40);
 </script>
 
 <div
@@ -20,7 +20,7 @@
 >
   {#each filteredEntries as [name, component]}
     <div class="flex items-center gap-4 text-lg">
-      <svelte:component this={component} class="shrink-0 h-{size} w-{size}" />
+      <svelte:component this={component} class="shrink-0" {size} />
       {name}
     </div>
   {/each}

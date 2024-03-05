@@ -8,10 +8,9 @@
 
 ### [1.0.2](https://github.com/shinokada/svelte-supertiny/compare/v1.0.1...v1.0.2) (2024-03-01)
 
-
 ### Bug Fixes
 
-* layout update add class to NavHamburger ([4a193dd](https://github.com/shinokada/svelte-supertiny/commit/4a193dd98d83645bf086b36f67dad6feea9f3186))
+- layout update add class to NavHamburger ([4a193dd](https://github.com/shinokada/svelte-supertiny/commit/4a193dd98d83645bf086b36f67dad6feea9f3186))
 
 ### [1.0.1](https://github.com/shinokada/svelte-supertiny/compare/v0.3.2...v1.0.1) (2024-01-27)
 
