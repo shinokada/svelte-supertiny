@@ -1,0 +1,25 @@
+<script>
+	import { getContext } from 'svelte';
+	const ctx = getContext('iconCtx') ?? {};
+	let {
+		size = ctx.size || '24',
+		role = ctx.role || 'img',
+		ariaLabel = 'Arch_linux,',
+		class: classname,
+		...restProps
+	} = $props();
+</script>
+
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	width={size}
+	height={size}
+	{...restProps}
+	aria-label="Arch Linux"
+	{role}
+	viewBox="0 0 512 512"
+	><path d="m0 0H512V512H0" fill="#fff" /><path
+		d="m416 411q-81-46-125-54a36.5 58-1 10-68 0q-51 9-127 55 79-143 117-220 18 16 45 26-22-15-41-36 21-44 39-92 34 90 122 250-20-11-44-17 25 13 55 38"
+		fill="#1793d1"
+	/></svg
+>

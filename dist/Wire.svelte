@@ -1,0 +1,27 @@
+<script>
+	import { getContext } from 'svelte';
+	const ctx = getContext('iconCtx') ?? {};
+	let {
+		size = ctx.size || '24',
+		role = ctx.role || 'img',
+		ariaLabel = 'Wire,',
+		class: classname,
+		...restProps
+	} = $props();
+</script>
+
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	width={size}
+	height={size}
+	{...restProps}
+	aria-label="Wire"
+	{role}
+	viewBox="0 0 512 512"
+	><path d="m0 0H512V512H0" fill="#fff" /><path
+		fill="none"
+		stroke="#000"
+		stroke-width="19"
+		d="M99 127v163a1 1 0 00186 0V157a1 1 0 00-58 0v133a1 1 0 00186 0V127"
+	/></svg
+>

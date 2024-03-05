@@ -1,0 +1,25 @@
+<script>
+	import { getContext } from 'svelte';
+	const ctx = getContext('iconCtx') ?? {};
+	let {
+		size = ctx.size || '24',
+		role = ctx.role || 'img',
+		ariaLabel = 'Digitalocean,',
+		class: classname,
+		...restProps
+	} = $props();
+</script>
+
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	width={size}
+	height={size}
+	{...restProps}
+	aria-label="DigitalOcean"
+	{role}
+	viewBox="0 0 512 512"
+	><path d="m0 0H512V512H0" fill="#fff" /><path
+		fill="#0080ff"
+		d="M78 373v-47h47v104h57V300h74v147A191 191 0 1065 256h74a117 117 0 11117 117"
+	/></svg
+>

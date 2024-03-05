@@ -1,0 +1,25 @@
+<script>
+	import { getContext } from 'svelte';
+	const ctx = getContext('iconCtx') ?? {};
+	let {
+		size = ctx.size || '24',
+		role = ctx.role || 'img',
+		ariaLabel = 'Udemy,',
+		class: classname,
+		...restProps
+	} = $props();
+</script>
+
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	width={size}
+	height={size}
+	{...restProps}
+	aria-label="Udemy"
+	{role}
+	viewBox="0 0 512 512"
+	><path d="m0 0H512V512H0" fill="#fff" /><path
+		fill="#a435f0"
+		d="M256 121.5l-94.5 57v-57l94.5-57 94.5 57v57z"
+	/><path d="M161.5 226.5h49.5V352a45 49 0 0090 0V226.5h49.5V356a94.5 91.5 0 01-189 0z" /></svg
+>

@@ -1,40 +1,38 @@
-<script>
-  import { getContext } from 'svelte';
-  const ctx = getContext('iconCtx') ?? {};
-  export let size = ctx.size || '24';
-  export let role = ctx.role || 'img';
+<script lang="ts">
+	import { getContext } from 'svelte';
+	interface CtxType {
+		size?: string;
+		role?: string;
+	}
+	const ctx: CtxType = getContext('iconCtx') ?? {};
+	interface Props {
+		size?: string;
+		role?: string;
+		ariaLabel?: string;
+		class?: string;
+	}
+	let {
+		size = ctx.size || '24',
+		role = ctx.role || 'img',
+		ariaLabel = 'Nginx,',
+		class: classname,
+		...restProps
+	} = $props<Props>();
 </script>
 
 <svg
-  xmlns="http://www.w3.org/2000/svg"
-  aria-label="NGINX"
-  {role}
-  width={size}
-  height={size}
-  {...$$restProps}
-  on:click
-  on:keydown
-  on:keyup
-  on:focus
-  on:blur
-  on:mouseenter
-  on:mouseleave
-  on:mouseover
-  on:mouseout
-  viewBox="0 0 512 512"
-  ><path d="m0 0H512V512H0" fill="#fff" /><path
-    fill="#009639"
-    d="M82 343a22 22 0 0011 18l153 88a22 22 0 0020 0l153-88a22 22 0 0010-18V167a22 22 0 00-10-18L265 62a22 22 0 00-20 0L92 150a22 22 0 00-10 17Z"
-  /><path
-    fill="#FFF"
-    d="m206 322a1 1 0 01-39 0V188c0-11 9-19 22-19 9 0 20 4 27 12l88 105v-98a1 1 0 0139 0v135c0 10-9 19-22 19-10 0-21-4-27-12l-88-105z"
-  /></svg
+	xmlns="http://www.w3.org/2000/svg"
+	width={size}
+	height={size}
+	{...restProps}
+	aria-label="NGINX"
+	{role}
+	viewBox="0 0 512 512"
+	><path d="m0 0H512V512H0" fill="#fff" /><path
+		fill="#009639"
+		d="M82 343a22 22 0 0011 18l153 88a22 22 0 0020 0l153-88a22 22 0 0010-18V167a22 22 0 00-10-18L265 62a22 22 0 00-20 0L92 150a22 22 0 00-10 17Z"
+	/><path
+		fill="#FFF"
+		d="m206 322a1 1 0 01-39 0V188c0-11 9-19 22-19 9 0 20 4 27 12l88 105v-98a1 1 0 0139 0v135c0 10-9 19-22 19-10 0-21-4-27-12l-88-105z"
+	/></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop export let size = ctx.size || '24';
-@prop export let role = ctx.role || 'img';
--->

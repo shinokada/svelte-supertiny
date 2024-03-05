@@ -1,0 +1,34 @@
+<script lang="ts">
+	import { getContext } from 'svelte';
+	interface CtxType {
+		size?: string;
+		role?: string;
+	}
+	const ctx: CtxType = getContext('iconCtx') ?? {};
+	interface Props {
+		size?: string;
+		role?: string;
+		ariaLabel?: string;
+		class?: string;
+	}
+	let {
+		size = ctx.size || '24',
+		role = ctx.role || 'img',
+		ariaLabel = 'X,',
+		class: classname,
+		...restProps
+	} = $props<Props>();
+</script>
+
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	width={size}
+	height={size}
+	{...restProps}
+	aria-label="X"
+	{role}
+	viewBox="0 0 512 512"
+	><rect width="512" height="512" fill="#fff" /><path
+		d="M281.7 234.3 382.2 120h-23.8l-87.3 99.2-69.7-99.2H121l105.4 150L121 389.9h23.8L237 285.1l73.6 104.8H391ZM153.4 137.5H190l168.4 235.6h-36.6Z"
+	/></svg
+>

@@ -1,0 +1,25 @@
+<script>
+	import { getContext } from 'svelte';
+	const ctx = getContext('iconCtx') ?? {};
+	let {
+		size = ctx.size || '24',
+		role = ctx.role || 'img',
+		ariaLabel = 'Quora,',
+		class: classname,
+		...restProps
+	} = $props();
+</script>
+
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	width={size}
+	height={size}
+	{...restProps}
+	aria-label="quora"
+	{role}
+	viewBox="0 0 512 512"
+	><path d="m0 0H512V512H0" fill="#b92b27" /><path
+		d="M412.9 386a18 18 0 01-12.5 30.4l-146-.1a163 163 0 11128.8-59.8zM354 253.5a1 1 0 00-195 0 1 1 0 00195 0z"
+		fill="#fff"
+	/></svg
+>

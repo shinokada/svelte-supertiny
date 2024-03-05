@@ -1,0 +1,25 @@
+<script>
+	import { getContext } from 'svelte';
+	const ctx = getContext('iconCtx') ?? {};
+	let {
+		size = ctx.size || '24',
+		role = ctx.role || 'img',
+		ariaLabel = 'Thisamericanlife,',
+		class: classname,
+		...restProps
+	} = $props();
+</script>
+
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	width={size}
+	height={size}
+	{...restProps}
+	aria-label="This American Life"
+	{role}
+	viewBox="0 0 512 512"
+	><path d="m0 0H512V512H0" fill="#fff" /><path
+		d="M90 170v98h117v-98zm157.7 0v29.25h175.3v-29.25zm0 69v29.25h175.3v-29.25zm30.3 97.25h145V307H90v29.25H208V420.4z"
+		fill="#ed0017"
+	/></svg
+>

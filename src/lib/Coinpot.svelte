@@ -1,60 +1,58 @@
-<script>
-  import { getContext } from 'svelte';
-  const ctx = getContext('iconCtx') ?? {};
-  export let size = ctx.size || '24';
-  export let role = ctx.role || 'img';
+<script lang="ts">
+	import { getContext } from 'svelte';
+	interface CtxType {
+		size?: string;
+		role?: string;
+	}
+	const ctx: CtxType = getContext('iconCtx') ?? {};
+	interface Props {
+		size?: string;
+		role?: string;
+		ariaLabel?: string;
+		class?: string;
+	}
+	let {
+		size = ctx.size || '24',
+		role = ctx.role || 'img',
+		ariaLabel = 'Coinpot,',
+		class: classname,
+		...restProps
+	} = $props<Props>();
 </script>
 
 <svg
-  xmlns="http://www.w3.org/2000/svg"
-  aria-label="coinpot"
-  {role}
-  width={size}
-  height={size}
-  {...$$restProps}
-  on:click
-  on:keydown
-  on:keyup
-  on:focus
-  on:blur
-  on:mouseenter
-  on:mouseleave
-  on:mouseover
-  on:mouseout
-  viewBox="0 0 512 512"
-  ><path d="m0 0H512V512H0" fill="#e0e0e0" /><defs
-    ><g id="c"
-      ><path d="M0 0h84v13Q42 18 0 13" fill="#ffd54e" /><ellipse
-        cx="42"
-        rx="42"
-        ry="3"
-        fill="#c6a900"
-      /></g
-    ></defs
-  ><g transform="translate(78,255)"
-    ><g id="s"
-      ><use href="#c" /><use y="18" href="#c" /><use y="36" href="#c" /><use y="54" href="#c" /><use
-        y="72"
-        href="#c"
-      /></g
-    ></g
-  ><use x="174" y="202" href="#s" /><use x="174" y="256" href="#s" /><use
-    x="269"
-    y="173"
-    href="#s"
-  /><use x="269" y="245" href="#s" /><path
-    d="M62 328C152 366 261 332 385 233v150H62"
-    fill="#e0e0e0"
-  /><path
-    d="M62 335C152 373 261 339 385 240l-13-10l77-28l-17 73l-13-11C203 413 132 367 62 335"
-    fill="#03a9f3"
-  /></svg
+	xmlns="http://www.w3.org/2000/svg"
+	width={size}
+	height={size}
+	{...restProps}
+	aria-label="coinpot"
+	{role}
+	viewBox="0 0 512 512"
+	><path d="m0 0H512V512H0" fill="#e0e0e0" /><defs
+		><g id="c"
+			><path d="M0 0h84v13Q42 18 0 13" fill="#ffd54e" /><ellipse
+				cx="42"
+				rx="42"
+				ry="3"
+				fill="#c6a900"
+			/></g
+		></defs
+	><g transform="translate(78,255)"
+		><g id="s"
+			><use href="#c" /><use y="18" href="#c" /><use y="36" href="#c" /><use y="54" href="#c" /><use
+				y="72"
+				href="#c"
+			/></g
+		></g
+	><use x="174" y="202" href="#s" /><use x="174" y="256" href="#s" /><use
+		x="269"
+		y="173"
+		href="#s"
+	/><use x="269" y="245" href="#s" /><path
+		d="M62 328C152 366 261 332 385 233v150H62"
+		fill="#e0e0e0"
+	/><path
+		d="M62 335C152 373 261 339 385 240l-13-10l77-28l-17 73l-13-11C203 413 132 367 62 335"
+		fill="#03a9f3"
+	/></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop export let size = ctx.size || '24';
-@prop export let role = ctx.role || 'img';
--->

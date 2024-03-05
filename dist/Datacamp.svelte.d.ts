@@ -1,0 +1,22 @@
+import { SvelteComponent } from 'svelte';
+declare const __propDef: {
+	props: {
+		size?: string | undefined;
+		role?: string | undefined;
+		ariaLabel?: string | undefined;
+		class?: string | undefined;
+	};
+	events: {
+		[evt: string]: CustomEvent<any>;
+	};
+	slots: {};
+};
+export type DatacampProps = typeof __propDef.props;
+export type DatacampEvents = typeof __propDef.events;
+export type DatacampSlots = typeof __propDef.slots;
+export default class Datacamp extends SvelteComponent<
+	DatacampProps,
+	DatacampEvents,
+	DatacampSlots
+> {}
+export {};

@@ -1,17 +1,30 @@
 <script lang="ts">
-  import type { ComponentType } from 'svelte';
-  export let icon: ComponentType;
-  export let size: number = 24;
-  export let role: string = 'img';
+	import type { ComponentType } from 'svelte';
+	interface Props {
+		icon: ComponentType;
+		size?: number;
+		color?: string;
+		role?: string;
+		ariaLabel?: string;
+		class?: string;
+	}
+	let {
+		icon,
+		size = 24,
+		color,
+		role = 'img',
+		ariaLabel = 'Icon',
+		class: classname,
+		...restProps
+	} = $props<Props>();
 </script>
 
-<svelte:component this={icon} {...$$restProps} {role} {size} class={$$props.class} />
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop export let icon: ComponentType;
-@prop export let size: number = 24;
-@prop export let role: string = 'img';
--->
+<svelte:component
+	this={icon}
+	{...restProps}
+	{role}
+	{size}
+	{color}
+	class={classname}
+	aria-label={ariaLabel}
+/>

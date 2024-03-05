@@ -1,45 +1,43 @@
-<script>
-  import { getContext } from 'svelte';
-  const ctx = getContext('iconCtx') ?? {};
-  export let size = ctx.size || '24';
-  export let role = ctx.role || 'img';
+<script lang="ts">
+	import { getContext } from 'svelte';
+	interface CtxType {
+		size?: string;
+		role?: string;
+	}
+	const ctx: CtxType = getContext('iconCtx') ?? {};
+	interface Props {
+		size?: string;
+		role?: string;
+		ariaLabel?: string;
+		class?: string;
+	}
+	let {
+		size = ctx.size || '24',
+		role = ctx.role || 'img',
+		ariaLabel = 'Tox,',
+		class: classname,
+		...restProps
+	} = $props<Props>();
 </script>
 
 <svg
-  xmlns="http://www.w3.org/2000/svg"
-  aria-label="Tox"
-  {role}
-  width={size}
-  height={size}
-  {...$$restProps}
-  on:click
-  on:keydown
-  on:keyup
-  on:focus
-  on:blur
-  on:mouseenter
-  on:mouseleave
-  on:mouseover
-  on:mouseout
-  viewBox="0 0 512 512"
-  fill="#232323"
-  ><path d="m0 0H512V512H0" /><g fill="#f0f0f0"
-    ><rect height="270" rx="90" width="180" x="166" y="65" /><rect
-      height="220"
-      rx="18"
-      width="294"
-      x="109"
-      y="207"
-    /></g
-  ><ellipse cx="256" cy="156" rx="59" ry="56" /><path
-    d="m307 129c26 40-12 91-49 113 6-9 11-19 12-31m-4 113c18 6 29 21 29 44 0 8-7 14-15 14h-48c-8 0-15-6-15-14 0-23 11-38 29-44"
-  /><circle cx="256" cy="297" r="29" /></svg
+	xmlns="http://www.w3.org/2000/svg"
+	width={size}
+	height={size}
+	{...restProps}
+	aria-label="Tox"
+	{role}
+	viewBox="0 0 512 512"
+	fill="#232323"
+	><path d="m0 0H512V512H0" /><g fill="#f0f0f0"
+		><rect height="270" rx="90" width="180" x="166" y="65" /><rect
+			height="220"
+			rx="18"
+			width="294"
+			x="109"
+			y="207"
+		/></g
+	><ellipse cx="256" cy="156" rx="59" ry="56" /><path
+		d="m307 129c26 40-12 91-49 113 6-9 11-19 12-31m-4 113c18 6 29 21 29 44 0 8-7 14-15 14h-48c-8 0-15-6-15-14 0-23 11-38 29-44"
+	/><circle cx="256" cy="297" r="29" /></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop export let size = ctx.size || '24';
-@prop export let role = ctx.role || 'img';
--->
