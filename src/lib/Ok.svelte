@@ -1,35 +1,45 @@
 <script lang="ts">
-	import { getContext } from 'svelte';
-	interface CtxType {
-		size?: string;
-		role?: string;
-	}
-	const ctx: CtxType = getContext('iconCtx') ?? {};
-	interface Props {
-		size?: string;
-		role?: string;
-		ariaLabel?: string;
-		class?: string;
-	}
-	let {
-		size = ctx.size || '24',
-		role = ctx.role || 'img',
-		ariaLabel = 'Ok,',
-		class: classname,
-		...restProps
-	} = $props<Props>();
+  import { getContext } from 'svelte';
+  interface CtxType {
+    size?: string;
+    role?: string;
+  }
+  const ctx: CtxType = getContext('iconCtx') ?? {};
+  interface Props {
+    size?: string;
+    role?: string;
+    ariaLabel?: string;
+    class?: string;
+  }
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    ariaLabel = 'Ok,',
+    class: classname,
+    ...restProps
+  } = $props<Props>();
 </script>
 
 <svg
-	xmlns="http://www.w3.org/2000/svg"
-	width={size}
-	height={size}
-	{...restProps}
-	aria-label="OK.ru"
-	{role}
-	viewBox="0 0 512 512"
-	><path d="m0 0H512V512H0" fill="#EE8208" /><path
-		d="M256 137a36.5 36.5 0 0136.5 36.5a36.5 36.5 0 01-36.5 36.5a36.5 36.5 0 01-36.5-36.5a36.5 36.5 0 0136.5-36.5zm0 124.5c48.6 0 88-39.5 88 -88s-39.5-88 -88 -88s-88 39.5-88 88s39.5 88 88 88m35.6 71.9a164.8 164.8 0 0051-21a25.8 25.8 0 008-35.6a25.8 25.8 0 00-35.6-8a111.9 111.9 0 01-118.6 0a25.8 25.8 0 00-35.6 8a25.8 25.8 0 008 35.6c15.9 10 33 17 51 21l-49 49.3a25.8 25.8 0 0036.5 36.5l48.4-48.5l48.4 48.4a25.8 25.8 0 0036.5 0a25.8 25.8 0 000-36.5l-49.3-49.3"
-		fill="#fff"
-	/></svg
+  xmlns="http://www.w3.org/2000/svg"
+  width={size}
+  height={size}
+  {...restProps}
+  aria-label="OK.ru"
+  {role}
+  viewBox="0 0 512 512"
+  ><path d="m0 0H512V512H0" fill="#EE8208" /><path
+    d="M256 137a36.5 36.5 0 0136.5 36.5a36.5 36.5 0 01-36.5 36.5a36.5 36.5 0 01-36.5-36.5a36.5 36.5 0 0136.5-36.5zm0 124.5c48.6 0 88-39.5 88 -88s-39.5-88 -88 -88s-88 39.5-88 88s39.5 88 88 88m35.6 71.9a164.8 164.8 0 0051-21a25.8 25.8 0 008-35.6a25.8 25.8 0 00-35.6-8a111.9 111.9 0 01-118.6 0a25.8 25.8 0 00-35.6 8a25.8 25.8 0 008 35.6c15.9 10 33 17 51 21l-49 49.3a25.8 25.8 0 0036.5 36.5l48.4-48.5l48.4 48.4a25.8 25.8 0 0036.5 0a25.8 25.8 0 000-36.5l-49.3-49.3"
+    fill="#fff"
+  /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Ok,';
+@props:class?: string;
+-->

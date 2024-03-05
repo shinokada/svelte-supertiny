@@ -1,58 +1,68 @@
 <script lang="ts">
-	import { getContext } from 'svelte';
-	interface CtxType {
-		size?: string;
-		role?: string;
-	}
-	const ctx: CtxType = getContext('iconCtx') ?? {};
-	interface Props {
-		size?: string;
-		role?: string;
-		ariaLabel?: string;
-		class?: string;
-	}
-	let {
-		size = ctx.size || '24',
-		role = ctx.role || 'img',
-		ariaLabel = 'Microformats,',
-		class: classname,
-		...restProps
-	} = $props<Props>();
+  import { getContext } from 'svelte';
+  interface CtxType {
+    size?: string;
+    role?: string;
+  }
+  const ctx: CtxType = getContext('iconCtx') ?? {};
+  interface Props {
+    size?: string;
+    role?: string;
+    ariaLabel?: string;
+    class?: string;
+  }
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    ariaLabel = 'Microformats,',
+    class: classname,
+    ...restProps
+  } = $props<Props>();
 </script>
 
 <svg
-	xmlns="http://www.w3.org/2000/svg"
-	width={size}
-	height={size}
-	{...restProps}
-	aria-label="microformats"
-	{role}
-	viewBox="0 0 512 512"
-	><path d="m0 0H512V512H0" fill="#fff" /><defs
-		><linearGradient id="b" y2="1"
-			><stop offset="0" stop-color="#6ba140" /><stop
-				offset="1"
-				stop-color="#77ae40"
-			/></linearGradient
-		><linearGradient id="m" y2="1"
-			><stop offset="0" stop-color="#92c73c" /><stop
-				offset="1"
-				stop-color="#78b143"
-			/></linearGradient
-		><linearGradient id="t" y2="1"
-			><stop offset="0" stop-color="#BCD531" /><stop
-				offset="1"
-				stop-color="#94c63a"
-			/></linearGradient
-		></defs
-	><g stroke="#fff" stroke-width="15"
-		><rect x="108" y="159" width="246" height="246" rx="51" fill="url(#b)" /><rect
-			x="192"
-			y="126"
-			width="192"
-			height="192"
-			rx="39"
-			fill="url(#m)"
-		/><rect x="276" y="114" width="132" height="132" rx="24" fill="url(#t)" /></g
-	></svg
+  xmlns="http://www.w3.org/2000/svg"
+  width={size}
+  height={size}
+  {...restProps}
+  aria-label="microformats"
+  {role}
+  viewBox="0 0 512 512"
+  ><path d="m0 0H512V512H0" fill="#fff" /><defs
+    ><linearGradient id="b" y2="1"
+      ><stop offset="0" stop-color="#6ba140" /><stop
+        offset="1"
+        stop-color="#77ae40"
+      /></linearGradient
+    ><linearGradient id="m" y2="1"
+      ><stop offset="0" stop-color="#92c73c" /><stop
+        offset="1"
+        stop-color="#78b143"
+      /></linearGradient
+    ><linearGradient id="t" y2="1"
+      ><stop offset="0" stop-color="#BCD531" /><stop
+        offset="1"
+        stop-color="#94c63a"
+      /></linearGradient
+    ></defs
+  ><g stroke="#fff" stroke-width="15"
+    ><rect x="108" y="159" width="246" height="246" rx="51" fill="url(#b)" /><rect
+      x="192"
+      y="126"
+      width="192"
+      height="192"
+      rx="39"
+      fill="url(#m)"
+    /><rect x="276" y="114" width="132" height="132" rx="24" fill="url(#t)" /></g
+  ></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Microformats,';
+@props:class?: string;
+-->

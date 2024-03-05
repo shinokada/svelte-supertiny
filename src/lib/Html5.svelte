@@ -1,38 +1,48 @@
 <script lang="ts">
-	import { getContext } from 'svelte';
-	interface CtxType {
-		size?: string;
-		role?: string;
-	}
-	const ctx: CtxType = getContext('iconCtx') ?? {};
-	interface Props {
-		size?: string;
-		role?: string;
-		ariaLabel?: string;
-		class?: string;
-	}
-	let {
-		size = ctx.size || '24',
-		role = ctx.role || 'img',
-		ariaLabel = 'Html5,',
-		class: classname,
-		...restProps
-	} = $props<Props>();
+  import { getContext } from 'svelte';
+  interface CtxType {
+    size?: string;
+    role?: string;
+  }
+  const ctx: CtxType = getContext('iconCtx') ?? {};
+  interface Props {
+    size?: string;
+    role?: string;
+    ariaLabel?: string;
+    class?: string;
+  }
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    ariaLabel = 'Html5,',
+    class: classname,
+    ...restProps
+  } = $props<Props>();
 </script>
 
 <svg
-	xmlns="http://www.w3.org/2000/svg"
-	width={size}
-	height={size}
-	{...restProps}
-	aria-label="HTML5"
-	{role}
-	viewBox="0 0 512 512"
-	><path fill="#e34f26" d="M71 460L30 0h451l-41 460-185 52" /><path
-		fill="#ef652a"
-		d="M256 472l149-41 35-394H256"
-	/><path
-		fill="#ebebeb"
-		d="M256 208h-75l-5-58h80V94H114l15 171h127zm-1 147l-63-17-4-45h-56l7 89 116 32z"
-	/><path fill="#fff" d="M255 208v57h70l-7 73-63 17v59l116-32 16-174zm0-114v56h137l5-56z" /></svg
+  xmlns="http://www.w3.org/2000/svg"
+  width={size}
+  height={size}
+  {...restProps}
+  aria-label="HTML5"
+  {role}
+  viewBox="0 0 512 512"
+  ><path fill="#e34f26" d="M71 460L30 0h451l-41 460-185 52" /><path
+    fill="#ef652a"
+    d="M256 472l149-41 35-394H256"
+  /><path
+    fill="#ebebeb"
+    d="M256 208h-75l-5-58h80V94H114l15 171h127zm-1 147l-63-17-4-45h-56l7 89 116 32z"
+  /><path fill="#fff" d="M255 208v57h70l-7 73-63 17v59l116-32 16-174zm0-114v56h137l5-56z" /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Html5,';
+@props:class?: string;
+-->

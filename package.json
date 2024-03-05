@@ -24,10 +24,10 @@
     "test:integration": "playwright test",
     "test:unit": "vitest",
     "gen:exports": "svelte-lib-helpers exports",
-    "gen:docs": "svelte-lib-helpers docs",
+    "gen:docs5": "svelte-lib-helpers docs5FromType",
     "gen:compo-data": "svelte-lib-helpers compo-data",
     "copy:package": "svelte-lib-helpers package",
-    "lib-helpers": "npm run format && npm run gen:docs && npm run build && npm run gen:exports && npm run copy:package",
+    "lib-helpers": "npm run format && npm run gen:docs5 && npm run build && npm run gen:exports && npm run copy:package",
     "package:publish": "standard-version && git push --follow-tags origin main && npm publish"
   },
   "devDependencies": {
@@ -44,6 +44,7 @@
     "eslint-plugin-svelte": "2.36.0-next.9",
     "prettier": "^3.2.5",
     "prettier-plugin-svelte": "^3.2.2",
+    "prettier-plugin-tailwindcss": "^0.5.11",
     "publint": "^0.2.7",
     "svelte": "5.0.0-next.71",
     "svelte-check": "^3.6.6",

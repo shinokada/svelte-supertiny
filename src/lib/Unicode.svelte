@@ -1,35 +1,45 @@
 <script lang="ts">
-	import { getContext } from 'svelte';
-	interface CtxType {
-		size?: string;
-		role?: string;
-	}
-	const ctx: CtxType = getContext('iconCtx') ?? {};
-	interface Props {
-		size?: string;
-		role?: string;
-		ariaLabel?: string;
-		class?: string;
-	}
-	let {
-		size = ctx.size || '24',
-		role = ctx.role || 'img',
-		ariaLabel = 'Unicode,',
-		class: classname,
-		...restProps
-	} = $props<Props>();
+  import { getContext } from 'svelte';
+  interface CtxType {
+    size?: string;
+    role?: string;
+  }
+  const ctx: CtxType = getContext('iconCtx') ?? {};
+  interface Props {
+    size?: string;
+    role?: string;
+    ariaLabel?: string;
+    class?: string;
+  }
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    ariaLabel = 'Unicode,',
+    class: classname,
+    ...restProps
+  } = $props<Props>();
 </script>
 
 <svg
-	xmlns="http://www.w3.org/2000/svg"
-	width={size}
-	height={size}
-	{...restProps}
-	aria-label="Unicode"
-	{role}
-	viewBox="0 0 512 512"
-	><path d="m0 0H512V512H0" fill="#55f" /><path
-		fill="#fff"
-		d="m273 195v96c0 63-35 100-98 100S73 358 74 291V140q0-4 3-4h40q3 0 3 4v150q1 60 53.5 60t53.5-60V139q0-3 3-3h53q4 0 5 3l100.5 187-1.5-124q0-3 3-3h38q3 0 3 3v181q0 4-4 4h-48q-4 0-5-2m33-264a28 28 0 101 0"
-	/></svg
+  xmlns="http://www.w3.org/2000/svg"
+  width={size}
+  height={size}
+  {...restProps}
+  aria-label="Unicode"
+  {role}
+  viewBox="0 0 512 512"
+  ><path d="m0 0H512V512H0" fill="#55f" /><path
+    fill="#fff"
+    d="m273 195v96c0 63-35 100-98 100S73 358 74 291V140q0-4 3-4h40q3 0 3 4v150q1 60 53.5 60t53.5-60V139q0-3 3-3h53q4 0 5 3l100.5 187-1.5-124q0-3 3-3h38q3 0 3 3v181q0 4-4 4h-48q-4 0-5-2m33-264a28 28 0 101 0"
+  /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Unicode,';
+@props:class?: string;
+-->
