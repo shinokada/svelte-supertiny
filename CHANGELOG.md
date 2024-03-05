@@ -1,5 +1,11 @@
 # svelte-supertiny
 
+## 2.0.0
+
+### Patch Changes
+
+- e55ad75: fix: update Icon.svelte
+
 ## 2.0.0-next.1
 
 ### Patch Changes
