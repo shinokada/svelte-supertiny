@@ -4,6 +4,12 @@
 
 ### Patch Changes
 
+- 525c813: docs: update README for npmjs.com
+
+## 2.0.0
+
+### Patch Changes
+
 - 7819fcc: fix: run lib-helpers to package
 
 ## 2.0.0
