@@ -27,7 +27,7 @@
     "gen:docs5": "svelte-lib-helpers docs5FromType",
     "gen:compo-data": "svelte-lib-helpers compo-data",
     "copy:package": "svelte-lib-helpers package",
-    "lib-helpers": "npm run format && npm run gen:docs5 && npm run build && npm run gen:exports && npm run copy:package",
+    "lib-helpers": "npm run format && npm run gen:docs5 && npm run package && npm run gen:exports && npm run copy:package",
     "package:publish": "git push --follow-tags origin main && npm publish"
   },
   "devDependencies": {
