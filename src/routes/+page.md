@@ -22,16 +22,14 @@ Thank you for considering my open-source package. If you use it in a commercial 
 
 ## Installation
 
-Find the latest verion 1 and 2 from the [releases website](https://github.com/shinokada/svelte-supertiny/releases).
-
 ### Svelte 4/5
 
 ```sh
-// install version 1
-pnpm i -D svelte-supertiny@1.x.x
+pnpm i -D svelte-supertiny
 ```
 
 ### Svelte 5:Runes
+Find the latest verion 2 on the [releases website](https://github.com/shinokada/svelte-supertiny/releases).
 
 After installing Svelte 5 and enabling `runes` in `svelte.config.js`:
 
