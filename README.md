@@ -26,15 +26,15 @@ See the [Svelte Supertiny documentation](https://svelte-supertiny.codewithshin.c
 
 ## Installation
 
-Find the latest version for version 1 and 2 at the [releases page on GitHub](https://github.com/shinokada/svelte-supertiny/releases).
-
 ### Svelte 4/5
 
 ```sh
-pnpm i -D svelte-supertiny@1.x.x
+pnpm i -D svelte-supertiny
 ```
 
 ### Svelte 5:Runes
+
+Find the latest version 2 at the [releases page on GitHub](https://github.com/shinokada/svelte-supertiny/releases).
 
 After installing Svelte 5 and enabling `runes` in `svelte.config.js`:
 
