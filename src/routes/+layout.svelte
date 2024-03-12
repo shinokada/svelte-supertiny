@@ -93,8 +93,8 @@
   <Footer footerType="logo" class="dark:bg-slate-950">
     <div class="sm:flex sm:items-center sm:justify-between">
       <FooterBrand
-        href="https://svelte-supertiny.vercel.app/"
-        name="Svelte Supertiny"
+        href="https://codewithshin.com/"
+        name="codewithshin.com"
         classSpan="text-primary-700 dark:text-primary-500"
       />
       <FooterLinkGroup
