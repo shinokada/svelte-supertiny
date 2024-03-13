@@ -4,6 +4,12 @@
 
 ### Patch Changes
 
+- 02814e0: fix: if there is fill="#fff", add fill?: string; to CtxType and interface Props, fill = ctx.fill || '#fff', to props(), and replace fill="#fff" with {fill}
+
+## 2.0.0
+
+### Patch Changes
+
 - 525c813: docs: update README for npmjs.com
 
 ## 2.0.0
