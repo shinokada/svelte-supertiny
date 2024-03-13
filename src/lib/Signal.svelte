@@ -3,6 +3,7 @@
   const ctx = getContext('iconCtx') ?? {};
   export let size = ctx.size || '24';
   export let role = ctx.role || 'img';
+  export let fill = ctx.fill || '#fff';
 </script>
 
 <svg
@@ -24,7 +25,7 @@
   viewBox="0 0 512 512"
   ><path d="m0 0H512V512H0" fill="#3a76f0" /><path
     d="M256 100a156 156 0 00-132 239l-15 64 64-15a156 156 0 1083-288z"
-    fill="#fff"
+    {fill}
   /><path
     fill="none"
     stroke-dasharray="54.5,17"
@@ -40,4 +41,5 @@
 ## Props
 @prop export let size = ctx.size || '24';
 @prop export let role = ctx.role || 'img';
+@prop export let fill = ctx.fill || '#fff';
 -->

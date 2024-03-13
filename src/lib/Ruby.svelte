@@ -3,6 +3,7 @@
   const ctx = getContext('iconCtx') ?? {};
   export let size = ctx.size || '24';
   export let role = ctx.role || 'img';
+  export let fill = ctx.fill || '#fff';
 </script>
 
 <svg
@@ -23,7 +24,7 @@
   on:mouseout
   viewBox="0 0 512 512"
   fill="url(#ruby)"
-  ><path d="m0 0H512V512H0" fill="#fff" /><linearGradient id="ruby" x2=".2" y2="1"
+  ><path d="m0 0H512V512H0" {fill} /><linearGradient id="ruby" x2=".2" y2="1"
     ><stop offset=".2" stop-color="#fff" /><stop offset=".4" stop-color="#d53" /><stop
       offset=".6"
       stop-color="#b10"
@@ -52,4 +53,5 @@
 ## Props
 @prop export let size = ctx.size || '24';
 @prop export let role = ctx.role || 'img';
+@prop export let fill = ctx.fill || '#fff';
 -->

@@ -33,6 +33,7 @@ pnpm i -D svelte-supertiny
 ```
 
 ### Svelte 5:Runes
+
 Find the latest version for version 2 at the [releases page on GitHub](https://github.com/shinokada/svelte-supertiny/releases).
 
 After installing Svelte 5 and enabling `runes` in `svelte.config.js`:
