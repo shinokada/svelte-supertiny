@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.4
+
+### Patch Changes
+
+- fix: add export let fill = ctx.fill || '#fff'; if the component has fill="#fff" so that you can change the background color ([`5e652d348f0ec023ef6bc03d75c0ab668efe267c`](https://github.com/shinokada/svelte-supertiny/commit/5e652d348f0ec023ef6bc03d75c0ab668efe267c))
+
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 ### [1.0.2](https://github.com/shinokada/svelte-supertiny/compare/v1.0.1...v1.0.2) (2024-03-01)
