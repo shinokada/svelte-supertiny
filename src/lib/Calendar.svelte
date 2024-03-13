@@ -1,6 +1,7 @@
 <script lang="ts">
   import { getContext } from 'svelte';
   interface CtxType {
+    fill?: string;
     size?: string;
     role?: string;
   }
@@ -10,11 +11,13 @@
     role?: string;
     ariaLabel?: string;
     class?: string;
+    fill?: string;
   }
   let {
     size = ctx.size || '24',
     role = ctx.role || 'img',
     ariaLabel = 'Calendar,',
+    fill = ctx.fill || '#fff',
     class: classname,
     ...restProps
   } = $props<Props>();
@@ -28,7 +31,7 @@
   aria-label="Calendar"
   {role}
   viewBox="0 0 512 512"
-  fill="#fff"
+  {fill}
   font-family="monospace"
   ><path d="m0 0V512h512V0" fill="#dee" /><path d="m0 0V180h512V0" fill="#d34" /><path
     fill="#eab"
@@ -52,4 +55,5 @@
 @props:role?:  string; = ctx.role || 'img';
 @props:ariaLabel?:  string; = 'Calendar,';
 @props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
 -->

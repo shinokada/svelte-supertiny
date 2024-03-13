@@ -1,6 +1,7 @@
 <script lang="ts">
   import { getContext } from 'svelte';
   interface CtxType {
+    fill?: string;
     size?: string;
     role?: string;
   }
@@ -10,11 +11,13 @@
     role?: string;
     ariaLabel?: string;
     class?: string;
+    fill?: string;
   }
   let {
     size = ctx.size || '24',
     role = ctx.role || 'img',
     ariaLabel = 'Powershell,',
+    fill = ctx.fill || '#fff',
     class: classname,
     ...restProps
   } = $props<Props>();
@@ -29,7 +32,7 @@
   aria-label="PowerShell"
   {role}
   viewBox="0 0 512 512"
-  ><path d="m0 0H512V512H0" fill="#fff" /><linearGradient id="b" x1="0" x2=".9" y1=".2" y2=".73"
+  ><path d="m0 0H512V512H0" {fill} /><linearGradient id="b" x1="0" x2=".9" y1=".2" y2=".73"
     ><stop stop-color="#c7e6ff" offset="0" /><stop
       stop-color="#a9c8ff"
       offset="1"
@@ -66,4 +69,5 @@
 @props:role?:  string; = ctx.role || 'img';
 @props:ariaLabel?:  string; = 'Powershell,';
 @props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
 -->

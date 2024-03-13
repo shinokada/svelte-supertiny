@@ -1,6 +1,7 @@
 <script lang="ts">
   import { getContext } from 'svelte';
   interface CtxType {
+    fill?: string;
     size?: string;
     role?: string;
   }
@@ -10,11 +11,13 @@
     role?: string;
     ariaLabel?: string;
     class?: string;
+    fill?: string;
   }
   let {
     size = ctx.size || '24',
     role = ctx.role || 'img',
     ariaLabel = 'Mysql,',
+    fill = ctx.fill || '#fff',
     class: classname,
     ...restProps
   } = $props<Props>();
@@ -28,7 +31,7 @@
   aria-label="MySQL"
   {role}
   viewBox="0 0 512 512"
-  ><path d="m0 0H512V512H0" fill="#fff" /><path
+  ><path d="m0 0H512V512H0" {fill} /><path
     fill="#005c87"
     d="m55 285v56H41v-56q0-7 6-9t12-1 10 8l21 48 21-48q4-7 10-8t12 1 6 9v56h-14v-56l-22 49q-3 8-13 8t-13-8m74-38v32c0 6 8 13 25 13h28v5q0 6-11 6h-42v9h41q26 0 26-15v-50h-14v36h-31q-8 0-8-5v-31m176-130c7-2 12 6 6 10m34 90q-15-14-27-43-7 5-8 22c-1 7-17-14-6-40q2-6 0-8c-14-17-7-23-21-40s3-16 19-2c28-2 55 28 64 48s15 37 21 38q20 6 33 19-16 0-25 5c5 17 24 17 38 31-10-19-26-21-29-28 13-4 14-2 24-5q-12-17-39-28s-6-10-17-35-41-51-67-51c-27-21-41-5-26 11s4 18 21 40c-16 47 17 67 17 41l1-6c9 20 14 18 24 29"
   /><path
@@ -45,4 +48,5 @@
 @props:role?:  string; = ctx.role || 'img';
 @props:ariaLabel?:  string; = 'Mysql,';
 @props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
 -->

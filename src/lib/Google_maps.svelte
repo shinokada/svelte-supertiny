@@ -1,6 +1,7 @@
 <script lang="ts">
   import { getContext } from 'svelte';
   interface CtxType {
+    fill?: string;
     size?: string;
     role?: string;
   }
@@ -10,11 +11,13 @@
     role?: string;
     ariaLabel?: string;
     class?: string;
+    fill?: string;
   }
   let {
     size = ctx.size || '24',
     role = ctx.role || 'img',
     ariaLabel = 'Google_maps,',
+    fill = ctx.fill || '#fff',
     class: classname,
     ...restProps
   } = $props<Props>();
@@ -28,7 +31,7 @@
   aria-label="Google Maps"
   {role}
   viewBox="0 0 512 512"
-  fill="#fff"
+  {fill}
   ><path d="m0 0H512V512H0" /><mask id="a"
     ><path
       d="m122 198c0 70 40 105 77 154s40 73 44 83 6 13 13 13 10-3 13-13 7-34 44-83 77-84 77-153a1 1 0 00-268-2m83 0a51 51 0 110 2"
@@ -52,4 +55,5 @@
 @props:role?:  string; = ctx.role || 'img';
 @props:ariaLabel?:  string; = 'Google_maps,';
 @props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
 -->

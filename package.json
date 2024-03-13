@@ -152,6 +152,10 @@
       "types": "./dist/Apple_music.svelte.d.ts",
       "svelte": "./dist/Apple_music.svelte"
     },
+    "./Apple_podcasts.svelte": {
+      "types": "./dist/Apple_podcasts.svelte.d.ts",
+      "svelte": "./dist/Apple_podcasts.svelte"
+    },
     "./Arch_linux.svelte": {
       "types": "./dist/Arch_linux.svelte.d.ts",
       "svelte": "./dist/Arch_linux.svelte"
@@ -219,6 +223,10 @@
     "./Blogger.svelte": {
       "types": "./dist/Blogger.svelte.d.ts",
       "svelte": "./dist/Blogger.svelte"
+    },
+    "./Bluesky.svelte": {
+      "types": "./dist/Bluesky.svelte.d.ts",
+      "svelte": "./dist/Bluesky.svelte"
     },
     "./Bluetooth.svelte": {
       "types": "./dist/Bluetooth.svelte.d.ts",
