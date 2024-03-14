@@ -37,3 +37,14 @@
     d="M0 0h256v256H0"
   /><path fill="#eee" d="M256 256h256v256H256z" /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Delicious,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

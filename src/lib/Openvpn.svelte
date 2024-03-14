@@ -37,3 +37,14 @@
     d="m234.5 317a61 60.3 0 1143 0l23 125h-90"
   /><path fill="#ea7e20" d="m171 342a114 113 8 11170 0l12 81a192 189 0 10-194 0" /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Openvpn,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

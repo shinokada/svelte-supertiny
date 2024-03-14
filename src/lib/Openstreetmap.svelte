@@ -70,3 +70,14 @@
     ry=""
   /><rect transform="rotate(45)" x="343" y="18" width="35" height="35" /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Openstreetmap,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

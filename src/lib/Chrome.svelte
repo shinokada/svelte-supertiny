@@ -44,3 +44,14 @@
     stroke-width="20"
   /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Chrome,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

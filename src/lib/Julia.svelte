@@ -39,3 +39,14 @@
     r="83"
   /><circle fill="#9558b2" cx="367" cy="329" r="83" /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Julia,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

@@ -42,3 +42,14 @@
     d="M155 73h72l130 366q-41-5-74-6"
   /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Netflix,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

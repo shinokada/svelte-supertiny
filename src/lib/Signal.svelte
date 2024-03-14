@@ -43,3 +43,14 @@
     d="M403 147A183 183 0 0097 346l-18 76c0 3 0 6 3 8a9 9 0 008 3l76-18A183 183 0 00402 146M79 422c0 3 0 6 3 8a9 9 0 008 3"
   /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Signal,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

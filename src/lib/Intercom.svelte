@@ -43,3 +43,14 @@
     d="M151 327c52 41 157 41 203 0M152 181v91m203 0v-91M202 161v135m102 0v-135m-51-5v146"
   /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Intercom,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

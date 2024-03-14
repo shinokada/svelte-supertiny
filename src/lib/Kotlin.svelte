@@ -34,3 +34,13 @@
     d="M410 102H256L102 267v143"
   /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Kotlin,';
+@props:class?: string;
+-->

@@ -40,3 +40,14 @@
     d="m106,239v60h300v-60"
   /><path fill="#1e5397" d="M406,319H106v16q0,50 50,50h123v65l65,-65h12q50,0 50,-50" /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Stackexchange,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

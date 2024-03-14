@@ -37,3 +37,14 @@
     d="m365 80H150l-30 60H400m30 60 35 60-35 60H210m100-120H85l-35 60 35 60m35 60H400l-35 60H150"
   /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Zorinos,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

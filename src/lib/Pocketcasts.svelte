@@ -37,3 +37,14 @@
     d="m256 329a73 73 0 1173-73h42A115 115 0 10256 371v29A144 144 0 11400 256h48A192 192 0 10256 448"
   /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Pocketcasts,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

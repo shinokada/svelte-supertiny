@@ -46,3 +46,14 @@
     ><path d="M-10-54c-2 0 1-2 2-1m7 1c1-1-1-2-3-1" /></g
   ></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Linux,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

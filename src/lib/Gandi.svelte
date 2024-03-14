@@ -44,3 +44,14 @@
     d="M255 66a54 54 0 1054 54 54 54 0 00-54-54zm0 71a17 17 0 1117-17 17 17 0 01-17 17z M145 155c13-13 27-5 34 1s26 43 76 43 64-28 80-44c10-11 24-8 33 1s6 25 0 33c-36 49-97 69-116 82-29 20-49 40-49 69 0 24 17 60 53 60s52-25 52-37c0-15-10-19-13-19-15 0-15 18-34 18-15 0-22-12-22-24 0-18 27-42 55-42 38 0 62 27 62 64 0 42-39 88-99 88-65 0-102-61-102-106s21-78 56-101c-26-10-51-27-71-58-2-2-9-16 5-28z"
   /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Gandi,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

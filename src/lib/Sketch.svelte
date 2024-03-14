@@ -40,3 +40,14 @@
     d="m257 84 119 129H138"
   /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Sketch,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

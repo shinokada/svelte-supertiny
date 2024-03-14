@@ -37,3 +37,14 @@
     d="m102 102V410h90V192h109V102h19V410H211V211h90V410H410V102"
   /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Manjaro,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

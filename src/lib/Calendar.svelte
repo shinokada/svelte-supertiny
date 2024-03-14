@@ -47,3 +47,14 @@
 <![CDATA[c=0;for(i in e={month:"short",day:"numeric",weekday:"long"})document.querySelectorAll("text")[c++].innerHTML=(new Date).toLocaleString(0,{[i]:e[i]})]]>
   </script></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Calendar,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

@@ -37,3 +37,14 @@
     d="m72 398 28-70a172 172 0 1146 60m109-46c127 0 127-172 3-172h-69v172m47-42v-88h21c60 0 60 88 0 88"
   /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Disqus,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

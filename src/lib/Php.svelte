@@ -39,3 +39,13 @@
     /><use xlink:href="#a" x="239" /></g
   ></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Php,';
+@props:class?: string;
+-->

@@ -42,3 +42,14 @@
     /><path d="m156 315c54-12 116-17 178 20" stroke-width="24" /></g
   ></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Spotify,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

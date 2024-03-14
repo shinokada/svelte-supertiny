@@ -37,3 +37,14 @@
     d="M256 64a192 192 0 10.001 0M232 445v-37q0-18-18-25a134 134 0 11176-128q1 99-137 179"
   /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Amazon_alexa,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

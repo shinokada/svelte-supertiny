@@ -52,3 +52,13 @@
     /><circle cx="347" cy="165" r="6" /></g
   ></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Instagram,';
+@props:class?: string;
+-->

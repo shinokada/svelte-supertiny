@@ -37,3 +37,14 @@
     d="M158 101l-99 63 295 188 99-63m-99-188l99 63-295 188-99-63m99 83l98 63 98-63-98-62z"
   /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Dropbox,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

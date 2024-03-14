@@ -41,3 +41,14 @@
     d="M84 251q-7.5 5 0 10l162 75q10 3 20 0l162-75q7.5-5 0-10l-32-14q-10.5-4.5-21 0l-109 50q-10 4.5-20 0l-109-50q-10.5-4.5-21 0z"
   /><use transform="translate(0 94)" xlink:href="#a" /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Buffer,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

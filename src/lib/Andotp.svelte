@@ -34,3 +34,13 @@
     d="M256 64a192 192 0 10.001 0M122 217.3a140 142 0 01268 0M244 328.6a27 27 0 1124 0l22 49h-68"
   /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Andotp,';
+@props:class?: string;
+-->

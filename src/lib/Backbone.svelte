@@ -38,3 +38,14 @@
     d="m115 81V271l282 160V241m-235 1V158l90 51v5l98 55v81"
   /><path d="m115 431V241l141-80v55l-94 53v81l94-54v55" /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Backbone,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

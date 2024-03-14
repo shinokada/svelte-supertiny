@@ -37,3 +37,14 @@
     d="m273 195v96c0 63-35 100-98 100S73 358 74 291V140q0-4 3-4h40q3 0 3 4v150q1 60 53.5 60t53.5-60V139q0-3 3-3h53q4 0 5 3l100.5 187-1.5-124q0-3 3-3h38q3 0 3 3v181q0 4-4 4h-48q-4 0-5-2m33-264a28 28 0 101 0"
   /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Unicode,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

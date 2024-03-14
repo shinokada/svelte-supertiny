@@ -46,3 +46,14 @@
     /></g
   ><g fill="#f40"><circle cx="191" cy="287" r="31" /><circle cx="321" cy="287" r="31" /></g></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Reddit,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

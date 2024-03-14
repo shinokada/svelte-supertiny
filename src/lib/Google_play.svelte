@@ -40,3 +40,14 @@
     d="m170 429c-26 16-56 0-61-25l150-148 77 77"
   /><path fill="#4285f4" d="m109.3 106.4Q108 112 108 116v280q0 5 1.3 9.7L259 256" /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Google_play,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

@@ -42,3 +42,13 @@
     d="m307 129c26 40-12 91-49 113 6-9 11-19 12-31m-4 113c18 6 29 21 29 44 0 8-7 14-15 14h-48c-8 0-15-6-15-14 0-23 11-38 29-44"
   /><circle cx="256" cy="297" r="29" /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Tox,';
+@props:class?: string;
+-->

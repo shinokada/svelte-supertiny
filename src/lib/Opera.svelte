@@ -37,3 +37,14 @@
     fill="#a70014"
   /><path d="m384 112.9a192 192 0 100 286.2 150.2 166.6 0 110-286.2" fill="#f23" /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Opera,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

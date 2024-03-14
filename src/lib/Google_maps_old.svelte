@@ -49,3 +49,14 @@
     /><circle cx="423" cy="89" r="25" fill="#7d2426" /></g
   ></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Google_maps_old,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

@@ -37,3 +37,13 @@
     d="M333 131l65 65c35 36 35 96 0 134-34 34-99 36-132 4l-68-69m-19 116l-65-65a97 97 0 0 1 0-134c34-35 98-36 131-4l69 69"
   /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Authy,';
+@props:class?: string;
+-->

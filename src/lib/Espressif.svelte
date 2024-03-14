@@ -37,3 +37,14 @@
     d="M126 120.53a1 1 0 00266.53 266.52 1 1 0 1110.87 10.87A1 1 0 01115.14 109.66 1 1 0 01126 120.53m52.5 240.22a26 26 0 100 1M409 334a273 273 0 00-231.5-231.5A150 150 0 00139 130v26a216 216 0 01217 216h26a111 111 0 0027-39M240 83l-4 12a298 298 0 01181 180l11-4A172 172 0 00240 83zm5 342a118 118 0 00-95-171 1 1 0 013-21 140 140 0 01120 177l31 9 26.5-10a195 195 0 00-163-230 1 1 0 10-18 131.5 63 63 0 0142 95.5l21 14z"
   /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Espressif,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

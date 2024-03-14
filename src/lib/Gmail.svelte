@@ -40,3 +40,14 @@
     fill="#ea4335"
   /><path d="m76 190v-32c0-29 34-48 58-30L158 146v106" fill="#c5221f" /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Gmail,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

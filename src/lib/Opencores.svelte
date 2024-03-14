@@ -36,3 +36,13 @@
     d="M276 192a84 84 0 01-168 0 84 84 0 01168 0zM379 380A84 84 0 11380 261"
   /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Opencores,';
+@props:class?: string;
+-->

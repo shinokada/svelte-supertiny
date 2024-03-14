@@ -43,3 +43,14 @@
     d="M76 196h90v120H76"
   /><path fill="#00832d" d="M286 256l90-73v146" /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Google_meet,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

@@ -36,3 +36,14 @@
     d="m280.6 255a108.3 109 0 100 2m10.5 0a54.1 102.7 0 100-2m118.9 0a19 92 0 110 2"
   /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Medium,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

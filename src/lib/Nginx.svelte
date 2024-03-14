@@ -40,3 +40,14 @@
     d="m206 322a1 1 0 01-39 0V188c0-11 9-19 22-19 9 0 20 4 27 12l88 105v-98a1 1 0 0139 0v135c0 10-9 19-22 19-10 0-21-4-27-12l-88-105z"
   /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Nginx,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

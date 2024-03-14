@@ -37,3 +37,14 @@
     d="m64 100h148l44 77 44-77h148L256 433"
   /><path fill="#35495e" d="m141 100h71l44 77 44-77h71L256 300" /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Vue,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

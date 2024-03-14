@@ -36,3 +36,13 @@
     d="m181 291zm41-70zm0 140zm40 70zm0-140zm0-140zm40-70zm0 140zm0 140zm41-70z"
   /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Vivino,';
+@props:class?: string;
+-->

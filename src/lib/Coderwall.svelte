@@ -39,3 +39,14 @@
     d="m2 2zm2 0zm0 2zm2-2zm0 2zm0 2z"
   /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Coderwall,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->

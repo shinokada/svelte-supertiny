@@ -40,3 +40,14 @@
     d="M256 208h-75l-5-58h80V94H114l15 171h127zm-1 147l-63-17-4-45h-56l7 89 116 32z"
   /><path {fill} d="M255 208v57h70l-7 73-63 17v59l116-32 16-174zm0-114v56h137l5-56z" /></svg
 >
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:ariaLabel?:  string; = 'Html5,';
+@props:class?: string;
+@props:fill?:  string; = ctx.fill || '#fff';
+-->
