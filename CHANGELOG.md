@@ -4,6 +4,12 @@
 
 ### Patch Changes
 
+- f2af719: fix: add {classname}
+
+## 2.0.0
+
+### Patch Changes
+
 - 02814e0: fix: if there is fill="#fff", add fill?: string; to CtxType and interface Props, fill = ctx.fill || '#fff', to props(), and replace fill="#fff" with {fill}
 
 ## 2.0.0
