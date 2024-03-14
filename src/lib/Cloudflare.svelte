@@ -27,6 +27,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="Cloudflare"
   {role}
@@ -39,14 +40,3 @@
     d="M381 224c-4 0-6-1-7 1l-5 21c-5 16 3 30 20 31l32 2c4 0 4 6-1 7l-33 1c-36 4-46 39-46 39 0 2 0 3 2 3h113l3-2a81 81 0 0 0-78-103"
   /></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Cloudflare,';
-@props:class?: string;
-@props:fill?:  string; = ctx.fill || '#fff';
--->

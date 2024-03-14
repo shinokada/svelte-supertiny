@@ -27,6 +27,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="Ruby"
   {role}
@@ -54,14 +55,3 @@
     ><path d="m155 157a62 139 45 101-1.02" /><path d="m375 83h-96l42 30zl300-600" /></g
   ></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Ruby,';
-@props:class?: string;
-@props:fill?:  string; = ctx.fill || '#fff';
--->

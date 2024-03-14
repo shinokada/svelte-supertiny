@@ -24,6 +24,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="LibreSpeed"
   {role}
@@ -50,13 +51,3 @@
     d="m372 239q2 15 0 31l21 2q3-17 0-36"
   /><path fill="#be1e2d" d="m370 280q-3 15-10 29l19 9q9-16 12-34" /></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Librespeed,';
-@props:class?: string;
--->

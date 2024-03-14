@@ -27,6 +27,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="Email"
   {role}
@@ -45,14 +46,3 @@
     d="M434 128L269 292c-7 8-19 8-26 0L78 128m0 256l129-128m227 128L305 256"
   /></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Email,';
-@props:class?: string;
-@props:fill?:  string; = ctx.fill || '#fff';
--->

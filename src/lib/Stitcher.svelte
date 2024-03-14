@@ -27,6 +27,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="Stitcher"
   {role}
@@ -39,14 +40,3 @@
     d="M222 194h70v146h-70z"
   /><path fill="#612268" d="M139 182h70v141h-70z" /></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Stitcher,';
-@props:class?: string;
-@props:fill?:  string; = ctx.fill || '#fff';
--->

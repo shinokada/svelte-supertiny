@@ -24,6 +24,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="Lock"
   {role}
@@ -39,13 +40,3 @@
     /><circle cx="256" cy="296" r="28" /><path d="M262 296h-12l-16 69h44" /></g
   ></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Lock,';
-@props:class?: string;
--->

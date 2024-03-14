@@ -24,6 +24,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="Stack Overflow"
   {role}
@@ -35,13 +36,3 @@
     d="m293 89 90 120m-28 27-115-97m-41 65 136 64m-11 36-148-31m-6 68h150m46-44V402H125V297"
   /></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Stackoverflow,';
-@props:class?: string;
--->

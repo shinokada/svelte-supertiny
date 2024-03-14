@@ -27,6 +27,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="Outlook"
   {role}
@@ -52,14 +53,3 @@
     d="M154 305c-23 0-43-18-43-45 0-28 16-48 44-48 27 0 43 21 43 46 0 29-18 47-44 47zm1-75c-16 0-23 14-23 29 0 18 11 28 22 28 14 0 23-10 23-28s-8-29-22-29z"
   /></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Outlook,';
-@props:class?: string;
-@props:fill?:  string; = ctx.fill || '#fff';
--->

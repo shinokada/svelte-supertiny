@@ -27,6 +27,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="Google Maps"
   {role}
@@ -46,14 +47,3 @@
     /><path stroke="#ea4335" d="m76 232 91-109" /></g
   ></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Google_maps,';
-@props:class?: string;
-@props:fill?:  string; = ctx.fill || '#fff';
--->

@@ -24,6 +24,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="NextCloud"
   {role}
@@ -35,13 +36,3 @@
     d="m160 257a40 40 0 110-2zh25a71 71 0 100-2v2m167 0a40 40 0 100-2z"
   /></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Nextcloud,';
-@props:class?: string;
--->

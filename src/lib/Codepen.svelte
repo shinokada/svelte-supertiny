@@ -24,6 +24,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="CodePen"
   {role}
@@ -36,13 +37,3 @@
     d="M256 314 431 198 256 81 81 198ZV431L431 314 256 198 81 314 256 431M81 198V314m350 0V198m-175 0V81"
   /></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Codepen,';
-@props:class?: string;
--->

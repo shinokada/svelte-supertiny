@@ -27,6 +27,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="Azure"
   viewBox="0 0 512 512"
@@ -53,14 +54,3 @@
     d="M316.8 129.8a13.5 13.5 0 00-12.8-9.2h-94.8a13.5 13.5 0 0112.8 9.2l82.3 243.8a13.5 13.5 0 01-12.8 17.9h94.8a13.5 13.5 0 0012.8-17.9z"
   /></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Azure,';
-@props:class?: string;
-@props:fill?:  string; = ctx.fill || '#fff';
--->

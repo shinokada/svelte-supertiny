@@ -27,6 +27,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   xmlns:xlink="http://www.w3.org/1999/xlink"
   aria-label="Python"
@@ -39,14 +40,3 @@
     /></g
   ><use xlink:href="#p" fill="#ffd43b" transform="rotate(180,256,255)" /></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Python,';
-@props:class?: string;
-@props:fill?:  string; = ctx.fill || '#fff';
--->

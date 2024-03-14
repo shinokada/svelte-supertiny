@@ -27,6 +27,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="Google Docs Editors"
   {role}
@@ -42,14 +43,3 @@
     fill="#00ac47"
   /><path d="M297.5 342h83v56q0 30-30 30h-53" fill="#0066da" /></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Google_docs_editors,';
-@props:class?: string;
-@props:fill?:  string; = ctx.fill || '#fff';
--->

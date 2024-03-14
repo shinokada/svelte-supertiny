@@ -27,6 +27,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="microformats"
   {role}
@@ -59,14 +60,3 @@
     /><rect x="276" y="114" width="132" height="132" rx="24" fill="url(#t)" /></g
   ></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Microformats,';
-@props:class?: string;
-@props:fill?:  string; = ctx.fill || '#fff';
--->

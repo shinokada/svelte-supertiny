@@ -27,6 +27,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="Dart"
   {role}
@@ -43,14 +44,3 @@
     d="M426.1 225.9L353.7 155c-7.5-7.1-15.5-10.4-24-10.3H144.1l221.1 220.9h60.9z"
   /></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Dart,';
-@props:class?: string;
-@props:fill?:  string; = ctx.fill || '#fff';
--->

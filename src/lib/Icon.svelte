@@ -25,14 +25,3 @@
   class={classname}
   aria-label={ariaLabel}
 />
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: icon: ComponentType;
-@props:size?:  number; = 24;
-@props:role?:  string; = 'img';
-@props:ariaLabel?:  string; = 'Icon';
-@props:class?: string;
--->

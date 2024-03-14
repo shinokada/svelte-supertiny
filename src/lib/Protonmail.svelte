@@ -27,6 +27,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="Proton Mail"
   {role}
@@ -46,14 +47,3 @@
     d="m84 184v-60c0-7 8-12 15-5l132 111c13 12 32 15 48 2l137-115c4-3 12-1 12 7v235a36 36 0 01-36 36h-60"
   /><path fill="url(#b)" d="M84 183v176a36 36 0 0036 36h235V168l-50 42-74 66s-17 13-36 0" /></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Protonmail,';
-@props:class?: string;
-@props:fill?:  string; = ctx.fill || '#fff';
--->

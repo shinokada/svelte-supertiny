@@ -27,6 +27,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="SVG"
   {role}
@@ -45,14 +46,3 @@
     d="m121 387a35 35 0 1063-21c-19-23-37-5-56-28a35 35 0 1163-21m29-55 36 172 36-172m98 55a35 35 0 00-70 0v70a35 35 0 0070 0v-35h-35"
   /><path d="M99 258H307v9H99" fill="#271b09" /></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Svg,';
-@props:class?: string;
-@props:fill?:  string; = ctx.fill || '#fff';
--->

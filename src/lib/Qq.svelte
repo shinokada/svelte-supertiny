@@ -27,6 +27,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="QQ"
   {role}
@@ -45,14 +46,3 @@
     d="M391 220c-4-14-9-20-19-12-71 38-159 38-230 0-10-7-15-2-19 12s-6 18 6 26l32 15c-6 32-5 63-5 65 1 13 12 12 27 12 14-1 26 0 26-15 0-8 0-27 3-46 56 10 120-1 173-31 11-7 9-11 6-26z"
   /></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Qq,';
-@props:class?: string;
-@props:fill?:  string; = ctx.fill || '#fff';
--->

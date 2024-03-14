@@ -27,6 +27,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="SubscribeStar"
   {role}
@@ -42,14 +43,3 @@
     d="m158 271c-17 103 65 138 102 177q38 0 76-17.5C308 381 256 364 235 324q-56-4-77-53m196 24c0-54-30-122-129-103v22c0 37 14 43 31 43s31 5 31 39v34h67"
   /></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Subscribestar,';
-@props:class?: string;
-@props:fill?:  string; = ctx.fill || '#fff';
--->

@@ -27,6 +27,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="Open Source"
   {role}
@@ -39,14 +40,3 @@
     d="m322 435a185 185 0 10-132 0l43-111a64 64 0 1146 0z"
   /></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Opensource,';
-@props:class?: string;
-@props:fill?:  string; = ctx.fill || '#fff';
--->

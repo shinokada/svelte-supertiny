@@ -27,6 +27,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="eBay"
   {role}
@@ -42,14 +43,3 @@
     d="M314 208c-46 0-48 25-48 28h22s2-14 24-14c31 0 27 24 27 24h-27c-35 0-53 11-53 31s17 32 40 32c32 0 41-17 41-17l1 14h20v-62c0-30-25-36-47-36zm25 52s4 35-35 35c-16 0-23-8-23-18 0-17 24-17 58-17z"
   /><path fill="#86b817" d="M348 212h25l37 72 36-72h23l-65 129h-24l18-36z" /></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Ebay,';
-@props:class?: string;
-@props:fill?:  string; = ctx.fill || '#fff';
--->

@@ -27,6 +27,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="Bash"
   {role}
@@ -44,14 +45,3 @@
     d="m342.4 364.7q-1.1.7-1.1 2v8c0 1.3.9 1.5 1.6 1l32-19.4q.9-.6.9-2.4v-7c0-1.5-1-1.4-1.6-1"
   /></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Bash,';
-@props:class?: string;
-@props:fill?:  string; = ctx.fill || '#fff';
--->

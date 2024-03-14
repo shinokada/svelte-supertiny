@@ -27,6 +27,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="Jacobin"
   {role}
@@ -38,14 +39,3 @@
     d="m166 326a84 84 0 10170 0V124H158"
   /></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Jacobin,';
-@props:class?: string;
-@props:fill?:  string; = ctx.fill || '#fff';
--->

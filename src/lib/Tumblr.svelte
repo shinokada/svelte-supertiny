@@ -27,6 +27,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="Tumblr"
   {role}
@@ -36,14 +37,3 @@
     d="m148 173q73-21 81-103h57v94h67v68h-67v96q1 37 37 37h33v72h-62c-60 0-96-34-96-96V232h-50"
   /></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Tumblr,';
-@props:class?: string;
-@props:fill?:  string; = ctx.fill || '#fff';
--->

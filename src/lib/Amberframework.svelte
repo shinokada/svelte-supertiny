@@ -27,6 +27,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="Amber Framework"
   {role}
@@ -39,14 +40,3 @@
     d="m256 66-125 206 240-69m54 148-109 7-60 88"
   /><path fill="#e88b3d" d="M87 351V161l44 111 185 86 55-155 54 148-109 7-60 88-125-174" /></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Amberframework,';
-@props:class?: string;
-@props:fill?:  string; = ctx.fill || '#fff';
--->

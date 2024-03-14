@@ -27,6 +27,7 @@
   xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
+  class={classname}
   {...restProps}
   aria-label="Google Drive"
   {role}
@@ -42,14 +43,3 @@
     fill="#1967d2"
   /><path d="m386 417q9-5 16-17l38-66q6-10 6-21H326.3" fill="#ea4335" /></svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Google_drive,';
-@props:class?: string;
-@props:fill?:  string; = ctx.fill || '#fff';
--->
