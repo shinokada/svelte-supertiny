@@ -206,7 +206,6 @@ Create a Svelte component named `src/lib/MyIcon.svelte`:
   import type { ComponentType } from 'svelte';
   const config = {
     size: 30,
-    color: '#FF5733'
   };
   import { Icon } from 'svelte-supertiny';
   export let icon: ComponentType;
@@ -312,13 +311,33 @@ You can pass other attibutes as well.
   import { onMount } from 'svelte';
   const props = {
     size: '50',
-    color: '#ff0000'
+    class: '#ff0000',
+    fill: 'currentColor',
   };
   onMount(() => {
     const icon = new Cib500px({ target: document.body, props });
   });
 </script>
 ```
+
+## How to switch icon background color for light and dark mode for next version
+
+Some icons have already fixed background colors, but some have white as the background color.
+
+Use `const svgclass='text-white dark:text-sky-950'` and `fill='currentColor'` to switch for light and dark mode.
+
+```
+<script>
+  import { Svelte, Github, Javascript } from 'svelte-supertiny';
+  const svgclass='text-white dark:text-sky-950'
+</script>
+
+<Svelte {size} class={svgclass} fill='currentColor'/>
+<Github {size} class={svgclass} fill='currentColor'/>
+<Javascript {size} class={svgclass} />
+```
+
+Notice that `Javascript` icon already has the fixed background color.
 
 ## Import all
 
