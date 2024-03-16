@@ -14,7 +14,7 @@
     ariaLabel = 'Icon',
     class: classname,
     ...restProps
-  } = $props<Props>();
+  }: Props = $props();
 </script>
 
 <svelte:component

@@ -141,6 +141,7 @@ export { default as Gradle } from './Gradle.svelte';
 export { default as Grafana } from './Grafana.svelte';
 export { default as Guacamole } from './Guacamole.svelte';
 export { default as Guilded } from './Guilded.svelte';
+export { default as HEntry } from './HEntry.svelte';
 export { default as Hackernews } from './Hackernews.svelte';
 export { default as Hackerone } from './Hackerone.svelte';
 export { default as Haml } from './Haml.svelte';

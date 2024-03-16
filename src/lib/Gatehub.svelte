@@ -14,10 +14,10 @@
   let {
     size = ctx.size || '24',
     role = ctx.role || 'img',
-    ariaLabel = 'Gatehub,',
+    ariaLabel = 'Gatehub',
     class: classname,
     ...restProps
-  } = $props<Props>();
+  }: Props = $props();
 </script>
 
 <svg
@@ -51,6 +51,6 @@
 ## Props
 @props: size?:  string; = ctx.size || '24';
 @props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Gatehub,';
+@props:ariaLabel?:  string; = 'Gatehub';
 @props:class?: string;
 -->
