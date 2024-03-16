@@ -1,30 +1,36 @@
 # svelte-supertiny
 
-## 2.0.0
+## 2.0.0-next.8
+
+### Patch Changes
+
+- fix: change <Props> to : Props
+
+## 2.0.0-next.7
 
 ### Patch Changes
 
 - f2af719: fix: add {classname}
 
-## 2.0.0
+## 2.0.0-next.6
 
 ### Patch Changes
 
 - 02814e0: fix: if there is fill="#fff", add fill?: string; to CtxType and interface Props, fill = ctx.fill || '#fff', to props(), and replace fill="#fff" with {fill}
 
-## 2.0.0
+## 2.0.0-next.5
 
 ### Patch Changes
 
 - 525c813: docs: update README for npmjs.com
 
-## 2.0.0
+## 2.0.0-next.4
 
 ### Patch Changes
 
 - 7819fcc: fix: run lib-helpers to package
 
-## 2.0.0
+## 2.0.0-next.3
 
 ### Patch Changes
 
