@@ -1,73 +1,49 @@
 <script lang="ts">
-  const meta = {
-    title: 'Svelte Supertiny: Svelte 4 & 5',
-  }
+  import { HighlightCompo, CodeWrapper, Code, H2, H3 } from 'svelte-icon-webkit';
+  
+  const modules = import.meta.glob('./md/*.md', {
+    query: '?raw',
+    import: 'default',
+    eager: true
+  });
 </script>
 
-<h1>Props: v1</h1>
+<h1>Props: Svelte Supertiny v1</h1>
 
-## Outline
+<H2>Props</H2>
 
+<HighlightCompo codeLang="ts" code={modules['./md/props.md'] as string} />
 
+<H2>Size</H2>
 
-## Solid
+<p>To change the size of an icon, use the <Code>size</Code> prop and specify the desired size. For example:</p>
 
+<HighlightCompo codeLang="ts" code={modules['./md/size.md'] as string} />
 
+<p>If you want to override the preconfigured size, you can add a custom size using Tailwind CSS by including the desired classes in the `class` prop. For example:</p>
 
-## Size
+<HighlightCompo codeLang="ts" code={modules['./md/size-2.md'] as string} />
 
-The following table provides details about the available sizes for icons:
+<H2>CSS frameworks suport</H2>
 
+<p>You can apply CSS framework directly to the icon component or its parent tag using the <Code>class</Code> prop.</p>
 
+<H3>Tailwind CSS example:</H3>
 
-To change the size of an icon, use the `size` prop and specify the desired size. For example:
+<HighlightCompo codeLang="ts" code={modules['./md/tailwind.md'] as string} />
 
+<H3>Bootstrap examples:</H3>
 
+<HighlightCompo codeLang="ts" code={modules['./md/bootstrap.md'] as string} />
 
-If you want to override the preconfigured size, you can add a custom size using Tailwind CSS by including the desired classes in the `class` prop. For example:
+<H2>Events</H2>
 
+<p>All icons have the following event forwardings:</p>
 
+<HighlightCompo codeLang="ts" code={modules['./md/events.md'] as string} />
 
-## Color
+<H2>Passing down other attributes</H2>
 
-You can apply Tailwind CSS color directly to the icon component or its parent tag using the `class` prop.
+<p>Since all icons have <Code>...$$restProps</Code>, you can pass other attibutes as well.</p>
 
-
-## CSS HEX Colors
-
-Use the color attribute to change colors with HEX color code for Filled and Outlined components.
-
-
-## Dark mode
-
-If you are using the dark mode on your website with Tailwind CSS, add your dark mode class to the `class` prop.
-
-Let's use `dark` for the dark mode class as an example.
-
-
-
-## A11y
-
-All icons have aria-label. For example `BxAbacus` has `aria-label="bx abacus"`.
-Use `ariaLabel` prop to modify the `aria-label` value.
-
-
-Use `title`, `desc`, and `ariaLabel` props to make your icons accessible.
-
-
-## withEvents
-
-As default all icons are unfocusable. However you can add `withEvents` prop to make your icons focusable.
-
-
-It is possible to add `tabindex="0"`, but it is not recommended for A11y.
-If you want to use it add `withEvents` prop as well.
-
-## Events
-
-Use `withEvents` prop to use the following events:
-
-## Passing down other attributes
-
-Since all icons have "...$$restProps", you can pass other attibutes as well.
-
+<HighlightCompo codeLang="ts" code={modules['./md/passing-down-attributes.md'] as string} />

@@ -21,7 +21,7 @@
   const urlsToIncludeSwitcherAndSidebar =['/guide/']
   const siteName = 'Svelte Supertiny'
   const twitterUrl = 'https://twitter.com/shinokada'
-  const githubUrl = 'https://github.com/shinokada/svelte-awesome-icons'
+  const githubUrl = 'https://github.com/shinokada/svelte-supertiny'
 </script>
 
 <Nav {lis} {siteName} {twitterUrl} {githubUrl} urlsToIncludeSwitcher={urlsToIncludeSwitcherAndSidebar}/>

@@ -1,19 +1,29 @@
+<script lang="ts">
+  import { HighlightCompo, CodeWrapper, Code, H2, H3 } from 'svelte-icon-webkit';
+
+  const modules = import.meta.glob('./md/*.md', {
+    query: '?raw',
+    import: 'default',
+    eager: true
+  });
+</script>
+
 <h1>Custom Default Icons</h1>
 
-You can create a custom default icon, by using `IconSolid` or `IconOutline`:
+<p>You can create a custom default icon, by using <Code>Icon</Code>:</p>
 
-<h2>Create a custom component</h2>
+<H2>Create a custom component</H2>
 
-Create a Svelte component named `src/lib/MyIcon.svelte`:
+<p>Create a Svelte component named <Code>src/lib/MyIcon.svelte</Code>:</p>
 
+<HighlightCompo codeLang="ts" code={modules['./md/create-a-custom-component.md'] as string} />
 
+<p>This component, <Code>MyIcon.svelte</Code>, accepts an <Code>icon</Code> prop which you can use to pass in the specific icon component you want to display. The default configuration is also applied to the icon.</p>
 
-This component, `MyIcon.svelte`, accepts an `icon` prop which you can use to pass in the specific icon component you want to display. The default configuration is also applied to the icon.
+<H2>Implementation</H2>
 
-<h2>Implementation in a Page</h2>
+<p>To use your custom default icon in a Svelte page, do the following:</p>
 
-To use your custom default icon in a Svelte page, do the following:
+<HighlightCompo codeLang="ts" code={modules['./md/implementation.md'] as string} />
 
-
-
-Here, we import the `MyIcon` component and the `AngleLeftSolid` icon. By passing the `AngleLeftSolid` icon to the `icon` prop of MyIcon, you apply the default configuration to the icon.
+<p>Here, we import the <Code>MyIcon</Code> component and the <Code>Svelte</Code> icon. By passing the <Code>Svelte</Code> icon to the <Code>icon</Code> prop of MyIcon, you apply the default configuration to the icon.</p>

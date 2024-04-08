@@ -1,1 +1,1 @@
-<Svelte id="my-svg" transform="rotate(45)"/>
+<Svelte id="svelte-logo-svg" transform="rotate(45)" />

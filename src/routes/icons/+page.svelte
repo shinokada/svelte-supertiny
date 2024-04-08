@@ -1,19 +1,13 @@
 <script lang="ts">
-  import { IconPage } from 'svelte-icon-webkit'
+  import type { ComponentType } from 'svelte';
+  import { IconPage, filterStringKeys } from 'svelte-icon-webkit'
   import * as icons from '$lib'
-  import { MetaTag } from 'svelte-icon-webkit';
+  import Meta from '../utils/Meta.svelte'
 
-  const meta = {
-    title: 'Svelte SVG Icons - Svelte Supertiny',
-    description: '340+ SVG logos for popular brands from SuperTinyIcons for Svelte.',
-    keywords:'SuperTinyIcons, Svelte 5, Svelte 4, Runes, SvelteKit, SVG icons',
-    url: 'https://svelte-supertiny.codewithshin.com/',
-    image: 'https://open-graph-vercel.vercel.app/api/svelte-supertiny',
-    imageAlt: 'Svelte Icon Webkit',
-    creator: '@shinokada'
-  }
+  const keyIcons = filterStringKeys(icons);
+  const title = 'Icons: Svelte Supertiny'
 </script>
 
-<MetaTag {...meta}/>
+<Meta {title}/>
 
-<IconPage {icons} threeTabs={false} title="Icons: Svelte Supertiny" />
+<IconPage icons={keyIcons as ComponentType} threeTabs={false} title="Icons: Svelte Supertiny" />
