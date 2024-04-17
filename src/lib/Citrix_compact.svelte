@@ -1,50 +1,97 @@
-<script lang="ts">
+<script lang='ts'>
   import { getContext } from 'svelte';
+
   interface CtxType {
-    fill?: string;
-    size?: string;
-    role?: string;
-  }
+		size?: string;
+		role?: string;
+    withEvents?: boolean;
+	}
+
+  type TitleType = {
+    id?: string;
+    title?: string;
+  };
+
+  type DescType = {
+    id?: string;
+    desc?: string;
+  };
+
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props {
+
+  interface Props{
+    onclick?: ()=>void;
     size?: string;
     role?: string;
     ariaLabel?: string;
     class?: string;
-    fill?: string;
+    withEvents?: boolean;
+    title?: TitleType;
+    desc?: DescType;
   }
-  let {
-    size = ctx.size || '24',
-    role = ctx.role || 'img',
-    ariaLabel = 'Citrix_compact',
-    fill = ctx.fill || '#fff',
-    class: classname,
-    ...restProps
-  }: Props = $props();
+  let { 
+    onclick,
+    size = ctx.size || '24', 
+    role = ctx.role || 'img',  
+    ariaLabel =  "citrix_compact" , 
+    class: classname, 
+    withEvents = ctx.withEvents || false,
+    title = {},
+    desc = {},
+    ...restProps }: Props = $props();
+
+    let ariaDescribedby = $state(`${title.id || ''} ${desc.id || ''}`);
+    let hasDescription = $state(false);
+    $effect(() => {
+      if (title.id || desc.id) {
+        hasDescription = true;
+      } else {
+        hasDescription = false;
+      }
+    })
 </script>
 
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width={size}
-  height={size}
-  class={classname}
-  {...restProps}
-  aria-label="Citrix"
-  {role}
-  viewBox="0 0 512 512"
-  ><rect height="512" width="512" {fill} />
-  <path
-    d="M346.2 340.2a1 1 0 01-19 16.6l-69.8-80.3-69.8 80.3a1 1 0 01-19-16.6l72.1-82.9-72.1-82.9a1 1 0 0119-16.6l69.8 80.3 69.8-80.3a1 1 0 0119 16.6l-72.1 82.9zm-88.8-251a1 1 0 000 40.2 1 1 0 000-40.2z"
-  /></svg
->
+{#snippet svgContent()}
+  <rect  height="512" width="512" fill="#fff"/> <path d="M346.2 340.2a1 1 0 01-19 16.6l-69.8-80.3-69.8 80.3a1 1 0 01-19-16.6l72.1-82.9-72.1-82.9a1 1 0 0119-16.6l69.8 80.3 69.8-80.3a1 1 0 0119 16.6l-72.1 82.9zm-88.8-251a1 1 0 000 40.2 1 1 0 000-40.2z"/>
+{/snippet}
 
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Citrix_compact';
-@props:class?: string;
-@props:fill?:  string; = ctx.fill || '#fff';
--->
+{#if withEvents}
+  <svg xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    class={classname}
+    {...restProps}
+    aria-label={ariaLabel}
+    {role}
+    viewBox="0 0 512 512"
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    onclick={onclick}
+  >
+  {#if title.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  {@render svgContent()}
+  </svg>
+{:else}
+  <svg xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    class={classname}
+    {...restProps}
+    aria-label={ariaLabel}
+    {role}
+    viewBox="0 0 512 512"
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  >
+  {#if title.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  {@render svgContent()}
+  </svg>
+{/if}

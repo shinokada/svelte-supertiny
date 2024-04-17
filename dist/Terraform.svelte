@@ -1,0 +1,68 @@
+<script lang='ts'>import { getContext } from "svelte";
+const ctx = getContext("iconCtx") ?? {};
+let {
+  onclick,
+  size = ctx.size || "24",
+  role = ctx.role || "img",
+  ariaLabel = "terraform",
+  class: classname,
+  withEvents = ctx.withEvents || false,
+  title = {},
+  desc = {},
+  ...restProps
+} = $props();
+let ariaDescribedby = $state(`${title.id || ""} ${desc.id || ""}`);
+let hasDescription = $state(false);
+$effect(() => {
+  if (title.id || desc.id) {
+    hasDescription = true;
+  } else {
+    hasDescription = false;
+  }
+});
+</script>
+
+{#snippet svgContent()}
+  <path d="m0 0H512V512H0" fill="#fff"/><path fill="#7B42BC" d="m224 159 98 56v113l-98-56V159zM115 95v113l98 56V152L115 95zm109 303 98 56V342l-98-56v113z M333 216v113l98-56v-113l-98 56z"/>
+{/snippet}
+
+{#if withEvents}
+  <svg xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    class={classname}
+    {...restProps}
+    aria-label={ariaLabel}
+    {role}
+    viewBox="0 0 512 512"
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    onclick={onclick}
+  >
+  {#if title.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  {@render svgContent()}
+  </svg>
+{:else}
+  <svg xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    class={classname}
+    {...restProps}
+    aria-label={ariaLabel}
+    {role}
+    viewBox="0 0 512 512"
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  >
+  {#if title.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  {@render svgContent()}
+  </svg>
+{/if}

@@ -1,6 +1,5 @@
-<AddressBookOutline
-  title={{ id: 'my-title', title: 'Red bell' }}
-  desc={{ id: 'my-descrip', desc: 'The shape of a red bell' }}
-  ariaLabel="red bell"
-  color="red"
+<Svelte
+  title={{ id: 'my-title', title: 'Svelte' }}
+  desc={{ id: 'my-descrip', desc: 'The shape of S with orange edge and white background' }}
+  ariaLabel="Svelte icon"
 />

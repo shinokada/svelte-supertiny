@@ -1,0 +1,68 @@
+<script lang='ts'>import { getContext } from "svelte";
+const ctx = getContext("iconCtx") ?? {};
+let {
+  onclick,
+  size = ctx.size || "24",
+  role = ctx.role || "img",
+  ariaLabel = "untappd",
+  class: classname,
+  withEvents = ctx.withEvents || false,
+  title = {},
+  desc = {},
+  ...restProps
+} = $props();
+let ariaDescribedby = $state(`${title.id || ""} ${desc.id || ""}`);
+let hasDescription = $state(false);
+$effect(() => {
+  if (title.id || desc.id) {
+    hasDescription = true;
+  } else {
+    hasDescription = false;
+  }
+});
+</script>
+
+{#snippet svgContent()}
+  <path d="m0 0H512V512H0" fill="#ffce0d"/><path d="M382 432c38 16 93-21 89-61L358 206l-39-21-88-94-2-7-6-2-1-7c-15 2-26 9-33 23l7 3v6l6 4 58 114 8 43z" fill="#734019"/><path d="M39 371c-2 41 51 80 88 63l116-163 7-44 59-115 6-3-1-7 6-3c-7-14-17-22-32-23l-1 7-6 2-1 7-88 94-37 22z" fill="#e17e24"/>
+{/snippet}
+
+{#if withEvents}
+  <svg xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    class={classname}
+    {...restProps}
+    aria-label={ariaLabel}
+    {role}
+    viewBox="0 0 512 512"
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    onclick={onclick}
+  >
+  {#if title.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  {@render svgContent()}
+  </svg>
+{:else}
+  <svg xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    class={classname}
+    {...restProps}
+    aria-label={ariaLabel}
+    {role}
+    viewBox="0 0 512 512"
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  >
+  {#if title.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  {@render svgContent()}
+  </svg>
+{/if}

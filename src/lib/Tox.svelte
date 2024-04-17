@@ -1,54 +1,97 @@
-<script lang="ts">
+<script lang='ts'>
   import { getContext } from 'svelte';
+
   interface CtxType {
-    size?: string;
-    role?: string;
-  }
+		size?: string;
+		role?: string;
+    withEvents?: boolean;
+	}
+
+  type TitleType = {
+    id?: string;
+    title?: string;
+  };
+
+  type DescType = {
+    id?: string;
+    desc?: string;
+  };
+
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props {
+
+  interface Props{
+    onclick?: ()=>void;
     size?: string;
     role?: string;
     ariaLabel?: string;
     class?: string;
+    withEvents?: boolean;
+    title?: TitleType;
+    desc?: DescType;
   }
-  let {
-    size = ctx.size || '24',
-    role = ctx.role || 'img',
-    ariaLabel = 'Tox',
-    class: classname,
-    ...restProps
-  }: Props = $props();
+  let { 
+    onclick,
+    size = ctx.size || '24', 
+    role = ctx.role || 'img',  
+    ariaLabel =  "tox" , 
+    class: classname, 
+    withEvents = ctx.withEvents || false,
+    title = {},
+    desc = {},
+    ...restProps }: Props = $props();
+
+    let ariaDescribedby = $state(`${title.id || ''} ${desc.id || ''}`);
+    let hasDescription = $state(false);
+    $effect(() => {
+      if (title.id || desc.id) {
+        hasDescription = true;
+      } else {
+        hasDescription = false;
+      }
+    })
 </script>
 
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width={size}
-  height={size}
-  class={classname}
-  {...restProps}
-  aria-label="Tox"
-  {role}
-  viewBox="0 0 512 512"
-  fill="#232323"
-  ><path d="m0 0H512V512H0" /><g fill="#f0f0f0"
-    ><rect height="270" rx="90" width="180" x="166" y="65" /><rect
-      height="220"
-      rx="18"
-      width="294"
-      x="109"
-      y="207"
-    /></g
-  ><ellipse cx="256" cy="156" rx="59" ry="56" /><path
-    d="m307 129c26 40-12 91-49 113 6-9 11-19 12-31m-4 113c18 6 29 21 29 44 0 8-7 14-15 14h-48c-8 0-15-6-15-14 0-23 11-38 29-44"
-  /><circle cx="256" cy="297" r="29" /></svg
->
+{#snippet svgContent()}
+  <path d="m0 0H512V512H0" /><g fill="#f0f0f0"><rect height="270" rx="90" width="180" x="166" y="65"/><rect height="220" rx="18" width="294" x="109" y="207"/></g><ellipse cx="256" cy="156" rx="59" ry="56"/><path d="m307 129c26 40-12 91-49 113 6-9 11-19 12-31m-4 113c18 6 29 21 29 44 0 8-7 14-15 14h-48c-8 0-15-6-15-14 0-23 11-38 29-44"/><circle cx="256" cy="297" r="29"/>
+{/snippet}
 
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Tox';
-@props:class?: string;
--->
+{#if withEvents}
+  <svg xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    class={classname}
+    {...restProps}
+    aria-label={ariaLabel}
+    {role}
+    viewBox="0 0 512 512"
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    onclick={onclick}
+  >
+  {#if title.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  {@render svgContent()}
+  </svg>
+{:else}
+  <svg xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    class={classname}
+    {...restProps}
+    aria-label={ariaLabel}
+    {role}
+    viewBox="0 0 512 512"
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  >
+  {#if title.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  {@render svgContent()}
+  </svg>
+{/if}

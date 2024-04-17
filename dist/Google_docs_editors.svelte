@@ -1,0 +1,68 @@
+<script lang='ts'>import { getContext } from "svelte";
+const ctx = getContext("iconCtx") ?? {};
+let {
+  onclick,
+  size = ctx.size || "24",
+  role = ctx.role || "img",
+  ariaLabel = "google_docs_editors",
+  class: classname,
+  withEvents = ctx.withEvents || false,
+  title = {},
+  desc = {},
+  ...restProps
+} = $props();
+let ariaDescribedby = $state(`${title.id || ""} ${desc.id || ""}`);
+let hasDescription = $state(false);
+$effect(() => {
+  if (title.id || desc.id) {
+    hasDescription = true;
+  } else {
+    hasDescription = false;
+  }
+});
+</script>
+
+{#snippet svgContent()}
+  <path d="m0 0H512V512H0" fill="#fff"/><path d="M131.5 344h83v-174h83v-86h-136q-30 0-30 30" fill="#ffba00"/><path d="M297.5 84v86h83" fill="#ea4335"/><path d="M297.5 170h83v174h-83" fill="#2684fc"/><path d="M131.5 342v56q0 30 30 30h55v-86" fill="#00832d"/><path d="M214.5 342h85v86h-85" fill="#00ac47"/><path d="M297.5 342h83v56q0 30-30 30h-53" fill="#0066da"/>
+{/snippet}
+
+{#if withEvents}
+  <svg xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    class={classname}
+    {...restProps}
+    aria-label={ariaLabel}
+    {role}
+    viewBox="0 0 512 512"
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    onclick={onclick}
+  >
+  {#if title.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  {@render svgContent()}
+  </svg>
+{:else}
+  <svg xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    class={classname}
+    {...restProps}
+    aria-label={ariaLabel}
+    {role}
+    viewBox="0 0 512 512"
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  >
+  {#if title.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  {@render svgContent()}
+  </svg>
+{/if}

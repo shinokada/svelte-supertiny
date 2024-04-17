@@ -1,13 +1,11 @@
 <script lang="ts">
   import type { ComponentType } from 'svelte';
   const config = {
-    size: "xl",
+    size: "40",
+    role: "presentation"
   };
-  import { Icon } from 'svelte-supertiny';
-  // for Svelte 4/5
+  import { IconSolid } from 'svelte-supertiny';
   export let icon: ComponentType;
-  // for Svelte 5:Runes
-  let { icon } = $props();
 </script>
 
-<Icon {...config} {icon} />
+<IconSolid {...config} {icon} />

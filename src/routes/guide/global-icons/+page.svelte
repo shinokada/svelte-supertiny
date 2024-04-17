@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { HighlightCompo, CodeWrapper, Code, H2, H3 } from 'svelte-icon-webkit';
+  import { HighlightCompo, CodeWrapper, Code, H2, H3 } from 'runes-webkit';
 
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
@@ -10,13 +10,21 @@
 
 <h1>Setting Global Icon using setContext</h1>
 
-<p>You can create global icon preferences in your Svelte application using <Code>setContext</Code>. This allows you to configure icon-related properties once and share them across multiple components.</p>
+<p>You can create global icon preferences in your Svelte application using `setContext`. This allows you to configure icon-related properties once and share them across multiple components.</p>
 
 <H2>Setting preferences</H2>
 
-<p>In your <Code>+layout.svelte</Code> or <Code>+page.svelte</Code>, you can define and set global icon preferences as follows:</p>
+<p>In your `+layout.svelte` or `+page.svelte`, you can define and set global icon preferences as follows:</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/setting-preferences.md'] as string} />
+
+<p>Check the Props section for what properties you can set.</p>
+
+<H2>Prop size</H2>
+
+<p>If you set `size`, icons can be customized other properties. For example:</p>
+
+<HighlightCompo codeLang="ts" code={modules['./md/prop-size.md'] as string} />
 
 <H2>Setting more than one props</H2>
 

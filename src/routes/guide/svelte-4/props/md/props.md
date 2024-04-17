@@ -1,3 +1,3 @@
-  - size = ctx.size || '24';
-  - role = ctx.role || 'img';
-  - fill = ctx.fill || '#fff';
+- let size = ctx.size || '24';
+- let role = ctx.role || 'img';
+- let fill = ctx.fill || '#fff';

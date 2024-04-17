@@ -1,7 +1,6 @@
 
 <script lang="ts">
-  import { HighlightCompo, CodeWrapper, Code, H2, H3 } from 'svelte-icon-webkit';
-  import { A } from 'svelte-5-ui-lib'
+  import { HighlightCompo, CodeWrapper } from 'runes-webkit';
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
     import: 'default',
@@ -9,36 +8,33 @@
   });
 </script>
 
-<h1>Svelte Supertiny: v2</h1>
+<h1>Svelte Awesome Icons: v2</h1>
 
 <div class="flex gap-2 my-8">
 <a href="https://github.com/sponsors/shinokada" target="_blank"><img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" alt="sponsor" ></a>
-<a href="https://www.npmjs.com/package/svelte-supertiny" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/v/svelte-supertiny/next" alt="npm" ></a>
-<a href="https://opensource.org/licenses/MIT" rel="nofollow" target="_blank"><img src="https://img.shields.io/github/license/shinokada/svelte-supertiny" alt="License" ></a>
-<a href="https://www.npmjs.com/package/svelte-supertiny" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-supertiny.svg" alt="npm" ></a>
+<a href="https://www.npmjs.com/package/svelte-awesome-icons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/v/svelte-awesome-icons" alt="npm" ></a>
+<a href="https://opensource.org/licenses/MIT" rel="nofollow" target="_blank"><img src="https://img.shields.io/github/license/shinokada/svelte-awesome-icons" alt="License" ></a>
+<a href="https://www.npmjs.com/package/svelte-awesome-icons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-awesome-icons.svg" alt="npm" ></a>
 </div>
 
 <h2>Requirements</h2>
 
 <HighlightCompo codeLang="ts" code={modules['./md/requirement.md'] as string} />
 
+
 <h2>Installation</h2>
 
-<p>Install Svelte and Svelte Supertiny:</p>
+<p>Install Svelte and TailwindCSS:</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/installation.md'] as string} />
 
-<p>Replace <Code>2.0.0-next.x</Code> with the latest <Code>v2</Code> version.
-Check the latest version at the <A href="https://github.com/shinokada/svelte-supertiny/releases">GitHub Releases</A>.</p>
 
-<p>Enable Runes in <Code>svelte.config.js</Code>:</p>
-
-<HighlightCompo codeLang="ts" code={modules['./md/runes.md'] as string} />
 <h2>Basic Usage</h2>
 
 <p>In a svelte file:</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/basic-usage.md'] as string} />
+
 
 
 <h2>Faster compiling</h2>
@@ -59,8 +55,12 @@ Check the latest version at the <A href="https://github.com/shinokada/svelte-sup
 
 <HighlightCompo codeLang="ts" code={modules['./md/using-svelte-component.md'] as string} />
 
+<h2>Using onMount</h2>
+<HighlightCompo codeLang="ts" code={modules['./md/using-onmount.md'] as string} />
+
+
 <h2>Import all</h2>
 
-<p>Use <Code>import * as Icon from 'svelte-supertiny'</Code>:</p>
+<p>Use `import * as Icon from 'svelte-awesome-icons`.</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/import-all.md'] as string} />

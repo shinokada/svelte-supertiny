@@ -1,68 +1,97 @@
-<script lang="ts">
+<script lang='ts'>
   import { getContext } from 'svelte';
+
   interface CtxType {
-    fill?: string;
-    size?: string;
-    role?: string;
-  }
+		size?: string;
+		role?: string;
+    withEvents?: boolean;
+	}
+
+  type TitleType = {
+    id?: string;
+    title?: string;
+  };
+
+  type DescType = {
+    id?: string;
+    desc?: string;
+  };
+
   const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props {
+
+  interface Props{
+    onclick?: ()=>void;
     size?: string;
     role?: string;
     ariaLabel?: string;
     class?: string;
-    fill?: string;
+    withEvents?: boolean;
+    title?: TitleType;
+    desc?: DescType;
   }
-  let {
-    size = ctx.size || '24',
-    role = ctx.role || 'img',
-    ariaLabel = 'Edge',
-    fill = ctx.fill || '#fff',
-    class: classname,
-    ...restProps
-  }: Props = $props();
+  let { 
+    onclick,
+    size = ctx.size || '24', 
+    role = ctx.role || 'img',  
+    ariaLabel =  "edge" , 
+    class: classname, 
+    withEvents = ctx.withEvents || false,
+    title = {},
+    desc = {},
+    ...restProps }: Props = $props();
+
+    let ariaDescribedby = $state(`${title.id || ''} ${desc.id || ''}`);
+    let hasDescription = $state(false);
+    $effect(() => {
+      if (title.id || desc.id) {
+        hasDescription = true;
+      } else {
+        hasDescription = false;
+      }
+    })
 </script>
 
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width={size}
-  height={size}
-  class={classname}
-  {...restProps}
-  aria-label="Edge"
-  {role}
-  viewBox="0 0 512 512"
-  ><path d="m0 0H512V512H0" {fill} /><radialGradient id="a"
-    ><stop offset=".8" stop-color="#159" /><stop offset="1" stop-color="#148" /></radialGradient
-  ><radialGradient id="b" cy=".7" r=".7"
-    ><stop offset=".8" stop-color="#18d" /><stop offset="1" stop-color="#07a" /></radialGradient
-  ><radialGradient id="c" cx=".1" cy=".2" r="1"
-    ><stop offset=".4" stop-color="#3ce" /><stop offset="1" stop-color="#3c5" /></radialGradient
-  ><radialGradient id="d" cx=".9"
-    ><stop offset="0" stop-color="#6e7" /><stop
-      offset="1"
-      stop-color="#6e7"
-      stop-opacity="0"
-    /></radialGradient
-  ><path
-    d="m233 214s-25 12-25 42a133 112 0 00202 94 6 6 0 019 7C316 514 90 454 187 237"
-    fill="url(#a)"
-  /><path
-    d="m300 153H94a192 192 0 00220 286 116 120.3-2 01-74-228 48 49 0 0164 41"
-    fill="url(#b)"
-  /><path
-    d="m64 253c11-237 336-250 383-45 12 95-76 132-147 102-37-23 23-18-3-88-47-107-229-79-233 31"
-    fill="url(#c)"
-  /><path d="m242 58c251 14 262 290 86 248" fill="url(#d)" /></svg
->
+{#snippet svgContent()}
+  <path d="m0 0H512V512H0" fill="#fff"/><radialGradient id="a"><stop offset=".8" stop-color="#159"/><stop offset="1" stop-color="#148"/></radialGradient><radialGradient id="b" cy=".7" r=".7"><stop offset=".8" stop-color="#18d"/><stop offset="1" stop-color="#07a"/></radialGradient><radialGradient id="c" cx=".1" cy=".2" r="1"><stop offset=".4" stop-color="#3ce"/><stop offset="1" stop-color="#3c5"/></radialGradient><radialGradient id="d" cx=".9"><stop offset="0" stop-color="#6e7"/><stop offset="1" stop-color="#6e7" stop-opacity="0"/></radialGradient><path d="m233 214s-25 12-25 42a133 112 0 00202 94 6 6 0 019 7C316 514 90 454 187 237" fill="url(#a)"/><path d="m300 153H94a192 192 0 00220 286 116 120.3-2 01-74-228 48 49 0 0164 41" fill="url(#b)"/><path d="m64 253c11-237 336-250 383-45 12 95-76 132-147 102-37-23 23-18-3-88-47-107-229-79-233 31" fill="url(#c)"/><path d="m242 58c251 14 262 290 86 248" fill="url(#d)"/>
+{/snippet}
 
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:ariaLabel?:  string; = 'Edge';
-@props:class?: string;
-@props:fill?:  string; = ctx.fill || '#fff';
--->
+{#if withEvents}
+  <svg xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    class={classname}
+    {...restProps}
+    aria-label={ariaLabel}
+    {role}
+    viewBox="0 0 512 512"
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    onclick={onclick}
+  >
+  {#if title.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  {@render svgContent()}
+  </svg>
+{:else}
+  <svg xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    class={classname}
+    {...restProps}
+    aria-label={ariaLabel}
+    {role}
+    viewBox="0 0 512 512"
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  >
+  {#if title.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  {@render svgContent()}
+  </svg>
+{/if}
