@@ -1,0 +1,8 @@
+{
+  "mode": "pre",
+  "tag": "next",
+  "initialVersions": {
+    "svelte-supertiny": "2.0.0-next.8"
+  },
+  "changesets": []
+}

@@ -7,19 +7,12 @@ let {
   ariaLabel = "ok",
   class: classname,
   withEvents = ctx.withEvents || false,
-  title = {},
-  desc = {},
+  title,
+  desc,
   ...restProps
 } = $props();
-let ariaDescribedby = $state(`${title.id || ""} ${desc.id || ""}`);
-let hasDescription = $state(false);
-$effect(() => {
-  if (title.id || desc.id) {
-    hasDescription = true;
-  } else {
-    hasDescription = false;
-  }
-});
+let ariaDescribedby = $state(`${title?.id || ""} ${desc?.id || ""}`);
+const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
 {#snippet svgContent()}
@@ -38,10 +31,10 @@ $effect(() => {
     aria-describedby={hasDescription ? ariaDescribedby : undefined}
     onclick={onclick}
   >
-  {#if title.id && title.title}
+  {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
   {/if}
-  {#if desc.id && desc.desc}
+  {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
   {@render svgContent()}
@@ -57,12 +50,27 @@ $effect(() => {
     viewBox="0 0 512 512"
     aria-describedby={hasDescription ? ariaDescribedby : undefined}
   >
-  {#if title.id && title.title}
+  {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
   {/if}
-  {#if desc.id && desc.desc}
+  {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
   {@render svgContent()}
   </svg>
 {/if}
+
+<!--
+@component
+[Go to docs](https://runes-webkit.codewithshin.com/)
+## Props
+@prop onclick
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel =  "ok"
+@prop class: classname
+@prop withEvents = ctx.withEvents || false
+@prop title
+@prop desc
+@prop ...restProps
+-->

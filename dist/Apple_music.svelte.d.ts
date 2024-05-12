@@ -24,6 +24,36 @@ declare const __propDef: {
 export type AppleMusicProps = typeof __propDef.props;
 export type AppleMusicEvents = typeof __propDef.events;
 export type AppleMusicSlots = typeof __propDef.slots;
+/**
+ * [Go to docs](https://runes-webkit.codewithshin.com/)
+ * ## Props
+ * @prop onclick
+ * @prop size = ctx.size || '24'
+ * @prop role = ctx.role || 'img'
+ * @prop ariaLabel =  "apple_music"
+ * @prop class: classname
+ * @prop withEvents = ctx.withEvents || false
+ * @prop title
+ * @prop desc
+ * @prop ...restProps
+ */
 export default class AppleMusic extends SvelteComponent<AppleMusicProps, AppleMusicEvents, AppleMusicSlots> {
+    constructor(options?: import("svelte").ComponentConstructorOptions<{
+        onclick?: (() => void) | undefined;
+        size?: string | undefined;
+        role?: string | undefined;
+        ariaLabel?: string | undefined;
+        class?: string | undefined;
+        withEvents?: boolean | undefined;
+        title?: {
+            id?: string | undefined;
+            title?: string | undefined;
+        } | undefined;
+        desc?: {
+            id?: string | undefined;
+            desc?: string | undefined;
+        } | undefined;
+    }>);
+    $$bindings: "";
 }
 export {};
