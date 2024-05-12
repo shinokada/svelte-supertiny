@@ -40,10 +40,8 @@ Find the latest version for version 2 at the [releases page on GitHub](https://g
 After installing Svelte 5 and enabling `runes` in `svelte.config.js`:
 
 ```sh
-pnpm i -D svelte-supertiny@2.x.x
+pnpm i -D svelte-supertiny@next
 ```
-
-Replace 2.0.0-next.x with the latest v2 version. Check the latest version at the [GitHub Releases](https://github.com/shinokada/svelte-supertiny/releases).
 
 ## Original source
 
