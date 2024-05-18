@@ -25,7 +25,7 @@ export type YoutubeProps = typeof __propDef.props;
 export type YoutubeEvents = typeof __propDef.events;
 export type YoutubeSlots = typeof __propDef.slots;
 /**
- * [Go to docs](https://runes-webkit.codewithshin.com/)
+ * [Go to docs](https://svelte-supertiny.codewithshin.com/)
  * ## Props
  * @prop onclick
  * @prop size = ctx.size || '24'

@@ -25,7 +25,7 @@ export type AmazonS3Props = typeof __propDef.props;
 export type AmazonS3Events = typeof __propDef.events;
 export type AmazonS3Slots = typeof __propDef.slots;
 /**
- * [Go to docs](https://runes-webkit.codewithshin.com/)
+ * [Go to docs](https://svelte-supertiny.codewithshin.com/)
  * ## Props
  * @prop onclick
  * @prop size = ctx.size || '24'

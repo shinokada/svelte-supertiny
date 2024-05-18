@@ -25,7 +25,7 @@ export type TerraformProps = typeof __propDef.props;
 export type TerraformEvents = typeof __propDef.events;
 export type TerraformSlots = typeof __propDef.slots;
 /**
- * [Go to docs](https://runes-webkit.codewithshin.com/)
+ * [Go to docs](https://svelte-supertiny.codewithshin.com/)
  * ## Props
  * @prop onclick
  * @prop size = ctx.size || '24'

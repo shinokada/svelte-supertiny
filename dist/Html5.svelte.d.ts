@@ -25,7 +25,7 @@ export type Html5Props = typeof __propDef.props;
 export type Html5Events = typeof __propDef.events;
 export type Html5Slots = typeof __propDef.slots;
 /**
- * [Go to docs](https://runes-webkit.codewithshin.com/)
+ * [Go to docs](https://svelte-supertiny.codewithshin.com/)
  * ## Props
  * @prop onclick
  * @prop size = ctx.size || '24'

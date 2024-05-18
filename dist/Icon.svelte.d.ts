@@ -3,7 +3,7 @@ import type { ComponentType } from 'svelte';
 declare const __propDef: {
     props: {
         icon: ComponentType;
-        size?: number | undefined;
+        size?: string | undefined;
         role?: string | undefined;
         ariaLabel?: string | undefined;
         class?: string | undefined;
@@ -17,10 +17,10 @@ export type IconProps = typeof __propDef.props;
 export type IconEvents = typeof __propDef.events;
 export type IconSlots = typeof __propDef.slots;
 /**
- * [Go to docs](https://runes-webkit.codewithshin.com/)
+ * [Go to docs](https://svelte-supertiny.codewithshin.com/)
  * ## Props
  * @prop icon
- * @prop size = 24
+ * @prop size = '24'
  * @prop role = 'img'
  * @prop ariaLabel = 'Icon'
  * @prop class: classname
@@ -29,7 +29,7 @@ export type IconSlots = typeof __propDef.slots;
 export default class Icon extends SvelteComponent<IconProps, IconEvents, IconSlots> {
     constructor(options?: import("svelte").ComponentConstructorOptions<{
         icon: ComponentType;
-        size?: number | undefined;
+        size?: string | undefined;
         role?: string | undefined;
         ariaLabel?: string | undefined;
         class?: string | undefined;

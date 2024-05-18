@@ -25,7 +25,7 @@ export type WikipediaProps = typeof __propDef.props;
 export type WikipediaEvents = typeof __propDef.events;
 export type WikipediaSlots = typeof __propDef.slots;
 /**
- * [Go to docs](https://runes-webkit.codewithshin.com/)
+ * [Go to docs](https://svelte-supertiny.codewithshin.com/)
  * ## Props
  * @prop onclick
  * @prop size = ctx.size || '24'

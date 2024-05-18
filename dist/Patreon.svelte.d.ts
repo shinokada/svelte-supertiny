@@ -25,7 +25,7 @@ export type PatreonProps = typeof __propDef.props;
 export type PatreonEvents = typeof __propDef.events;
 export type PatreonSlots = typeof __propDef.slots;
 /**
- * [Go to docs](https://runes-webkit.codewithshin.com/)
+ * [Go to docs](https://svelte-supertiny.codewithshin.com/)
  * ## Props
  * @prop onclick
  * @prop size = ctx.size || '24'

@@ -25,7 +25,7 @@ export type ViberProps = typeof __propDef.props;
 export type ViberEvents = typeof __propDef.events;
 export type ViberSlots = typeof __propDef.slots;
 /**
- * [Go to docs](https://runes-webkit.codewithshin.com/)
+ * [Go to docs](https://svelte-supertiny.codewithshin.com/)
  * ## Props
  * @prop onclick
  * @prop size = ctx.size || '24'

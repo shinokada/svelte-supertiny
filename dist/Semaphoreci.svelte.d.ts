@@ -25,7 +25,7 @@ export type SemaphoreciProps = typeof __propDef.props;
 export type SemaphoreciEvents = typeof __propDef.events;
 export type SemaphoreciSlots = typeof __propDef.slots;
 /**
- * [Go to docs](https://runes-webkit.codewithshin.com/)
+ * [Go to docs](https://svelte-supertiny.codewithshin.com/)
  * ## Props
  * @prop onclick
  * @prop size = ctx.size || '24'

@@ -25,7 +25,7 @@ export type SnapchatProps = typeof __propDef.props;
 export type SnapchatEvents = typeof __propDef.events;
 export type SnapchatSlots = typeof __propDef.slots;
 /**
- * [Go to docs](https://runes-webkit.codewithshin.com/)
+ * [Go to docs](https://svelte-supertiny.codewithshin.com/)
  * ## Props
  * @prop onclick
  * @prop size = ctx.size || '24'
