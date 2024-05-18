@@ -4,5 +4,8 @@
   "initialVersions": {
     "svelte-supertiny": "2.0.0-next.8"
   },
-  "changesets": []
+  "changesets": [
+    "hip-hotels-build",
+    "loud-elephants-count"
+  ]
 }
