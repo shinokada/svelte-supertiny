@@ -1,1 +1,1 @@
-<h1>Props: v2</h1>
+<h1>Props: Svelte Supertiny v2 for Svelte Runes</h1>

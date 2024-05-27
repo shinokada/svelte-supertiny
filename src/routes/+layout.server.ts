@@ -4,23 +4,23 @@ import { ANALYTICS_ID } from '$env/static/private';
 export const load = ({ url }) => {
   const layoutMetaTags: MetaProps = {
     title: 'Svelte Supertiny',
-    description: 'A quick start for a Svelte Runes project.',
-    keywords: 'svelte, runes, webkit, ui, components',
+    description: '340+ Svelte SVG Supertinyicons components',
+    keywords: 'svelte, sveltekit, runes, Supertiny icons, svg icons, icons',
     twitter: {
       card: 'summary_large_image',
       site: '@shinokada',
       handle: '@shinokada',
       title: 'Svelte Supertiny',
-      description: 'A quick start for a Svelte Runes project.',
-      image: 'https://open-graph-vercel.vercel.app/api/runes-webkit',
+      description: '340+ Svelte SVG Supertinyicons components',
+      image: 'https://open-graph-vercel.vercel.app/api/svelte-supertiny',
       imageAlt: 'Svelte Supertiny'
     },
     og: {
       type: 'website',
       title: 'Svelte Supertiny',
-      description: 'A quick start for a Svelte Runes project.',
+      description: '340+ Svelte SVG Supertinyicons components',
       url: url.href,
-      image: 'https://open-graph-vercel.vercel.app/api/runes-webkit',
+      image: 'https://open-graph-vercel.vercel.app/api/svelte-supertiny',
       imageAlt: 'Svelte Supertiny',
       siteName: 'Svelte Supertiny',
       imageWidth: '1200',

@@ -2,15 +2,15 @@ import type { MetaProps } from 'runes-meta-tags';
 
 export const load = () => {
   const pageMetaTags = Object.freeze({
-    title: 'No tabs example - Svelte Supertiny',
-    description: 'No tabs example',
+    title: 'Icons - Svelte Supertiny',
+    description: 'Explore all SVG icons for our library! Browse and search names, different colors, adjust size, and easily copy icon names with a single click. Find the perfect icon for your project.',
     og: {
-      title: 'No tabs example - Svelte Supertiny',
-      description: 'No tabs example',
+      title: 'Icons - Svelte Supertiny',
+      description: 'Explore all SVG icons for our library! Browse and search names, different colors, adjust size, and easily copy icon names with a single click. Find the perfect icon for your project.'
     },
     twitter: {
-      title: 'No tabs example - Svelte Supertiny',
-      description: 'No tabs example',
+      title: 'Icons - Svelte Supertiny',
+      description: 'Explore all SVG icons for our library! Browse and search names, different colors, adjust size, and easily copy icon names with a single click. Find the perfect icon for your project.'
     }
   }) satisfies MetaProps;
   return { pageMetaTags };
