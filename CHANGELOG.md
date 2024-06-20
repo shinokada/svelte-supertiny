@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.5
+
+### Patch Changes
+
+- fix: calendar ([`5fb335313a3d304788ccd61cd13a7c005f5bfd49`](https://github.com/shinokada/svelte-supertiny/commit/5fb335313a3d304788ccd61cd13a7c005f5bfd49))
+
+- fix: discord ([`a451bba6f55aeb36f83632e8fc2bb319e27de228`](https://github.com/shinokada/svelte-supertiny/commit/a451bba6f55aeb36f83632e8fc2bb319e27de228))
+
 ## 1.0.4
 
 ### Patch Changes
