@@ -205,7 +205,7 @@ Create a Svelte component named `src/lib/MyIcon.svelte`:
 <script lang="ts">
   import type { ComponentType } from 'svelte';
   const config = {
-    size: 30,
+    size: 30
   };
   import { Icon } from 'svelte-supertiny';
   export let icon: ComponentType;
@@ -312,7 +312,7 @@ You can pass other attibutes as well.
   const props = {
     size: '50',
     class: '#ff0000',
-    fill: 'currentColor',
+    fill: 'currentColor'
   };
   onMount(() => {
     const icon = new Cib500px({ target: document.body, props });

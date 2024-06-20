@@ -5,10 +5,13 @@
   export let role: string = 'img';
 </script>
 
-<svelte:component 
-  {...$$restProps} 
-  {role}
-  this={icon} 
-  {size}
-  class={$$props.class} 
-/>
+<svelte:component this={icon} {...$$restProps} {role} {size} class={$$props.class} />
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop export let icon: ComponentType;
+@prop export let size: number = 24;
+@prop export let role: string = 'img';
+-->

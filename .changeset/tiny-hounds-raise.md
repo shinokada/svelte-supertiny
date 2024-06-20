@@ -1,5 +1,5 @@
 ---
-"svelte-supertiny": patch
+'svelte-supertiny': patch
 ---
 
 fix: discord
