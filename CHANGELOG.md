@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.6
+
+### Patch Changes
+
+- fix: type Component to ComponentType ([`912f58c105db110388628b0fb750a8b8965874a2`](https://github.com/shinokada/svelte-supertiny/commit/912f58c105db110388628b0fb750a8b8965874a2))
+
 ## 1.0.5
 
 ### Patch Changes
