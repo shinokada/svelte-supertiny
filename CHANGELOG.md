@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.7
+
+### Patch Changes
+
+- fix: replace fill="#fff" with {fill} and add prop ([`77cb05ee734d59f40cc32613289f3c5c458d9f3c`](https://github.com/shinokada/svelte-supertiny/commit/77cb05ee734d59f40cc32613289f3c5c458d9f3c))
+
 ## 1.0.6
 
 ### Patch Changes
