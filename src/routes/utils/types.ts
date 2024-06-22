@@ -1,18 +1,18 @@
-import type { Component } from 'svelte';
+import type { ComponentType } from 'svelte';
 
 export type Title = string;
 
 export type Card = {
   title: string;
   description: string;
-  icon: Component;
+  icon: ComponentType;
   icon_class: string;
 };
 
 export type CardType = {
   title: string;
   description: string;
-  icon: Component;
+  icon: ComponentType;
   href?: string;
   icon_class?: string;
 };
@@ -27,6 +27,6 @@ export interface LinkType {
 export type ListType = {
   name: string;
   href?: string;
-  icon?: Component;
+  icon?: ComponentType;
   children?: ListType[];
 };
