@@ -3,6 +3,7 @@
   const ctx = getContext('iconCtx') ?? {};
   export let size = ctx.size || '24';
   export let role = ctx.role || 'img';
+  export let fill = ctx.fill || '#fff';
 </script>
 
 <svg
@@ -22,7 +23,7 @@
   on:mouseover
   on:mouseout
   viewBox="0 0 512 512"
-  ><path d="m0 0H512V512H0" fill="#fff" /><path
+  ><path d="m0 0H512V512H0" {fill} /><path
     fill="#0d0"
     d="m255 64a192 192 0 102 0m0 23a169 169 0 11-2 0m-88 77h28l61 172 61-172h28l-75 204h-28"
   /></svg
@@ -34,4 +35,5 @@
 ## Props
 @prop export let size = ctx.size || '24';
 @prop export let role = ctx.role || 'img';
+@prop export let fill = ctx.fill || '#fff';
 -->

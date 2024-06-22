@@ -3,6 +3,7 @@
   const ctx = getContext('iconCtx') ?? {};
   export let size = ctx.size || '24';
   export let role = ctx.role || 'img';
+  export let fill = ctx.fill || '#fff';
 </script>
 
 <svg
@@ -34,7 +35,7 @@
         stop-color="#0669bc"
       /></linearGradient
     ></defs
-  ><path fill="#fff" d="M0 0h512v512H0" /><path
+  ><path {fill} d="M0 0h512v512H0" /><path
     fill="url(#a)"
     d="M208.1 120.5h85.1l-88.3 261.7a13.6 13.6 0 01-12.9 9.2H125.8a13.5 13.5 0 01-12.8-17.9l82.3-243.8a13.6 13.6 0 0112.9-9.2z"
   /><path
@@ -52,4 +53,5 @@
 ## Props
 @prop export let size = ctx.size || '24';
 @prop export let role = ctx.role || 'img';
+@prop export let fill = ctx.fill || '#fff';
 -->

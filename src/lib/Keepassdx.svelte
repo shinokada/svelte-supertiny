@@ -3,6 +3,7 @@
   const ctx = getContext('iconCtx') ?? {};
   export let size = ctx.size || '24';
   export let role = ctx.role || 'img';
+  export let fill = ctx.fill || '#fff';
 </script>
 
 <svg
@@ -28,7 +29,7 @@
     filter="url(#t)"
     d="m262 181a79 79 0 100-1m86 0a24 24 0 110 1m-239-28v-35h35l259 259v35h-35zm0 225v34h35l36-36h35v-35h35v-24l-40-40"
   /><path fill="#ffa726" d="m144 109h-35v35l259 259h35v-35" /><path
-    fill="#fff"
+    {fill}
     d="m262 172a79 79 0 100-1m86 0a24 24 0 110 1M109 369v34h35l36-36h35v-35h35v-24l-40-40"
   /></svg
 >
@@ -39,4 +40,5 @@
 ## Props
 @prop export let size = ctx.size || '24';
 @prop export let role = ctx.role || 'img';
+@prop export let fill = ctx.fill || '#fff';
 -->

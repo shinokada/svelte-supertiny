@@ -3,6 +3,7 @@
   const ctx = getContext('iconCtx') ?? {};
   export let size = ctx.size || '24';
   export let role = ctx.role || 'img';
+  export let fill = ctx.fill || '#fff';
 </script>
 
 <svg
@@ -29,7 +30,7 @@
     fill="none"
     stroke="#fff"
     stroke-width="51"
-  /><g fill="#fff" stroke="#e65e17" stroke-width="10"
+  /><g {fill} stroke="#e65e17" stroke-width="10"
     ><circle cx="90" cy="257" r="41" /><circle cx="353" cy="409" r="41" /><circle
       cx="353"
       cy="104"
@@ -44,4 +45,5 @@
 ## Props
 @prop export let size = ctx.size || '24';
 @prop export let role = ctx.role || 'img';
+@prop export let fill = ctx.fill || '#fff';
 -->
