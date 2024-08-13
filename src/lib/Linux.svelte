@@ -1,41 +1,34 @@
 <script lang='ts'>
   import { getContext } from 'svelte';
+  import type { SVGAttributes } from 'svelte/elements';
 
-  interface CtxType {
-		size?: string;
-		role?: string;
-    withEvents?: boolean;
-	}
-
-  type TitleType = {
-    id?: string;
-    title?: string;
+    type TitleType = {
+    id?: string | undefined | null;
+    title?: string | undefined | null;
   };
-
   type DescType = {
-    id?: string;
-    desc?: string;
+    id?: string | undefined | null;
+    desc?: string | undefined | null;
   };
-
+  interface BaseProps extends SVGAttributes<SVGElement>{
+    size?: string | undefined | null;
+    role?: string | undefined | null;
+    color?: string | undefined | null;
+    class?: string | undefined | null;
+  }
+  interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-
-  interface Props{
-    onclick?: ()=>void;
-    size?: string;
-    role?: string;
-    ariaLabel?: string;
-    class?: string;
-    withEvents?: boolean;
+  interface Props extends BaseProps{
     title?: TitleType;
     desc?: DescType;
+    ariaLabel?: string | undefined | null;
   }
+
   let { 
-    onclick,
     size = ctx.size || '24', 
     role = ctx.role || 'img',  
     ariaLabel =  "linux" , 
     class: classname, 
-    withEvents = ctx.withEvents || false,
     title,
     desc,
     ...restProps 
@@ -45,61 +38,33 @@
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-{#snippet svgContent()}
-  <path d="m0 0H512V512H0" fill="#fff"/><g transform="matrix(2 0 0 2 256 256)"><path d="M-32-25c-3 7-24 29-22 51 8 92 36 30 78 53 0 0 75-42 15-110-17-24-2-43-13-59s-30-17-44-2 6 37-14 67"/><path d="M42 21s9-18-8-31c16 17 6 32 6 32h-3C36-13 27 6 14-56 29-73 0-88 0-60h-9c1-24-20-12-8 5-1 37-23 52-23 78-7-18 6-32 6-32s-18 15-7 37 31 17 17 27c22 15 56 5 55-27 1-8 22-5 24-3s-3-4-13-4m-56-78c-7-2-5-11-2-11s8 7 2 11m19 1c-5-7-1-14 4-13s5 13-4 13" fill="#eee"/><g fill="#fc2" stroke="#333" stroke-width="1"><path d="M-41 31l21 30c11 7 5 35-25 21-17-5-31-4-33-13s4-10 3-14c-4-22 14-11 19-22s5-16 15-2M71 45c-4-6 0-17-14-16-6 12-23 24-24 0-10 0-3 24-7 35-9 27 17 29 28 16l26-18c2-3 5-6-9-17m-92-92c-3-6 11-14 16-14s12 4 19 6 4 9 2 10S3-35-5-35s-10-8-16-12"/><path d="M-21-48c8 6 17 11 35-3"/></g><path d="M-10-54c-2 0 1-2 2-1m7 1c1-1-1-2-3-1"/></g>
-{/snippet}
-
-{#if withEvents}
-  <svg xmlns="http://www.w3.org/2000/svg"
-    width={size}
-    height={size}
-    class={classname}
-    {...restProps}
-    aria-label={ariaLabel}
-    {role}
-    viewBox="0 0 512 512"
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    onclick={onclick}
-  >
-  {#if title?.id && title.title}
-    <title id={title.id}>{title.title}</title>
-  {/if}
-  {#if desc?.id && desc.desc}
-    <desc id={desc.id}>{desc.desc}</desc>
-  {/if}
-  {@render svgContent()}
-  </svg>
-{:else}
-  <svg xmlns="http://www.w3.org/2000/svg"
-    width={size}
-    height={size}
-    class={classname}
-    {...restProps}
-    aria-label={ariaLabel}
-    {role}
-    viewBox="0 0 512 512"
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-  >
-  {#if title?.id && title.title}
-    <title id={title.id}>{title.title}</title>
-  {/if}
-  {#if desc?.id && desc.desc}
-    <desc id={desc.id}>{desc.desc}</desc>
-  {/if}
-  {@render svgContent()}
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg"
+  width={size}
+  height={size}
+  class={classname}
+  {...restProps}
+  aria-label={ariaLabel}
+  {role}
+  viewBox="0 0 512 512"
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+>
+{#if title?.id && title.title}
+  <title id={title.id}>{title.title}</title>
 {/if}
+{#if desc?.id && desc.desc}
+  <desc id={desc.id}>{desc.desc}</desc>
+{/if}
+  <path d="m0 0H512V512H0" fill="#fff"/><g transform="matrix(2 0 0 2 256 256)"><path d="M-32-25c-3 7-24 29-22 51 8 92 36 30 78 53 0 0 75-42 15-110-17-24-2-43-13-59s-30-17-44-2 6 37-14 67"/><path d="M42 21s9-18-8-31c16 17 6 32 6 32h-3C36-13 27 6 14-56 29-73 0-88 0-60h-9c1-24-20-12-8 5-1 37-23 52-23 78-7-18 6-32 6-32s-18 15-7 37 31 17 17 27c22 15 56 5 55-27 1-8 22-5 24-3s-3-4-13-4m-56-78c-7-2-5-11-2-11s8 7 2 11m19 1c-5-7-1-14 4-13s5 13-4 13" fill="#eee"/><g fill="#fc2" stroke="#333" stroke-width="1"><path d="M-41 31l21 30c11 7 5 35-25 21-17-5-31-4-33-13s4-10 3-14c-4-22 14-11 19-22s5-16 15-2M71 45c-4-6 0-17-14-16-6 12-23 24-24 0-10 0-3 24-7 35-9 27 17 29 28 16l26-18c2-3 5-6-9-17m-92-92c-3-6 11-14 16-14s12 4 19 6 4 9 2 10S3-35-5-35s-10-8-16-12"/><path d="M-21-48c8 6 17 11 35-3"/></g><path d="M-10-54c-2 0 1-2 2-1m7 1c1-1-1-2-3-1"/></g>
+</svg>
 
 <!--
 @component
 [Go to docs](https://svelte-supertiny.codewithshin.com/)
 ## Props
-@prop onclick
 @prop size = ctx.size || '24'
 @prop role = ctx.role || 'img'
 @prop ariaLabel =  "linux"
 @prop class: classname
-@prop withEvents = ctx.withEvents || false
 @prop title
 @prop desc
 @prop ...restProps

@@ -154,7 +154,6 @@ export { default as Hulu } from './Hulu.svelte';
 export { default as Humblebundle } from './Humblebundle.svelte';
 export { default as I18next } from './I18next.svelte';
 export { default as Ibm } from './Ibm.svelte';
-export { default as Icon } from './Icon.svelte';
 export { default as Iheartradio } from './Iheartradio.svelte';
 export { default as Imdb } from './Imdb.svelte';
 export { default as Imgur } from './Imgur.svelte';

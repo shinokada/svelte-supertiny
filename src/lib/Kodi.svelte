@@ -1,41 +1,34 @@
 <script lang='ts'>
   import { getContext } from 'svelte';
+  import type { SVGAttributes } from 'svelte/elements';
 
-  interface CtxType {
-		size?: string;
-		role?: string;
-    withEvents?: boolean;
-	}
-
-  type TitleType = {
-    id?: string;
-    title?: string;
+    type TitleType = {
+    id?: string | undefined | null;
+    title?: string | undefined | null;
   };
-
   type DescType = {
-    id?: string;
-    desc?: string;
+    id?: string | undefined | null;
+    desc?: string | undefined | null;
   };
-
+  interface BaseProps extends SVGAttributes<SVGElement>{
+    size?: string | undefined | null;
+    role?: string | undefined | null;
+    color?: string | undefined | null;
+    class?: string | undefined | null;
+  }
+  interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-
-  interface Props{
-    onclick?: ()=>void;
-    size?: string;
-    role?: string;
-    ariaLabel?: string;
-    class?: string;
-    withEvents?: boolean;
+  interface Props extends BaseProps{
     title?: TitleType;
     desc?: DescType;
+    ariaLabel?: string | undefined | null;
   }
+
   let { 
-    onclick,
     size = ctx.size || '24', 
     role = ctx.role || 'img',  
     ariaLabel =  "kodi" , 
     class: classname, 
-    withEvents = ctx.withEvents || false,
     title,
     desc,
     ...restProps 
@@ -45,61 +38,33 @@
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-{#snippet svgContent()}
-  <path d="m0 0H512V512H0" fill="#fff"/><g fill="#17b2e7"><path d="M441.5 269.5L383 327.9c-7 7-14.5 7-21.5 0l-60.3-60.4c-6.8-6.8-6.8-14.3 0-21.1l60.6-60.7c6.6-6.5 14.3-6.5 20.9 0l58.7 58.8c9 8.7 8.4 16.6 0 25z"/><path d="M245 441l-58.3-58.5c-7-7-7-14.4 0-21.4l60.4-60.4c6.7-6.7 14.3-6.7 21 0l60.4 60.4c6.9 6.9 7 14.5 0 21.4l-58.8 59c-8.6 8.7-16.5 7.6-24.7-.6z"/><path d="M184 141.5c0-6.5 1.5-11.6 6.4-15.8 18.8-18.4 39-38.9 55.6-55.5 7-7 14.4-7 21.3 0l60.3 60.3c6.9 6.9 6.9 14.5 0 21.4L193.4 286.2c-7.8 4.2-9-1.5-9.2-7.7-.4-47.1.4-93.2-.2-137z"/><path d="M136.1 319c.1 5.2-3.7 10.9-7.7 7l-61-61a10.4 10.4 0 0 1 0-15.4l60.2-61c5.5-5.6 8.2 1.6 8.5 6.7V319z"/></g>
-{/snippet}
-
-{#if withEvents}
-  <svg xmlns="http://www.w3.org/2000/svg"
-    width={size}
-    height={size}
-    class={classname}
-    {...restProps}
-    aria-label={ariaLabel}
-    {role}
-    viewBox="0 0 512 512"
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    onclick={onclick}
-  >
-  {#if title?.id && title.title}
-    <title id={title.id}>{title.title}</title>
-  {/if}
-  {#if desc?.id && desc.desc}
-    <desc id={desc.id}>{desc.desc}</desc>
-  {/if}
-  {@render svgContent()}
-  </svg>
-{:else}
-  <svg xmlns="http://www.w3.org/2000/svg"
-    width={size}
-    height={size}
-    class={classname}
-    {...restProps}
-    aria-label={ariaLabel}
-    {role}
-    viewBox="0 0 512 512"
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-  >
-  {#if title?.id && title.title}
-    <title id={title.id}>{title.title}</title>
-  {/if}
-  {#if desc?.id && desc.desc}
-    <desc id={desc.id}>{desc.desc}</desc>
-  {/if}
-  {@render svgContent()}
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg"
+  width={size}
+  height={size}
+  class={classname}
+  {...restProps}
+  aria-label={ariaLabel}
+  {role}
+  viewBox="0 0 512 512"
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+>
+{#if title?.id && title.title}
+  <title id={title.id}>{title.title}</title>
 {/if}
+{#if desc?.id && desc.desc}
+  <desc id={desc.id}>{desc.desc}</desc>
+{/if}
+  <path d="m0 0H512V512H0" fill="#fff"/><g fill="#17b2e7"><path d="M441.5 269.5L383 327.9c-7 7-14.5 7-21.5 0l-60.3-60.4c-6.8-6.8-6.8-14.3 0-21.1l60.6-60.7c6.6-6.5 14.3-6.5 20.9 0l58.7 58.8c9 8.7 8.4 16.6 0 25z"/><path d="M245 441l-58.3-58.5c-7-7-7-14.4 0-21.4l60.4-60.4c6.7-6.7 14.3-6.7 21 0l60.4 60.4c6.9 6.9 7 14.5 0 21.4l-58.8 59c-8.6 8.7-16.5 7.6-24.7-.6z"/><path d="M184 141.5c0-6.5 1.5-11.6 6.4-15.8 18.8-18.4 39-38.9 55.6-55.5 7-7 14.4-7 21.3 0l60.3 60.3c6.9 6.9 6.9 14.5 0 21.4L193.4 286.2c-7.8 4.2-9-1.5-9.2-7.7-.4-47.1.4-93.2-.2-137z"/><path d="M136.1 319c.1 5.2-3.7 10.9-7.7 7l-61-61a10.4 10.4 0 0 1 0-15.4l60.2-61c5.5-5.6 8.2 1.6 8.5 6.7V319z"/></g>
+</svg>
 
 <!--
 @component
 [Go to docs](https://svelte-supertiny.codewithshin.com/)
 ## Props
-@prop onclick
 @prop size = ctx.size || '24'
 @prop role = ctx.role || 'img'
 @prop ariaLabel =  "kodi"
 @prop class: classname
-@prop withEvents = ctx.withEvents || false
 @prop title
 @prop desc
 @prop ...restProps

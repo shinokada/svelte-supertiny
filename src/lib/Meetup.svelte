@@ -1,41 +1,34 @@
 <script lang='ts'>
   import { getContext } from 'svelte';
+  import type { SVGAttributes } from 'svelte/elements';
 
-  interface CtxType {
-		size?: string;
-		role?: string;
-    withEvents?: boolean;
-	}
-
-  type TitleType = {
-    id?: string;
-    title?: string;
+    type TitleType = {
+    id?: string | undefined | null;
+    title?: string | undefined | null;
   };
-
   type DescType = {
-    id?: string;
-    desc?: string;
+    id?: string | undefined | null;
+    desc?: string | undefined | null;
   };
-
+  interface BaseProps extends SVGAttributes<SVGElement>{
+    size?: string | undefined | null;
+    role?: string | undefined | null;
+    color?: string | undefined | null;
+    class?: string | undefined | null;
+  }
+  interface CtxType extends BaseProps {}
   const ctx: CtxType = getContext('iconCtx') ?? {};
-
-  interface Props{
-    onclick?: ()=>void;
-    size?: string;
-    role?: string;
-    ariaLabel?: string;
-    class?: string;
-    withEvents?: boolean;
+  interface Props extends BaseProps{
     title?: TitleType;
     desc?: DescType;
+    ariaLabel?: string | undefined | null;
   }
+
   let { 
-    onclick,
     size = ctx.size || '24', 
     role = ctx.role || 'img',  
     ariaLabel =  "meetup" , 
     class: classname, 
-    withEvents = ctx.withEvents || false,
     title,
     desc,
     ...restProps 
@@ -45,61 +38,33 @@
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-{#snippet svgContent()}
-  <path d="m0 0H512V512H0" fill="#ed1c40"/><path d="m335 138c6 1 21-16 54-7 57 17 11 98 4 113-10 19-53 101-13 109 18 4 46 0 42 26-3 27-65 13-77 7-52-22-39-77-14-118 10-21 45-70 23-78-14-5-29 34-34 45-6 12-44 86-52 98-20 32-57 16-49-11 11-35 56-116 29-120-14-2-21 14-25 23-8 16-38 102-53 134-19 40-99 23-85-37 5-23 34-113 40-129 12-30 24-69 70-70 13 0 33 15 47 20 14 4 24-24 50-26 32-2 31 20 43 21z" fill="#fff"/>
-{/snippet}
-
-{#if withEvents}
-  <svg xmlns="http://www.w3.org/2000/svg"
-    width={size}
-    height={size}
-    class={classname}
-    {...restProps}
-    aria-label={ariaLabel}
-    {role}
-    viewBox="0 0 512 512"
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    onclick={onclick}
-  >
-  {#if title?.id && title.title}
-    <title id={title.id}>{title.title}</title>
-  {/if}
-  {#if desc?.id && desc.desc}
-    <desc id={desc.id}>{desc.desc}</desc>
-  {/if}
-  {@render svgContent()}
-  </svg>
-{:else}
-  <svg xmlns="http://www.w3.org/2000/svg"
-    width={size}
-    height={size}
-    class={classname}
-    {...restProps}
-    aria-label={ariaLabel}
-    {role}
-    viewBox="0 0 512 512"
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-  >
-  {#if title?.id && title.title}
-    <title id={title.id}>{title.title}</title>
-  {/if}
-  {#if desc?.id && desc.desc}
-    <desc id={desc.id}>{desc.desc}</desc>
-  {/if}
-  {@render svgContent()}
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg"
+  width={size}
+  height={size}
+  class={classname}
+  {...restProps}
+  aria-label={ariaLabel}
+  {role}
+  viewBox="0 0 512 512"
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+>
+{#if title?.id && title.title}
+  <title id={title.id}>{title.title}</title>
 {/if}
+{#if desc?.id && desc.desc}
+  <desc id={desc.id}>{desc.desc}</desc>
+{/if}
+  <path d="m0 0H512V512H0" fill="#ed1c40"/><path d="m335 138c6 1 21-16 54-7 57 17 11 98 4 113-10 19-53 101-13 109 18 4 46 0 42 26-3 27-65 13-77 7-52-22-39-77-14-118 10-21 45-70 23-78-14-5-29 34-34 45-6 12-44 86-52 98-20 32-57 16-49-11 11-35 56-116 29-120-14-2-21 14-25 23-8 16-38 102-53 134-19 40-99 23-85-37 5-23 34-113 40-129 12-30 24-69 70-70 13 0 33 15 47 20 14 4 24-24 50-26 32-2 31 20 43 21z" fill="#fff"/>
+</svg>
 
 <!--
 @component
 [Go to docs](https://svelte-supertiny.codewithshin.com/)
 ## Props
-@prop onclick
 @prop size = ctx.size || '24'
 @prop role = ctx.role || 'img'
 @prop ariaLabel =  "meetup"
 @prop class: classname
-@prop withEvents = ctx.withEvents || false
 @prop title
 @prop desc
 @prop ...restProps
