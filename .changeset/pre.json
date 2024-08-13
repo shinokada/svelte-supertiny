@@ -6,6 +6,7 @@
   },
   "changesets": [
     "hip-hotels-build",
-    "loud-elephants-count"
+    "loud-elephants-count",
+    "smart-students-rescue"
   ]
 }
