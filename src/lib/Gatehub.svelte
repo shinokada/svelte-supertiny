@@ -1,44 +1,25 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
-  import type { SVGAttributes } from 'svelte/elements';
+  import type { BaseProps, Props } from './types';
 
-    type TitleType = {
-    id?: string | undefined | null;
-    title?: string | undefined | null;
-  };
-  type DescType = {
-    id?: string | undefined | null;
-    desc?: string | undefined | null;
-  };
-  interface BaseProps extends SVGAttributes<SVGElement>{
-    size?: string | undefined | null;
-    role?: string | undefined | null;
-    color?: string | undefined | null;
-    class?: string | undefined | null;
-  }
-  interface CtxType extends BaseProps {}
-  const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
-    title?: TitleType;
-    desc?: DescType;
-    ariaLabel?: string | undefined | null;
-  }
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img',  
-    ariaLabel =  "gatehub" , 
-    class: classname, 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    ariaLabel = 'gatehub',
+    class: classname,
     title,
     desc,
-    ...restProps 
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = $state(`${title?.id || ''} ${desc?.id || ''}`);
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-<svg xmlns="http://www.w3.org/2000/svg"
+<svg
+  xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
   class={classname}
@@ -46,15 +27,27 @@
   aria-label={ariaLabel}
   {role}
   viewBox="0 0 512 512"
+  fill="#232323"
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
 >
-{#if title?.id && title.title}
-  <title id={title.id}>{title.title}</title>
-{/if}
-{#if desc?.id && desc.desc}
-  <desc id={desc.id}>{desc.desc}</desc>
-{/if}
-  <path d="m0 0H512V512H0"/><g id="g"><circle cx="83" cy="256" r="36" stroke="#f7f6f2" stroke-width="15" fill="none"/><rect x="169" y="250" width="88" height="13" fill="#9d9fa7"/></g><use xlink:href="#g" transform="rotate(120 256 256)"/><use xlink:href="#g" transform="rotate(240 256 256)"/>
+  {#if title?.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc?.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  <path d="m0 0H512V512H0" /><g id="g"
+    ><circle cx="83" cy="256" r="36" stroke="#f7f6f2" stroke-width="15" fill="none" /><rect
+      x="169"
+      y="250"
+      width="88"
+      height="13"
+      fill="#9d9fa7"
+    /></g
+  ><use xlink:href="#g" transform="rotate(120 256 256)" /><use
+    xlink:href="#g"
+    transform="rotate(240 256 256)"
+  />
 </svg>
 
 <!--
@@ -63,7 +56,7 @@
 ## Props
 @prop size = ctx.size || '24'
 @prop role = ctx.role || 'img'
-@prop ariaLabel =  "gatehub"
+@prop ariaLabel = 'gatehub'
 @prop class: classname
 @prop title
 @prop desc

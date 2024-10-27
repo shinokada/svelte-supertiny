@@ -1,44 +1,25 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
-  import type { SVGAttributes } from 'svelte/elements';
+  import type { BaseProps, Props } from './types';
 
-    type TitleType = {
-    id?: string | undefined | null;
-    title?: string | undefined | null;
-  };
-  type DescType = {
-    id?: string | undefined | null;
-    desc?: string | undefined | null;
-  };
-  interface BaseProps extends SVGAttributes<SVGElement>{
-    size?: string | undefined | null;
-    role?: string | undefined | null;
-    color?: string | undefined | null;
-    class?: string | undefined | null;
-  }
-  interface CtxType extends BaseProps {}
-  const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
-    title?: TitleType;
-    desc?: DescType;
-    ariaLabel?: string | undefined | null;
-  }
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img',  
-    ariaLabel =  "atom" , 
-    class: classname, 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    ariaLabel = 'atom',
+    class: classname,
     title,
     desc,
-    ...restProps 
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = $state(`${title?.id || ''} ${desc?.id || ''}`);
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-<svg xmlns="http://www.w3.org/2000/svg"
+<svg
+  xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
   class={classname}
@@ -48,13 +29,19 @@
   viewBox="0 0 512 512"
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
 >
-{#if title?.id && title.title}
-  <title id={title.id}>{title.title}</title>
-{/if}
-{#if desc?.id && desc.desc}
-  <desc id={desc.id}>{desc.desc}</desc>
-{/if}
-  <path d="m0 0H512V512H0" fill="#fff"/><path d="M112.4 290a182.6 66.6 3 11283 15M231 111.5a66.7 182.6-27 1089.5 124m47-69A182.7 66.7-57 10221 392.5m21-136a15 15 0 110 1h-1l17-2v5" fill="none" stroke="#66595c" stroke-width="14" stroke-linecap="round"/>
+  {#if title?.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc?.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  <path d="m0 0H512V512H0" fill="#fff" /><path
+    d="M112.4 290a182.6 66.6 3 11283 15M231 111.5a66.7 182.6-27 1089.5 124m47-69A182.7 66.7-57 10221 392.5m21-136a15 15 0 110 1h-1l17-2v5"
+    fill="none"
+    stroke="#66595c"
+    stroke-width="14"
+    stroke-linecap="round"
+  />
 </svg>
 
 <!--
@@ -63,7 +50,7 @@
 ## Props
 @prop size = ctx.size || '24'
 @prop role = ctx.role || 'img'
-@prop ariaLabel =  "atom"
+@prop ariaLabel = 'atom'
 @prop class: classname
 @prop title
 @prop desc

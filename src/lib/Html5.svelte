@@ -1,44 +1,25 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
-  import type { SVGAttributes } from 'svelte/elements';
+  import type { BaseProps, Props } from './types';
 
-    type TitleType = {
-    id?: string | undefined | null;
-    title?: string | undefined | null;
-  };
-  type DescType = {
-    id?: string | undefined | null;
-    desc?: string | undefined | null;
-  };
-  interface BaseProps extends SVGAttributes<SVGElement>{
-    size?: string | undefined | null;
-    role?: string | undefined | null;
-    color?: string | undefined | null;
-    class?: string | undefined | null;
-  }
-  interface CtxType extends BaseProps {}
-  const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
-    title?: TitleType;
-    desc?: DescType;
-    ariaLabel?: string | undefined | null;
-  }
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img',  
-    ariaLabel =  "html5" , 
-    class: classname, 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    ariaLabel = 'html5',
+    class: classname,
     title,
     desc,
-    ...restProps 
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = $state(`${title?.id || ''} ${desc?.id || ''}`);
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-<svg xmlns="http://www.w3.org/2000/svg"
+<svg
+  xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
   class={classname}
@@ -46,15 +27,22 @@
   aria-label={ariaLabel}
   {role}
   viewBox="0 0 512 512"
+  fill="#e34f26"
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
 >
-{#if title?.id && title.title}
-  <title id={title.id}>{title.title}</title>
-{/if}
-{#if desc?.id && desc.desc}
-  <desc id={desc.id}>{desc.desc}</desc>
-{/if}
-  <path fill="#e34f26" d="M71 460L30 0h451l-41 460-185 52"/><path fill="#ef652a" d="M256 472l149-41 35-394H256"/><path fill="#ebebeb" d="M256 208h-75l-5-58h80V94H114l15 171h127zm-1 147l-63-17-4-45h-56l7 89 116 32z"/><path fill="#fff" d="M255 208v57h70l-7 73-63 17v59l116-32 16-174zm0-114v56h137l5-56z"/>
+  {#if title?.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc?.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  <path fill="#e34f26" d="M71 460L30 0h451l-41 460-185 52" /><path
+    fill="#ef652a"
+    d="M256 472l149-41 35-394H256"
+  /><path
+    fill="#ebebeb"
+    d="M255 414 139 382l-7-89h56l4 45 63 17Zm1-149H129L114 94H256v56H176l5 58h75Z"
+  /><path fill="#fff" d="M255 208v57h70l-7 73-63 17v59l116-32 16-174zm0-114v56h137l5-56z" />
 </svg>
 
 <!--
@@ -63,7 +51,7 @@
 ## Props
 @prop size = ctx.size || '24'
 @prop role = ctx.role || 'img'
-@prop ariaLabel =  "html5"
+@prop ariaLabel = 'html5'
 @prop class: classname
 @prop title
 @prop desc

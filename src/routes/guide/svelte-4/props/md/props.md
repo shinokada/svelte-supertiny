@@ -1,3 +1,3 @@
-- let size = ctx.size || '24';
-- let role = ctx.role || 'img';
-- let fill = ctx.fill || '#fff';
+- size: string = ctx.size || '24';
+- role: string = ctx.role || 'img';
+- ariaLabel: string = '<icon file name>';

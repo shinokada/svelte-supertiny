@@ -1,3 +1,3 @@
-npm create svelte@latest my-project
-cd my-project
-pnpm i -D svelte-awesome-icons
+npx sv create myapp
+cd myapp
+pnpm i -D svelte-supertiny

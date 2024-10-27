@@ -3,7 +3,7 @@
 
   // Define your global icon settings
   const iconCtx = {
-    size: '40', // Icon size in pixels
+    size: '30',
   };
   setContext('iconCtx', iconCtx);
 </script>

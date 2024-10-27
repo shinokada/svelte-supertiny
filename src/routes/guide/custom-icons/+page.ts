@@ -1,17 +1,23 @@
 import type { MetaProps } from 'runes-meta-tags';
 
-export const load = () => {
-  const pageMetaTags = Object.freeze({
-    title: 'Custom icons example - Svelte Supertiny',
-    description: 'How to create a custom icons with Svelte Supertiny',
+const title = 'Custom icons - Svelte Supertiny';
+const description = 'How to create a custom icons with Svelte Supertiny';
+const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-supertiny';
+export const load = ({ url }) => {
+  const pageMetaTags: MetaProps = {
+    title,
+    description,
     og: {
-      title: 'Custom icons example - Svelte Supertiny',
-      description: 'How to create a custom icons with Svelte Supertiny'
+      title,
+      description,
+      image: imgUrl,
+      url: url.href
     },
     twitter: {
-      title: 'Custom icons example - Svelte Supertiny',
-      description: 'How to create a custom icons with Svelte Supertiny'
+      title,
+      description,
+      image: imgUrl
     }
-  }) satisfies MetaProps;
+  };
   return { pageMetaTags };
 };

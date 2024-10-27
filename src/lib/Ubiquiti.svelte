@@ -1,44 +1,25 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
-  import type { SVGAttributes } from 'svelte/elements';
+  import type { BaseProps, Props } from './types';
 
-    type TitleType = {
-    id?: string | undefined | null;
-    title?: string | undefined | null;
-  };
-  type DescType = {
-    id?: string | undefined | null;
-    desc?: string | undefined | null;
-  };
-  interface BaseProps extends SVGAttributes<SVGElement>{
-    size?: string | undefined | null;
-    role?: string | undefined | null;
-    color?: string | undefined | null;
-    class?: string | undefined | null;
-  }
-  interface CtxType extends BaseProps {}
-  const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
-    title?: TitleType;
-    desc?: DescType;
-    ariaLabel?: string | undefined | null;
-  }
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img',  
-    ariaLabel =  "ubiquiti" , 
-    class: classname, 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    ariaLabel = 'ubiquiti',
+    class: classname,
     title,
     desc,
-    ...restProps 
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = $state(`${title?.id || ''} ${desc?.id || ''}`);
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-<svg xmlns="http://www.w3.org/2000/svg"
+<svg
+  xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
   class={classname}
@@ -48,13 +29,16 @@
   viewBox="0 0 512 512"
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
 >
-{#if title?.id && title.title}
-  <title id={title.id}>{title.title}</title>
-{/if}
-{#if desc?.id && desc.desc}
-  <desc id={desc.id}>{desc.desc}</desc>
-{/if}
-  <path d="m0 0H512V512H0" fill="#399cdb"/><path d="M112 94v18h18V94h-18zm288 0c-82 0-90 31-90 61v172a147 147 0 01-3 28c43-9 72-36 86-82l7-23V94zm-234 18v18h18v-18h-18zm-18 18v18h18v-18h-18zm36 9v18h18v-18h-18zm-72 4v147c0 73 53 128 144 128 0 0-54-30-54-91V197h-18v66h-18v-39h-18v17h-18v-98h-18zm54 18v18h18v-18h-18zm-18 27v18h18v-18h-18zm252 87c-19 64-65 92-131 89-24-1-43-7-57-16 10 42 46 63 48 64l10 6c82-5 130-59 130-128v-15z" fill="#fff"/>
+  {#if title?.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc?.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  <path d="m0 0H512V512H0" fill="#399cdb" /><path
+    d="M400 275v15c0 69-48 123-130 128l-10-6c-2-1-38-22-48-64 14 9 33 15 57 16 66 3 112-25 131-89ZM148 188h18v18H148V188Zm18-27h18v18H166V161Zm-54-18h18v98h18V224h18v39h18V197h18V327c0 61 54 91 54 91-91 0-144-55-144-128V143Zm72-4h18v18H184V139Zm-36-9h18v18H148V130Zm18-18h18v18H166V112ZM400 94V250l-7 23c-14 46-43 73-86 82a147 147 0 003-28V155c0-30 8-61 90-61ZM112 94h18v18H112V94Z"
+    fill="#fff"
+  />
 </svg>
 
 <!--
@@ -63,7 +47,7 @@
 ## Props
 @prop size = ctx.size || '24'
 @prop role = ctx.role || 'img'
-@prop ariaLabel =  "ubiquiti"
+@prop ariaLabel = 'ubiquiti'
 @prop class: classname
 @prop title
 @prop desc

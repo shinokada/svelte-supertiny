@@ -1,0 +1,1 @@
+<Svelte withEvents onclick="{handleClick}" />

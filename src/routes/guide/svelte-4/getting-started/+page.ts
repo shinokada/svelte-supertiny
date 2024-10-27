@@ -1,23 +1,24 @@
 import type { MetaProps } from 'runes-meta-tags';
-import { metaTitle, metaDescription, metaImg, splitAndCapitalize } from 'runes-meta-tags';
+
+const title = 'Getting Started - Svelte Supertiny v1';
+const description = 'How to get started with Svelte Supertiny v1';
+const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-supertiny';
 
 export const load = ({ url }) => {
-  const title = metaTitle(url.pathname, __NAME__);
-  const basicDesc = splitAndCapitalize(__NAME__);
-  const description = metaDescription(url.pathname, basicDesc);
-  const image = metaImg(url.pathname, __NAME__);
-
-  const pageMetaTags = Object.freeze({
+  const pageMetaTags: MetaProps = {
     title,
     description,
     og: {
       title,
-      description
+      description,
+      image: imgUrl,
+      url: url.href
     },
     twitter: {
       title,
-      description
+      description,
+      image: imgUrl
     }
-  }) satisfies MetaProps;
+  };
   return { pageMetaTags };
 };

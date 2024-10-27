@@ -1,17 +1,24 @@
 import type { MetaProps } from 'runes-meta-tags';
 
-export const load = () => {
-  const pageMetaTags = Object.freeze({
-    title: 'Icons - Svelte Supertiny',
-    description: 'Explore all SVG icons for our library! Browse and search names, different colors, adjust size, and easily copy icon names with a single click. Find the perfect icon for your project.',
+const title = 'Icons - Svelte Supertiny';
+const description = 'Easily Find & Copy SVG Icon name for Your Project';
+const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-supertiny';
+
+export const load = ({ url }) => {
+  const pageMetaTags: MetaProps = {
+    title,
+    description,
     og: {
-      title: 'Icons - Svelte Supertiny',
-      description: 'Explore all SVG icons for our library! Browse and search names, different colors, adjust size, and easily copy icon names with a single click. Find the perfect icon for your project.'
+      title,
+      description,
+      image: imgUrl,
+      url: url.href
     },
     twitter: {
-      title: 'Icons - Svelte Supertiny',
-      description: 'Explore all SVG icons for our library! Browse and search names, different colors, adjust size, and easily copy icon names with a single click. Find the perfect icon for your project.'
+      title,
+      description,
+      image: imgUrl
     }
-  }) satisfies MetaProps;
+  };
   return { pageMetaTags };
 };

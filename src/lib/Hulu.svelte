@@ -1,44 +1,25 @@
-<script lang='ts'>
+<script lang="ts">
   import { getContext } from 'svelte';
-  import type { SVGAttributes } from 'svelte/elements';
+  import type { BaseProps, Props } from './types';
 
-    type TitleType = {
-    id?: string | undefined | null;
-    title?: string | undefined | null;
-  };
-  type DescType = {
-    id?: string | undefined | null;
-    desc?: string | undefined | null;
-  };
-  interface BaseProps extends SVGAttributes<SVGElement>{
-    size?: string | undefined | null;
-    role?: string | undefined | null;
-    color?: string | undefined | null;
-    class?: string | undefined | null;
-  }
-  interface CtxType extends BaseProps {}
-  const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props extends BaseProps{
-    title?: TitleType;
-    desc?: DescType;
-    ariaLabel?: string | undefined | null;
-  }
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
 
-  let { 
-    size = ctx.size || '24', 
-    role = ctx.role || 'img',  
-    ariaLabel =  "hulu" , 
-    class: classname, 
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    ariaLabel = 'hulu',
+    class: classname,
     title,
     desc,
-    ...restProps 
+    ...restProps
   }: Props = $props();
 
   let ariaDescribedby = $state(`${title?.id || ''} ${desc?.id || ''}`);
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-<svg xmlns="http://www.w3.org/2000/svg"
+<svg
+  xmlns="http://www.w3.org/2000/svg"
   width={size}
   height={size}
   class={classname}
@@ -48,13 +29,16 @@
   viewBox="0 0 512 512"
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
 >
-{#if title?.id && title.title}
-  <title id={title.id}>{title.title}</title>
-{/if}
-{#if desc?.id && desc.desc}
-  <desc id={desc.id}>{desc.desc}</desc>
-{/if}
-  <path d="m0 0H512V512H0" fill="#040405"/><path fill="#1ce783" d="M297 197h29v119h-29zm-51 85c0 4-3 7-8 7h-16c-4 0-8-3-8-7v-48h-29v50c0 21 14 31 33 31h28c18 0 29-13 29-31v-50h-29v48zm162-48v48c0 4-4 7-8 7h-17c-4 0-7-3-7-7v-48h-29v50c0 21 13 31 33 31h28c17 0 28-13 28-31v-50h-28zm-275 0h-19l-10 1v-38H76v118h28v-48c0-4 4-7 8-7h17c4 0 8 3 8 7v48h28v-51c0-22-14-30-32-30"/>
+  {#if title?.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc?.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  <path d="m0 0H512V512H0" fill="#040405" /><path
+    fill="#1ce783"
+    d="M133 234c18 0 32 8 32 30v51H137V267c0-4-4-7-8-7H112c-4 0-8 3-8 7v48H76V197h28v38l10-1h19m275 0h28v50c0 18-11 31-28 31H380c-20 0-33-10-33-31V234h29v48c0 4 3 7 7 7h17c4 0 8-3 8-7V234ZM246 282V234h29v50c0 18-11 31-29 31H218c-19 0-33-10-33-31V234h29v48c0 4 4 7 8 7h16c5 0 8-3 8-7Zm51 34h29V197H297Z"
+  />
 </svg>
 
 <!--
@@ -63,7 +47,7 @@
 ## Props
 @prop size = ctx.size || '24'
 @prop role = ctx.role || 'img'
-@prop ariaLabel =  "hulu"
+@prop ariaLabel = 'hulu'
 @prop class: classname
 @prop title
 @prop desc

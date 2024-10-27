@@ -1,0 +1,1 @@
+<Svelte on:click="{handleClick}" />

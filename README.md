@@ -1,54 +1,24 @@
 # Svelte Supertiny
 
-<div class="flex gap-2 my-8">
-<a href="https://github.com/sponsors/shinokada" target="_blank"><img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" alt="sponsors"></a>
-<a href="https://www.npmjs.com/package/svelte-supertiny" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/v/svelte-supertiny" alt="npm"></a>
-<a href="https://www.npmjs.com/package/svelte-supertiny" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/v/svelte-supertiny/next" alt="npm"></a>
-<a href="https://twitter.com/shinokada" rel="nofollow" target="_blank"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada"></a>
-<a href="https://opensource.org/licenses/MIT" rel="nofollow" target="_blank"><img src="https://img.shields.io/github/license/shinokada/svelte-supertiny" alt="License"></a>
-<a href="https://www.npmjs.com/package/svelte-supertiny" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-supertiny.svg" alt="npm"></a>
-</div>
+A collection of reusable Svelte components for building user interfaces for Svelte Runes web applications.
 
-340+ SVG logos for popular brands from <a href="https://github.com/edent/SuperTinyIcons">SuperTinyIcons</a> for Svelte.
+- CodeWrapper
+- Footer
+- helpers
+- HighlightCompo
+- HomeCards
+- IconPage
+- SupportBanner
+- TechInfo
 
-Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on GitHub: https://github.com/sponsors/shinokada. Your support helps me maintain and improve this package for the benefit of the community.
 
-## Docs
+## Requirements
 
-See the [Svelte Supertiny documentation](https://svelte-supertiny.codewithshin.com/) to learn more.
-
-## Icons
-
-[Icon names](https://svelte-supertiny.codewithshin.com/icons)
-
-## Repo
-
-[GitHub repo](https://github.com/shinokada/svelte-supertiny/)
+- Svelte 5 (Runes)
+- SvelteKit
 
 ## Installation
 
-### Svelte 4/5
-
 ```sh
-pnpm i -D svelte-supertiny
+pnpm i -D runes-webkit svelte-rune-highlight highlight.js
 ```
-
-### Svelte 5:Runes
-
-Find the latest version for version 2 at the [releases page on GitHub](https://github.com/shinokada/svelte-supertiny/releases).
-
-After installing Svelte 5 and enabling `runes` in `svelte.config.js`:
-
-```sh
-pnpm i -D svelte-supertiny@next
-```
-
-## Original source
-
-[edent/SuperTinyIcons](https://github.com/edent/SuperTinyIcons)
-
-## License
-
-[Svelte-Supertiny License](https://github.com/shinokada/svelte-supertiny/LICENSE)
-
-[SuperTinyIcons License](https://github.com/edent/SuperTinyIcons/blob/master/LICENSE)

@@ -1,1 +1,1 @@
-<CalendarCheckRegular id="my-svg" transform="rotate(45)" />
+<Svelte id="my-svg" transform="rotate(45)" />

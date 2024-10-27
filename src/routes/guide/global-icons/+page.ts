@@ -1,17 +1,24 @@
 import type { MetaProps } from 'runes-meta-tags';
 
-export const load = () => {
-  const pageMetaTags = Object.freeze({
-    title: 'Setting Global Icon - Svelte Supertiny',
-    description: 'Setting Global Icon using setContext with Svelte Supertiny',
+const title = 'Setting Global Icon - Svelte Supertiny';
+const description = 'How to create a global icon using setContext with Svelte Supertiny';
+const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-supertiny';
+
+export const load = ({ url }) => {
+  const pageMetaTags: MetaProps = {
+    title,
+    description,
     og: {
-      title: 'Setting Global Icon - Svelte Supertiny',
-      description: 'Setting Global Icon using setContext with Svelte Supertiny'
+      title,
+      description,
+      image: imgUrl,
+      url: url.href
     },
     twitter: {
-      title: 'Setting Global Icon - Svelte Supertiny',
-      description: 'Setting Global Icon using setContext with Svelte Supertiny'
+      title,
+      description,
+      image: imgUrl
     }
-  }) satisfies MetaProps;
+  };
   return { pageMetaTags };
 };

@@ -1,11 +1,10 @@
 <script lang="ts">
   import type { Component } from 'svelte';
   const config = {
-    size: "40",
-    role: "presentation"
+    size: '30',
   };
-  import { IconSolid } from 'svelte-supertiny';
+  import { Icon } from 'svelte-supertiny';
   export let icon: Component;
 </script>
 
-<IconSolid {...config} {icon} />
+<Icon {...config} {icon} />

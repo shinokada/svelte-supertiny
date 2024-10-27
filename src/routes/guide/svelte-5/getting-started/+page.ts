@@ -1,17 +1,24 @@
 import type { MetaProps } from 'runes-meta-tags';
 
-export const load = () => {
-  const pageMetaTags = Object.freeze({
-    title: 'Getting Started: Svelte Supertiny v2 ',
-    description: 'Getting Started with Svelte Supertiny v2',
+const title = 'Getting Started - Svelte Supertiny v2';
+const description = 'How to get started with Svelte Supertiny v2';
+const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-supertiny';
+
+export const load = ({ url }) => {
+  const pageMetaTags: MetaProps = {
+    title,
+    description,
     og: {
-      title: 'Getting Started: Svelte Supertiny v2',
-      description: 'Getting Started with Svelte Supertiny v2'
+      title,
+      description,
+      image: imgUrl,
+      url: url.href
     },
     twitter: {
-      title: 'Getting Started: Svelte Supertiny v2',
-      description: 'Getting Started with Svelte Supertiny v2'
+      title,
+      description,
+      image: imgUrl
     }
-  }) satisfies MetaProps;
+  };
   return { pageMetaTags };
 };
