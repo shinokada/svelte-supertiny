@@ -62,16 +62,3 @@
     fill="#fff"
   /><circle cx="256" cy="256" r="196" fill="none" stroke="#fff" stroke-width="8" />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'pixelfed'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

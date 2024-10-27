@@ -40,16 +40,3 @@
     d="m88 169h55l39 169 43-129h51l42 131 30-131h-40l82-76 51 76h-40l-56 209h-53l-42-129-41 129h-55z"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'webmention'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

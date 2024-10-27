@@ -42,16 +42,3 @@
     d="M276 192a84 84 0 01-168 0 84 84 0 01168 0zM379 380a84 84 0 111-119"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'opencores'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

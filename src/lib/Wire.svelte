@@ -42,16 +42,3 @@
     d="M99 127v163a1 1 0 00186 0V157a1 1 0 00-58 0v133a1 1 0 00186 0V127"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'wire'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

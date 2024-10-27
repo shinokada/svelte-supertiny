@@ -57,16 +57,3 @@
     d="m372 239q2 15 0 31l21 2q3-17 0-36"
   /><path fill="#be1e2d" d="m370 280q-3 15-10 29l19 9q9-16 12-34" />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'librespeed'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

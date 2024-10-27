@@ -49,16 +49,3 @@
     /><use transform="scale(1 -1)" y="-512" href="#b" /></g
   ><use transform="scale(-1 1)" x="-512" href="#c" />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'json ld'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

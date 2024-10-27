@@ -43,16 +43,3 @@
     d="m256 199v138l131-78"
   /><path fill="#393939" d="m124 259l132-60v138" />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'ethereum'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

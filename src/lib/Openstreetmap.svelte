@@ -73,16 +73,3 @@
     ry=""
   /><rect transform="rotate(45)" x="343" y="18" width="35" height="35" />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'openstreetmap'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

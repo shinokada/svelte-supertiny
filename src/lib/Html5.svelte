@@ -44,16 +44,3 @@
     d="M255 414 139 382l-7-89h56l4 45 63 17Zm1-149H129L114 94H256v56H176l5 58h75Z"
   /><path fill="#fff" d="M255 208v57h70l-7 73-63 17v59l116-32 16-174zm0-114v56h137l5-56z" />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'html5'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

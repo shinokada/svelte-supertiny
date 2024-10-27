@@ -49,16 +49,3 @@
     d="m121 387a35 35 0 1063-21c-19-23-37-5-56-28a35 35 0 1163-21m29-55 36 172 36-172m98 55a35 35 0 00-70 0v70a35 35 0 0070 0v-35h-35"
   /><path d="M99 258H307v9H99" fill="#271b09" />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'svg'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

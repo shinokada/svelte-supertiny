@@ -40,16 +40,3 @@
     d="M78 373v-47h47v104h57V300h74v147A191 191 0 1065 256h74a117 117 0 11117 117"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'digitalocean'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

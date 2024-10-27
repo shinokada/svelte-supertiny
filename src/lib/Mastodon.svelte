@@ -48,16 +48,3 @@
     d="M360 202q0-51-43-60-35-5-51 21l-9 15-9-15q-18-26-51-21-43 9-44 60v91h36V205q0-31 30-28 20 3 20 34v47h36V211q0-31 20-34 28-3 29 23v93h36"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'mastodon'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

@@ -43,16 +43,3 @@
     d="M110 305h.1v.1m97 0v97"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'slack'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

@@ -40,16 +40,3 @@
     d="m358 151V91h-60l-6 6-28 54-9 6H154v82h56l5 6-57 110-3 6v60h60l6-6 28-54 9-6h100v-82h-56l-5-6"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'deviantart'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

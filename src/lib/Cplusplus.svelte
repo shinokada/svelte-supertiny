@@ -46,16 +46,3 @@
     d="M255.5 256.6l166.3-96.1a30 30 0 014.3 14.7V338a30 30 0 01-4.3 14.6Z"
   /><path stroke="#fff" stroke-width="13" d="M350.5 237v39M331 257h39m27.5-20v39M378 257h39" />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'cplusplus'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

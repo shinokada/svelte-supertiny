@@ -40,16 +40,3 @@
     d="M187 51L44 299l68 120L325 51"
   /><path fill="#ffcf48" d="M325 51l143 248H331L187 51" />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'google_drive_old'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

@@ -54,16 +54,3 @@
     d="M348 435a23 23 0 01-26-5c9 9 23 3 23-9V92c0-12-14-19-23-10a23 23 0 0127-4l75 36c7 3 12 11 12 20v244c0 9-5 17-12 21"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'visualstudiocode'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

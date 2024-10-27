@@ -58,16 +58,3 @@
     fill="url(#c)"
   /><path d="m242 58c251 14 262 290 86 248" fill="url(#d)" />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'edge'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

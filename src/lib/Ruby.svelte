@@ -58,16 +58,3 @@
     ><path d="m155 157a62 139 45 101-1.02" /><path d="m375 83h-96l42 30zl300-600" /></g
   >
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'ruby'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

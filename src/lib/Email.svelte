@@ -49,16 +49,3 @@
     d="M305 256 434 384M207 256 78 384m0-256L243 292c7 8 19 8 26 0L434 128"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'email'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

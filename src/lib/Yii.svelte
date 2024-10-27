@@ -49,16 +49,3 @@
     d="M310 353c0-11-7-19-15-26-16-14-43-24-43-24 3-4 5-10 7-15 13-27 20-66 20-66s8 11 13 23 16 34 18 66c1 10 2 17 0 42"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'yii'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

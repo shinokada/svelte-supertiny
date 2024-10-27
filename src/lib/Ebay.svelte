@@ -46,16 +46,3 @@
     d="M339 260c-34 0-58 0-58 17 0 10 7 18 23 18 39 0 35-35 35-35Zm-25-52c22 0 47 6 47 36v62H341l-1-14s-9 17-41 17c-23 0-40-12-40-32s18-31 53-31h27s4-24-27-24c-22 0-24 14-24 14H266c0-3 2-28 48-28Z"
   /><path fill="#86b817" d="M348 212h25l37 72 36-72h23l-65 129h-24l18-36z" />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'ebay'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

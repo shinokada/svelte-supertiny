@@ -43,16 +43,3 @@
     d="m331 176v21m0 64v75"
   /><path stroke="#4285f4" d="m405 245v22" /><path stroke="#0066d9" d="m107 245v22" />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'google_podcasts'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

@@ -40,16 +40,3 @@
     fill="#fff"
   /><path d="m154 396a28 28 0 102 0h99a28 28 0 102 0h99a28 28 0 102 0" fill="#05a63f" />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'threema'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

@@ -43,16 +43,3 @@
     d="m90 341a208 200 0 010-171l63 49q-12 37 0 73"
   /><path fill="#ea4335" d="m153 219c22-69 116-109 179-50l55-54c-78-75-230-72-297 55" />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'google'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

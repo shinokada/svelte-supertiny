@@ -40,16 +40,3 @@
     d="m104 100V412h57V100h151a117 117 0 10.1 0"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'patreon'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

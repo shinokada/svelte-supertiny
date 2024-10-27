@@ -63,16 +63,3 @@
     /><rect x="276" y="114" width="132" height="132" rx="24" fill="url(#t)" /></g
   >
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'microformats'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

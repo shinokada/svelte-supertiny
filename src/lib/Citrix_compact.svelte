@@ -40,16 +40,3 @@
     d="M257.4 89.2a1 1 0 010 40.2 1 1 0 010-40.2Zm16.7 168.1 72.1-82.9a1 1 0 00-19-16.6l-69.8 80.3-69.8-80.3a1 1 0 00-19 16.6l72.1 82.9-72.1 82.9a1 1 0 0019 16.6l69.8-80.3 69.8 80.3a1 1 0 0019-16.6Z"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'citrix_compact'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

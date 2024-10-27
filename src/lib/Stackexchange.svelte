@@ -43,16 +43,3 @@
     d="m106,239v60h300v-60"
   /><path fill="#1e5397" d="M406 319H106v16q0 50 50 50h123v65l65-65h12q50 0 50-50" />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'stackexchange'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

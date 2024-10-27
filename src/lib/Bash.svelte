@@ -48,16 +48,3 @@
     d="m342.4 364.7q-1.1.7-1.1 2v8c0 1.3.9 1.5 1.6 1l32-19.4q.9-.6.9-2.4v-7c0-1.5-1-1.4-1.6-1"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'bash'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

@@ -42,16 +42,3 @@
     d="m2 2zm2 0zm0 2zm2-2zm0 2zm0 2z"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'coderwall'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

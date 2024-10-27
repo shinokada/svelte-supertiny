@@ -46,16 +46,3 @@
     d="M197 292l20-127a14 14 0 0113-11h96c23 0 40 4 54 11-5 44-26 115-128 117h-44c-5 0-10 4-11 10z"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'paypal'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

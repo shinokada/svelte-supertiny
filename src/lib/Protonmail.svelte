@@ -50,16 +50,3 @@
     d="M332 395h60a36 36 0 0036-36V124c0-8-8-10-12-7L279 232c-16 13-35 10-48-2L99 119c-7-7-15-2-15 5v60"
   /><path fill="url(#b)" d="M84 183v176a36 36 0 0036 36h235V168l-50 42-74 66s-17 13-36 0" />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'protonmail'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

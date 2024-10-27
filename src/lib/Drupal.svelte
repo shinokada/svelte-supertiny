@@ -48,16 +48,3 @@
     d="M186 113a175 175 0 10141 0c-44-18-58-34-84-65-4 41-26 50-57 65"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'drupal'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

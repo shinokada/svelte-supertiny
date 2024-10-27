@@ -40,16 +40,3 @@
     fill="#49cc68"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'uphold'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

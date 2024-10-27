@@ -53,16 +53,3 @@
     fill="#1872a2"
   /><rect x="89" y="89" width="334" height="334" rx="50" fill="url(#l)" />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'friendica'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

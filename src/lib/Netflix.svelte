@@ -45,16 +45,3 @@
     d="M155 73h72l130 366q-41-5-74-6"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'netflix'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

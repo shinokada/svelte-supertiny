@@ -47,16 +47,3 @@
     d="m348 317 24-17h-27l-4-32-18 32h-27l16 17-13 31 30-18 23 18-4-31z"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'rockstar'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

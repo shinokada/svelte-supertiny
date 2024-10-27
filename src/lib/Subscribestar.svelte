@@ -46,16 +46,3 @@
     d="m158 271c-17 103 65 138 102 177q38 0 76-17.5C308 381 256 364 235 324q-56-4-77-53m196 24c0-54-30-122-129-103v22c0 37 14 43 31 43s31 5 31 39v34h67"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'subscribestar'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

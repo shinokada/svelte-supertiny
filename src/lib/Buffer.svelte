@@ -43,16 +43,3 @@
     d="M116 237q10.5-4.5 21 0l109 50q10 4.5 20 0l109-50q10.5-4.5 21 0l32 14q7.5 5 0 10L266 336q-10 3-20 0L84 261q-7.5-5 0-10Z"
   /><use transform="translate(0 94)" xlink:href="#a" />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'buffer'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

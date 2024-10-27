@@ -45,16 +45,3 @@
     d="m262 172a79 79 0 100-1m86 0a24 24 0 110 1M109 369v34h35l36-36h35v-35h35v-24l-40-40"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'keepassdx'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

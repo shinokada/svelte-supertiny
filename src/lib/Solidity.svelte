@@ -46,16 +46,3 @@
     d="M256.6 333.7H139.5l58.5 104h117l-58.4-104"
   /><path opacity=".8" d="m315.1 229.7-58.5 104 58.5 104 58.5-104-58.5-104" />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'solidity'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

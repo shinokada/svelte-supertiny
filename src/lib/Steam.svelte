@@ -48,16 +48,3 @@
     /><circle cx="340" cy="190" r="81" stroke-width="32" /></g
   >
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'steam'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

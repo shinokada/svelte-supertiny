@@ -42,16 +42,3 @@
     d="M125 297V402H366V297m-46 44H170m6-68 148 31m11-36-136-64m41-65 115 97m28-27L293 89"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'stackoverflow'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

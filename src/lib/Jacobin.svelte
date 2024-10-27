@@ -42,16 +42,3 @@
     d="m166 326a84 84 0 10170 0V124H158"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'jacobin'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

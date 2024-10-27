@@ -43,16 +43,3 @@
     d="M381 224a81 81 0 0178 103l-3 2H343c-2 0-2-1-2-3 0 0 10-35 46-39l33-1c5-1 5-7 1-7l-32-2c-17-1-25-15-20-31l5-21c1-2 3-1 7-1"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'cloudflare'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

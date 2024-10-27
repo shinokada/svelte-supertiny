@@ -40,16 +40,3 @@
     d="m148 173q73-21 81-103h57v94h67v68h-67v96q1 37 37 37h33v72h-62c-60 0-96-34-96-96V232h-50"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'tumblr'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

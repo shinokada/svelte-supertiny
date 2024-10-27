@@ -40,16 +40,3 @@
     d="M102 113v198a88 88 0 0088 88h132a88 88 0 0088-88V201a66 66 0 00-110-48.694A66 66 0 00190 201v110h44V201a1 1 0 0144 0v110h44V201a1 1 0 0144 0v110a44 44 0 01-44 44H190a44 44 0 01-44-44V113z"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'linux_mint'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

@@ -40,16 +40,3 @@
     d="M0 0h256v256H0"
   /><path fill="#eee" d="M256 256h256v256H256z" />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'delicious'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

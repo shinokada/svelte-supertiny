@@ -43,16 +43,3 @@
     d="M256 64c-99 0-192 81-192 192 0 123 102 192 192 192-21 0-125-23-125-166 0-89 73-139 125-119 0 0 56 21 56 93s-56 93-56 93c51 20 125-27 125-119 0-129-87-166-125-166z"
   /><use transform="rotate(180 256 256)" href="#b" />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'json'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

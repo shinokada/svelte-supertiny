@@ -40,16 +40,3 @@
     d="M95 184c0-51 41-93 93-93h86c64 0 103 61 85 126 0 0 61-3 66 58v53c0 46-34 93-93 93H183c-49 0-88-39-88-88z"
   /><path stroke="#FF5722" stroke-width="55" d="M199 188h68m-74 129h133" />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'blogger'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

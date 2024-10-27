@@ -47,16 +47,3 @@
     fill="#ea4335"
   /><circle cx="344.4" cy="366.1" r="49.9" fill="#fbbc05" />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'google_assistant'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

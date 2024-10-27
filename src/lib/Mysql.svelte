@@ -43,16 +43,3 @@
     d="M229 332h38q11 0 11-6v-8q0-5-11-5h-15c-11 0-23-5-23-14v-8c0-9 7-15 21-15h43v9h-40q-9 0-9 6v6q0 7 9 7h19c11 0 20 6 20 12v11c0 9-11 14-21 14h-42m111-9h-12q-11 0-11-8v-31q0-8 12-8h18q12 0 12 8v32q0 4-4 6l-11-10h-16m35 17q9-2 9-13v-33q0-16-25-16h-21q-24 0-24 15v34q0 16 23 16h25l11 10h17m3-75h14v49q0 7 12 7h37v9h-38q-25 0-25-17"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'mysql'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->

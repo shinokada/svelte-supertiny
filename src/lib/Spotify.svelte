@@ -45,16 +45,3 @@
     /><path d="m156 315c54-12 116-17 178 20" stroke-width="24" /></g
   >
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-supertiny.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop ariaLabel = 'spotify'
-@prop class: classname
-@prop title
-@prop desc
-@prop ...restProps
--->
