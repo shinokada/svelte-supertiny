@@ -65,7 +65,7 @@
     name: 'codewithshin.com',
     href: 'https://codewithshin.com'
   };
-  const urlsToIncludeSwitcherAndSidebar = ['/guide/', '/guide2/', '/how-to-use', '/quick-start'];
+  const urlsToIncludeSwitcherAndSidebar = ['/guide/'];
   /*eslint no-undef: "off"*/
   const siteName = removeHyphensAndCapitalize(__NAME__);
   const githubUrl = `https://github.com/shinokada/${__NAME__}`;
