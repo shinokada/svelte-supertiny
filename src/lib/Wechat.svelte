@@ -42,3 +42,16 @@
     d="M250 198a18 18 0 000-35 18 18 0 100 35m-89 0a18 18 0 000-35 18 18 0 100 35m44-93c66 0 121 41 131 93-64-4-147 44-123 128-3 0-25 2-51-6-4-1-8 0-11 2l-30 17c-3 1-7-1-6-6l7-24c1-5-1-8-4-10-28-20-45-50-45-83 0-61 59-111 132-111"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'wechat'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

@@ -48,3 +48,16 @@
     d="M246 324c-18 6-29 21-29 44 0 8 7 14 15 14h48c8 0 15-6 15-14 0-23-11-38-29-44m4-113c-1 12-6 22-12 31 37-22 75-73 49-113"
   /><circle cx="256" cy="297" r="29" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'tox'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

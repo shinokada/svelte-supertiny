@@ -40,3 +40,16 @@
     d="m124 91h51l81 162 81-164h51L276 293v136h-40V293"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'hackernews'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

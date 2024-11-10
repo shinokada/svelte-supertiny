@@ -35,7 +35,7 @@
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-  <path d="m0 0H512V512H0" fill="#fff" /><linearGradient id="a" x1=".79" y1=".16" x2=".21" y2=".84"
+  <path d="m0 0H512V512H0" fill="none" /><linearGradient id="a" x1=".79" y1=".16" x2=".21" y2=".84"
     ><stop offset="0" stop-color="#ffb45b" /><stop
       offset="1"
       stop-color="#ff8a00"
@@ -45,3 +45,16 @@
     fill="url(#a)"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'gitpod'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

@@ -50,3 +50,16 @@
     /><path stroke-width="19" d="M183 396l84-140H422 267m0 0-82-138" /></g
   >
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'ubuntu'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

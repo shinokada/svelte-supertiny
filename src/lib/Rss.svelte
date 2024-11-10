@@ -40,3 +40,16 @@
     d="m109 271A132 133 0 01241 403h60A192 193 0 00109 211v-54A246 247 0 01355 403h60A306 307 0 00109 97m35 235a35 35 0 102 0"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'rss'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

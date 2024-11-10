@@ -40,3 +40,16 @@
     d="M182 56 56 185l57-3 102 126-12 68 75-77L456 456 300 281l78-83-75 18L182 105"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'pinboard'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

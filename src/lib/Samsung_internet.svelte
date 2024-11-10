@@ -42,3 +42,16 @@
     stroke-width="54"
   /><path d="m98 188a172 172 0 01321 123" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'samsung_internet'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

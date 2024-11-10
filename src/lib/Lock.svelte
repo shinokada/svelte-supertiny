@@ -46,3 +46,16 @@
     /><circle cx="256" cy="296" r="28" /><path d="M278 365H234l16-69h12" /></g
   >
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'lock'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

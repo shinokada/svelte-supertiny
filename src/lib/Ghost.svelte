@@ -41,3 +41,16 @@
     d="M101 134h187zm246 0h61zM101 257h310zm0 121h123zm187 0h123z"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'ghost'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

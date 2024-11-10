@@ -40,3 +40,16 @@
     d="M296 120h114v272zm-80 0H102v272zm39 99-48 118h52l23 55h46"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'adobe'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

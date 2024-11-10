@@ -40,3 +40,16 @@
     d="M192 288l40-96 40 96h72L232 56 120 288Z"
   /><path fill="#fda580" d="M280 288l32 72 32-72h48l-80 168-80-168z" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'strava'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

@@ -62,3 +62,16 @@
     /><circle cx="423" cy="230" r="39" fill="#6f0" /></g
   >
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'fediverse'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

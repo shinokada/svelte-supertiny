@@ -36,7 +36,7 @@
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-  <path d="m0 0H512V512H0" fill="#fff" /><g transform="matrix(2 0 0 2 256 256)"
+  <path d="m0 0H512V512H0" fill="none" /><g transform="matrix(2 0 0 2 256 256)"
     ><path
       d="M-32-25c-3 7-24 29-22 51 8 92 36 30 78 53 0 0 75-42 15-110-17-24-2-43-13-59s-30-17-44-2 6 37-14 67"
     /><path
@@ -49,3 +49,16 @@
     ><path d="M-10-54c-2 0 1-2 2-1m7 1c1-1-1-2-3-1" /></g
   >
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'linux'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

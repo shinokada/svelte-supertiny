@@ -42,3 +42,16 @@
     d="m208 327c28 0 25-40-3-78s-68-53-79-37-1 51 19 77 49 38 63 38h96c-28 0-25-40 3-78s68-53 79-37 1 51-19 77-49 38-63 38m-48 39-34 36c-6 6-19 1-12-7l38-43q8-8 16 0l38 43c7 8-6 13-12 7"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'foobar2000'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

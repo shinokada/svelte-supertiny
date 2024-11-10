@@ -35,7 +35,7 @@
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-  <path d="m0 0H512V512H0" fill="#fff" /><path
+  <path d="m0 0H512V512H0" fill="none" /><path
     d="M100 135q0-35 37-35H340v74H174V340H100"
     fill="#4285f4"
   /><path d="m338 100v76h74v-41q0-35-35-35" fill="#1967d2" /><path
@@ -51,3 +51,16 @@
     fill="none"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'google_calendar'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

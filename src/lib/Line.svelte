@@ -47,3 +47,16 @@
     stroke-width="21"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'line'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

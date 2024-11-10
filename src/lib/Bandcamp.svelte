@@ -35,5 +35,18 @@
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-  <path d="m0 0H512V512H0" fill="#fff" /><path fill="#1DA0C3" d="M99 349h215l99-186H198" />
+  <path d="m0 0H512V512H0" fill="none" /><path fill="#1DA0C3" d="M99 349h215l99-186H198" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'bandcamp'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

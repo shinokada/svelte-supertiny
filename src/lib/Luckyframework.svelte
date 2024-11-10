@@ -35,7 +35,7 @@
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-  <path d="m0 0H512V512H0" fill="#fff" /><radialGradient id="a" cx="7.25" cy="4" r="7.73"
+  <path d="m0 0H512V512H0" fill="none" /><radialGradient id="a" cx="7.25" cy="4" r="7.73"
     ><stop offset=".975" stop-color="#9cfd65" /><stop offset=".975" stop-color="#34db96" /><stop
       offset="1"
       stop-color="#34db96"
@@ -47,3 +47,16 @@
     d="M146.1 351.1H366L256 161z"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'luckyframework'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

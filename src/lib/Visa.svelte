@@ -1,0 +1,55 @@
+<script lang="ts">
+  import { getContext } from 'svelte';
+  import type { BaseProps, Props } from './types';
+
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
+
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    ariaLabel = 'visa',
+    class: classname,
+    title,
+    desc,
+    ...restProps
+  }: Props = $props();
+
+  let ariaDescribedby = $state(`${title?.id || ''} ${desc?.id || ''}`);
+  const hasDescription = $derived(!!(title?.id || desc?.id));
+</script>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width={size}
+  height={size}
+  class={classname}
+  {...restProps}
+  aria-label={ariaLabel}
+  {role}
+  viewBox="0 0 512 512"
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+>
+  {#if title?.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc?.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  <path d="m0 0h512v512H0" fill="#fff" /><path
+    d="M229 323h-32l20-133h33l-21 133Zm117-129c-6-3-16-6-29-6-31 0-54 18-54 44 0 19 16 30 28 36 13 6 17 11 17 16 0 9-10 13-19 13-13 0-20-2-31-7l-4-2-4 30c7 4 21 7 36 7 33 0 55-18 56-45 0-15-9-27-27-36-12-6-19-11-19-17 1-5 6-11 19-11 11 0 18 2 24 5l3 1 4-28Zm43 82 13-37 4-13 3 12 7 38h-27Zm40-86h-25c-8 0-13 3-17 11l-48 122h34l7-20h41l4 20h30l-26-133Zm-259 0-31 91-4-19c-6-21-24-44-44-55l29 116h34l50-133h-34Z M109 190H58l-1 3c40 11 67 38 78 70l-11-61c-2-9-8-11-15-12Z"
+    fill="#00579F"
+  />
+</svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'visa'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

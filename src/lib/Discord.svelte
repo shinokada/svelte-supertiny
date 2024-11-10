@@ -35,9 +35,22 @@
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-  <path d="m0 0H512V512H0" fill="#fff" /><path
+  <path d="m0 0H512V512H0" fill="none" /><path
     id="a"
     fill="#5865f2"
     d="M196 304a34 37 0 10-1 0m63 58q-46 0-95-21l-7 5q7 6 31 16-8 16-20 32-52-16-93-47-13-109 54-211 38-18 77-24l10 20q16-3 42-3Z"
   /><use href="#a" transform="matrix(-1 0 0 1 512 0)" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'discord'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

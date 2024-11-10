@@ -42,3 +42,16 @@
     d="m99 260v52a52.5 55.5 0 00105 0V190a52 49.5 0 01104 0v122a52.5 55.5 0 00105 0V260"
   /><path fill="#ea4b24" d="M273 215v44l35 15 35-15v-44l-35 15z" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'stumbleupon'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

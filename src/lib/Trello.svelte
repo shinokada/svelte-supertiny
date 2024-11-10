@@ -44,3 +44,16 @@
     y="95"
   /><rect height="296" rx="23" width="132" x="97" y="95" />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'trello'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

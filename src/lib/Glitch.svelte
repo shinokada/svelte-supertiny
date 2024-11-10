@@ -64,3 +64,16 @@
     /></g
   >
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'glitch'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

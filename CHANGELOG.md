@@ -1,5 +1,11 @@
 # svelte-supertiny
 
+## 2.0.1
+
+### Patch Changes
+
+- feat: change from fill="#fff" to fill="none"
+
 ## 2.0.0
 
 ### Patch Changes

@@ -43,3 +43,16 @@
     d="M256 314 431 198 256 81 81 198ZV431L431 314 256 198 81 314 256 431M81 198V314m350 0V198m-175 0V81"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'codepen'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

@@ -1,6 +1,6 @@
 {
   "name": "svelte-supertiny",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "340+ Svelte SVG Supertinyicons components",
   "license": "MIT",
   "homepage": "https://svelte-supertiny.codewithshin.com/",
@@ -934,6 +934,10 @@
       "types": "./dist/Markdown.svelte.d.ts",
       "svelte": "./dist/Markdown.svelte"
     },
+    "./Mastercard.svelte": {
+      "types": "./dist/Mastercard.svelte.d.ts",
+      "svelte": "./dist/Mastercard.svelte"
+    },
     "./Mastodon.svelte": {
       "types": "./dist/Mastodon.svelte.d.ts",
       "svelte": "./dist/Mastodon.svelte"
@@ -1025,6 +1029,10 @@
     "./Olympics.svelte": {
       "types": "./dist/Olympics.svelte.d.ts",
       "svelte": "./dist/Olympics.svelte"
+    },
+    "./Onlyfans.svelte": {
+      "types": "./dist/Onlyfans.svelte.d.ts",
+      "svelte": "./dist/Onlyfans.svelte"
     },
     "./Openbenches.svelte": {
       "types": "./dist/Openbenches.svelte.d.ts",
@@ -1362,6 +1370,10 @@
       "types": "./dist/TailwindCss.svelte.d.ts",
       "svelte": "./dist/TailwindCss.svelte"
     },
+    "./Tata.svelte": {
+      "types": "./dist/Tata.svelte.d.ts",
+      "svelte": "./dist/Tata.svelte"
+    },
     "./Teamspeak.svelte": {
       "types": "./dist/Teamspeak.svelte.d.ts",
       "svelte": "./dist/Teamspeak.svelte"
@@ -1497,6 +1509,10 @@
     "./Vimeo.svelte": {
       "types": "./dist/Vimeo.svelte.d.ts",
       "svelte": "./dist/Vimeo.svelte"
+    },
+    "./Visa.svelte": {
+      "types": "./dist/Visa.svelte.d.ts",
+      "svelte": "./dist/Visa.svelte"
     },
     "./Visualstudiocode.svelte": {
       "types": "./dist/Visualstudiocode.svelte.d.ts",

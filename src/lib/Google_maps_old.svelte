@@ -35,7 +35,7 @@
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-  <path id="a" d="m0 0H512V512H0" fill="#fff" /><clipPath id="b"><use xlink:href="#a" /></clipPath
+  <path id="a" d="m0 0H512V512H0" fill="none" /><clipPath id="b"><use xlink:href="#a" /></clipPath
   ><g clip-path="url(#b)"
     ><path fill="#35a85b" d="M0 512V0h512z" /><path fill="#5881ca" d="M256 288L32 512h448z" /><path
       fill="#c1c0be"
@@ -53,3 +53,16 @@
     /></g
   >
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'google_maps_old'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

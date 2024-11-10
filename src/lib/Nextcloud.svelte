@@ -42,3 +42,16 @@
     d="m160 257a40 40 0 110-2zh25a71 71 0 100-2v2m167 0a40 40 0 100-2z"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'nextcloud'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

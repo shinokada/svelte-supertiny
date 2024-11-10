@@ -35,7 +35,7 @@
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-  <path d="m0 0H512V512H0" fill="#fff" /><defs
+  <path d="m0 0H512V512H0" fill="none" /><defs
     ><linearGradient
       id="A"
       gradientUnits="userSpaceOnUse"
@@ -53,3 +53,16 @@
     d="M256 56.1C203.1 56.1 32.8 364.9 58.7 417s369 51.6 394.7 0S308.9 56.1 256 56.1zm0 79.1c34.7 0 146.1 202.7 129.3 236.5s-241.5 34.2-258.5 0S221.3 135.2 256 135.2zm0 74.1c-17.6 0-74.1 102.5-65.5 119.8s122.5 17.1 131 0-47.9-119.8-65.5-119.8z"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'jellyfin'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

@@ -59,3 +59,16 @@
     d="M399.1 373.6a13.5 13.5 0 01-12.8 17.9H291.5a13.5 13.5 0 0012.8-17.9L222 129.8a13.5 13.5 0 00-12.8-9.2H304a13.5 13.5 0 0112.8 9.2Z"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'azure'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->

@@ -49,3 +49,16 @@
     /></g
   ><g fill="#f40"><circle cx="191" cy="287" r="31" /><circle cx="321" cy="287" r="31" /></g>
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop ariaLabel = 'reddit'
+@prop class: classname
+@prop title
+@prop desc
+@prop ...restProps
+-->
