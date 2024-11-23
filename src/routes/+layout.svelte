@@ -39,7 +39,7 @@
   let activeUrl = $state($page.url.pathname);
   $effect(() => {
     activeUrl = $page.url.pathname;
-  });  
+  });
 
   type LiType = {
     name: string;
