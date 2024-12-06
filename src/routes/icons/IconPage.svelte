@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Label } from 'svelte-5-ui-lib';
+  import { Label } from 'flowbite-svelte';
   import { twMerge } from 'tailwind-merge';
   import { Copy } from 'runes-webkit';
   /* eslint-disable  @typescript-eslint/no-explicit-any */
