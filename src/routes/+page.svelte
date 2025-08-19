@@ -10,7 +10,7 @@
     info,
     type CardType
   } from 'runes-webkit';
-  
+
   const brand = {
     title: `${removeHyphensAndCapitalize(__NAME__)}`,
     description: `${__DESCRIPTION__}`,
@@ -47,12 +47,12 @@
     svelteKitVersion: __SVELTEKIT_VERSION__,
     svelteRuneHighlight: __SVELTE_RUNE_HIGHLIGHT_VERSION__,
     viteVersion: __VITE_VERSION__,
-    tailwindcssVersion: __TAILWINDCSS_VERSION__,
+    tailwindcssVersion: __TAILWINDCSS_VERSION__
   };
 </script>
 
 <div class="relative mx-auto mt-8 h-full max-w-7xl overflow-y-auto px-8 pb-20">
-  <SupportBanner class="relative dark-bg-theme2">
+  <SupportBanner class="dark-bg-theme2 relative">
     To Keep It Going, Please Show Your Love.<a href="https://ko-fi.com/Z8Z2CHALG" target="_blank"
       ><img
         height="40"
@@ -64,7 +64,7 @@
   </SupportBanner>
 
   <h1 class="my-8 flex justify-center">Svelte Supertiny</h1>
- 
+
   <HomeCards cards={filteredCards as CardType[]} />
   <h2 class="my-8 flex justify-center">Info</h2>
   <HomeCards cards={newInfo as CardType[]} />

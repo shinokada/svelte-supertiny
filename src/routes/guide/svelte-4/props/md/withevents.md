@@ -1,1 +1,1 @@
-<Svelte withEvents on:click={handleClick}/> 
+<Svelte withEvents on:click={handleClick}/>
