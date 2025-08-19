@@ -19,7 +19,7 @@
 <HighlightCompo
   codeLang="ts"
   code={modules['./md/create-a-custom-component.md'] as string}
-  clipboardClass="top-2"
+  
 />
 
 <p>
@@ -35,7 +35,7 @@
 <HighlightCompo
   codeLang="ts"
   code={modules['./md/implementation.md'] as string}
-  clipboardClass="top-2"
+  
 />
 
 <p>
