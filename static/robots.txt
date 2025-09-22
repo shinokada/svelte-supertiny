@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://svelte-supertiny.codewithshin.com/sitemap.xml
