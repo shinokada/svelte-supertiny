@@ -1,23 +1,24 @@
 import type { SVGAttributes } from 'svelte/elements';
 type TitleType = {
-id?: string | undefined | null;
-title?: string | undefined | null;
+  id?: string;
+  title?: string;
 };
 
 type DescType = {
-id?: string | undefined | null;
-desc?: string | undefined | null;
+  id?: string;
+  desc?: string;
 };
 
 export interface BaseProps extends SVGAttributes<SVGElement>{
-size?: string | undefined | null;
-role?: string | undefined | null;
-color?: string | undefined | null;
-class?: string | undefined | null;
+  size?: string;
+  role?: string;
+  color?: string;
+  class?: string;
 }
 
 export interface Props extends BaseProps{
-title?: TitleType;
-desc?: DescType;
-ariaLabel?: string | undefined | null;
+  title?: TitleType;
+  desc?: DescType;
+  ariaLabel?: string;
+  focusable?: 'true' | 'false' | 'auto';
 }

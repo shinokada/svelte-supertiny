@@ -7,14 +7,15 @@
   let {
     size = ctx.size || '24',
     role = ctx.role || 'img',
-    ariaLabel = 'gogcom',
     class: classname,
     title,
     desc,
+    focusable = 'false',
+    ariaLabel,
     ...restProps
   }: Props = $props();
 
-  let ariaDescribedby = $state(`${title?.id || ''} ${desc?.id || ''}`);
+  let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
@@ -24,11 +25,13 @@
   height={size}
   class={classname}
   {...restProps}
-  aria-label={ariaLabel}
   {role}
+  {focusable}
+  aria-label={title?.id ? undefined : ariaLabel}
+  aria-labelledby={title?.id || undefined}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 512 512"
   fill="#333"
-  aria-describedby={hasDescription ? ariaDescribedby : undefined}
 >
   {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
@@ -42,7 +45,7 @@
   /><path
     id="o"
     d="M224 221h64q17-1 18-18v-64q-1-17-18-18h-64q-17 1-18 18v64q1 17 18 18zm14-24q-8 0-8-8v-36q0-8 8-8h36q8 0 8 8v36q0 8-8 8z"
-  /><use x="244" xlink:href="#g" /><use x="-19" y="170" xlink:href="#o" /><path
+  /><use x="244" href="#g" /><use x="-19" y="170" href="#o" /><path
     d="M307 391h24v-67q0-8 8-8h16v75h24v-67q0-8 8-8h16v75h24V291H325q-17-1-18 18zM167 291h-65q-17 1-18 18v64q1 17 18 18h65v-24h-51q-8 0-8-8v-36q0-8 8-8h51z"
   />
 </svg>
@@ -53,9 +56,10 @@
 ## Props
 @prop size = ctx.size || '24'
 @prop role = ctx.role || 'img'
-@prop ariaLabel = 'gogcom'
 @prop class: classname
 @prop title
 @prop desc
+@prop focusable = 'false'
+@prop ariaLabel
 @prop ...restProps
 -->

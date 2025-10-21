@@ -1,0 +1,68 @@
+<script lang="ts">
+  import { getContext } from 'svelte';
+  import type { BaseProps, Props } from './types';
+
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
+
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    class: classname,
+    title,
+    desc,
+    focusable = 'false',
+    ariaLabel,
+    ...restProps
+  }: Props = $props();
+
+  let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
+  const hasDescription = $derived(!!(title?.id || desc?.id));
+</script>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width={size}
+  height={size}
+  class={classname}
+  {...restProps}
+  {role}
+  {focusable}
+  aria-label={title?.id ? undefined : ariaLabel}
+  aria-labelledby={title?.id || undefined}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 512 512"
+>
+  {#if title?.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc?.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  <path d="m0 0H512V512H0" fill="none" /><path
+    fill="#ff9100"
+    d="M200.9 422.7a139 139 0 0 0 112.3-2.8 201 201 0 0 1-62.8-39.4 105 105 0 0 1-49.5 42.2"
+  /><path
+    fill="#ffc400"
+    d="M250.4 380.5a200 200 0 0 1-64.2-153.9l.3-6a107 107 0 0 0-55.8.7 141.4 141.4 0 0 0 70.2 201.4 105 105 0 0 0 49.5-42.2"
+  /><path
+    fill="#ff9100"
+    d="M250.4 380.5a107 107 0 0 0-63.9-159.8l-.3 5.9a200 200 0 0 0 64.2 153.9"
+  /><path
+    fill="#dd2c00"
+    d="M261.1 77.4a202 202 0 0 0-74.6 143.3 107 107 0 0 1 63.9 159.8c18.1 17 39.3 30 62.7 39.5 46.8-21.6 80-68.5 82-123.6 1.3-36-12.6-67.8-32.1-94.8-20.6-28.4-102-124.2-102-124.2"
+  />
+</svg>
+
+<!--
+@component
+[Go to docs](https://svelte-supertiny.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop class: classname
+@prop title
+@prop desc
+@prop focusable = 'false'
+@prop ariaLabel
+@prop ...restProps
+-->

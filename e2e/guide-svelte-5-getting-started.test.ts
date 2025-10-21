@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 
-const title = 'Getting Started - Svelte Supertiny v2';
-const description = 'How to get started with Svelte Supertiny v2';
+const title = 'Getting Started - Svelte Supertiny v3';
+const description = 'How to get started with Svelte Supertiny v3';
 const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-supertiny';
 
 test.beforeEach(async ({ page }) => {

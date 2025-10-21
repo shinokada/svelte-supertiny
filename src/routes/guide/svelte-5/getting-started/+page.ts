@@ -1,7 +1,7 @@
 import type { MetaProps } from 'runes-meta-tags';
 
-const title = 'Getting Started - Svelte Supertiny v2';
-const description = 'How to get started with Svelte Supertiny v2';
+const title = 'Getting Started - Svelte Supertiny v3';
+const description = 'How to get started with Svelte Supertiny v3';
 const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-supertiny';
 
 export const load = ({ url }) => {

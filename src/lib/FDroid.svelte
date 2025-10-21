@@ -7,14 +7,15 @@
   let {
     size = ctx.size || '24',
     role = ctx.role || 'img',
-    ariaLabel = 'f droid',
     class: classname,
     title,
     desc,
+    focusable = 'false',
+    ariaLabel,
     ...restProps
   }: Props = $props();
 
-  let ariaDescribedby = $state(`${title?.id || ''} ${desc?.id || ''}`);
+  let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
@@ -24,11 +25,13 @@
   height={size}
   class={classname}
   {...restProps}
-  aria-label={ariaLabel}
   {role}
+  {focusable}
+  aria-label={title?.id ? undefined : ariaLabel}
+  aria-labelledby={title?.id || undefined}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 512 512"
   fill="#fff"
-  aria-describedby={hasDescription ? ariaDescribedby : undefined}
 >
   {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
@@ -42,7 +45,7 @@
         fill="#9b0"
         d="M18 4-9-31q-8-11-17-4c-5 5-3 6 30 47"
       /></g
-    ><use xlink:href="#i" transform="matrix(-1 0 0 1 304 0)" /><rect
+    ><use href="#i" transform="matrix(-1 0 0 1 304 0)" /><rect
       fill="#c6f04c"
       width="304"
       height="48"
@@ -66,7 +69,7 @@
         cy="57"
         r="27"
       /></g
-    ><use xlink:href="#o" x="156" /><path
+    ><use href="#o" x="156" /><path
       fill="#0d47a1"
       d="m68 217a84 84 0 100-2m15 0a69 69 0 110 2m21-13a50 50 0 110 24h25a26 26 0 100-24"
     /></g
@@ -79,9 +82,10 @@
 ## Props
 @prop size = ctx.size || '24'
 @prop role = ctx.role || 'img'
-@prop ariaLabel = 'f droid'
 @prop class: classname
 @prop title
 @prop desc
+@prop focusable = 'false'
+@prop ariaLabel
 @prop ...restProps
 -->

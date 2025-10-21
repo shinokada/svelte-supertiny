@@ -7,14 +7,15 @@
   let {
     size = ctx.size || '24',
     role = ctx.role || 'img',
-    ariaLabel = 'gatehub',
     class: classname,
     title,
     desc,
+    focusable = 'false',
+    ariaLabel,
     ...restProps
   }: Props = $props();
 
-  let ariaDescribedby = $state(`${title?.id || ''} ${desc?.id || ''}`);
+  let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
@@ -24,11 +25,13 @@
   height={size}
   class={classname}
   {...restProps}
-  aria-label={ariaLabel}
   {role}
+  {focusable}
+  aria-label={title?.id ? undefined : ariaLabel}
+  aria-labelledby={title?.id || undefined}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
   viewBox="0 0 512 512"
   fill="#232323"
-  aria-describedby={hasDescription ? ariaDescribedby : undefined}
 >
   {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
@@ -44,8 +47,8 @@
       height="13"
       fill="#9d9fa7"
     /></g
-  ><use xlink:href="#g" transform="rotate(120 256 256)" /><use
-    xlink:href="#g"
+  ><use href="#g" transform="rotate(120 256 256)" /><use
+    href="#g"
     transform="rotate(240 256 256)"
   />
 </svg>
@@ -56,9 +59,10 @@
 ## Props
 @prop size = ctx.size || '24'
 @prop role = ctx.role || 'img'
-@prop ariaLabel = 'gatehub'
 @prop class: classname
 @prop title
 @prop desc
+@prop focusable = 'false'
+@prop ariaLabel
 @prop ...restProps
 -->

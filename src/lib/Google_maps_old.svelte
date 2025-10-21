@@ -7,14 +7,15 @@
   let {
     size = ctx.size || '24',
     role = ctx.role || 'img',
-    ariaLabel = 'google_maps_old',
     class: classname,
     title,
     desc,
+    focusable = 'false',
+    ariaLabel,
     ...restProps
   }: Props = $props();
 
-  let ariaDescribedby = $state(`${title?.id || ''} ${desc?.id || ''}`);
+  let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
@@ -24,10 +25,12 @@
   height={size}
   class={classname}
   {...restProps}
-  aria-label={ariaLabel}
   {role}
-  viewBox="0 0 512 512"
+  {focusable}
+  aria-label={title?.id ? undefined : ariaLabel}
+  aria-labelledby={title?.id || undefined}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 512 512"
 >
   {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
@@ -35,8 +38,8 @@
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-  <path id="a" d="m0 0H512V512H0" fill="none" /><clipPath id="b"><use xlink:href="#a" /></clipPath
-  ><g clip-path="url(#b)"
+  <path id="a" d="m0 0H512V512H0" fill="none" /><clipPath id="b"><use href="#a" /></clipPath><g
+    clip-path="url(#b)"
     ><path fill="#35a85b" d="M0 512V0h512z" /><path fill="#5881ca" d="M256 288L32 512h448z" /><path
       fill="#c1c0be"
       d="M288 256L512 32v448z"
@@ -60,9 +63,10 @@
 ## Props
 @prop size = ctx.size || '24'
 @prop role = ctx.role || 'img'
-@prop ariaLabel = 'google_maps_old'
 @prop class: classname
 @prop title
 @prop desc
+@prop focusable = 'false'
+@prop ariaLabel
 @prop ...restProps
 -->

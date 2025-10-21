@@ -7,14 +7,15 @@
   let {
     size = ctx.size || '24',
     role = ctx.role || 'img',
-    ariaLabel = 'xmpp',
     class: classname,
     title,
     desc,
+    focusable = 'false',
+    ariaLabel,
     ...restProps
   }: Props = $props();
 
-  let ariaDescribedby = $state(`${title?.id || ''} ${desc?.id || ''}`);
+  let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
@@ -24,10 +25,12 @@
   height={size}
   class={classname}
   {...restProps}
-  aria-label={ariaLabel}
   {role}
-  viewBox="0 0 512 512"
+  {focusable}
+  aria-label={title?.id ? undefined : ariaLabel}
+  aria-labelledby={title?.id || undefined}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 512 512"
 >
   {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
@@ -49,7 +52,7 @@
         d="m392.2 138.4c5 98-85 249-215.2 272.4q-9 3-27 7.2v4c156-12 274-173 261-290.3"
       /></g
     ></g
-  ><use xlink:href="#b" transform="matrix(-1 0 0 1 512 0)" fill="#a0ce67" color="#439639" />
+  ><use href="#b" transform="matrix(-1 0 0 1 512 0)" fill="#a0ce67" color="#439639" />
 </svg>
 
 <!--
@@ -58,9 +61,10 @@
 ## Props
 @prop size = ctx.size || '24'
 @prop role = ctx.role || 'img'
-@prop ariaLabel = 'xmpp'
 @prop class: classname
 @prop title
 @prop desc
+@prop focusable = 'false'
+@prop ariaLabel
 @prop ...restProps
 -->

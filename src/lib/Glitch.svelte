@@ -7,14 +7,15 @@
   let {
     size = ctx.size || '24',
     role = ctx.role || 'img',
-    ariaLabel = 'glitch',
     class: classname,
     title,
     desc,
+    focusable = 'false',
+    ariaLabel,
     ...restProps
   }: Props = $props();
 
-  let ariaDescribedby = $state(`${title?.id || ''} ${desc?.id || ''}`);
+  let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
@@ -24,10 +25,12 @@
   height={size}
   class={classname}
   {...restProps}
-  aria-label={ariaLabel}
   {role}
-  viewBox="0 0 512 512"
+  {focusable}
+  aria-label={title?.id ? undefined : ariaLabel}
+  aria-labelledby={title?.id || undefined}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 512 512"
 >
   {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
@@ -40,7 +43,7 @@
       id="f"
       d="m240 266q57 3 140-26c31 5 75 32 64 10s-2-24-2-38-8-22-1-33 8-35 4-36-53 22-65 21-38-14-72-19q-10-5-14-12t-39-16-44-10-29 26q-42-2-67 12t-38 28-12 30c23 9 38 12 3 22q7 8 19 15t31 14 48 1q19 40 77 28"
       fill="#fff"
-    /><use xlink:href="#f" y="119" /></mask
+    /><use href="#f" y="119" /></mask
   ><g mask="url(#m)"
     ><path d="m9 9H448V406H9" fill="#2800ff" /><path
       d="m9 256 207 2v-11h136v12h99V9H9"
@@ -58,7 +61,7 @@
           /></g
         ></g
       ></g
-    ><use xlink:href="#a" y="120" stroke="#f79" /><path
+    ><use href="#a" y="120" stroke="#f79" /><path
       d="m216 258v-11h136v12h99v-55H299v11H9v191H447v-82H247v11H9v-79"
       style="fill:#37b;mix-blend-mode:screen"
     /></g
@@ -71,9 +74,10 @@
 ## Props
 @prop size = ctx.size || '24'
 @prop role = ctx.role || 'img'
-@prop ariaLabel = 'glitch'
 @prop class: classname
 @prop title
 @prop desc
+@prop focusable = 'false'
+@prop ariaLabel
 @prop ...restProps
 -->

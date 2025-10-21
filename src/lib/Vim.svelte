@@ -7,14 +7,15 @@
   let {
     size = ctx.size || '24',
     role = ctx.role || 'img',
-    ariaLabel = 'vim',
     class: classname,
     title,
     desc,
+    focusable = 'false',
+    ariaLabel,
     ...restProps
   }: Props = $props();
 
-  let ariaDescribedby = $state(`${title?.id || ''} ${desc?.id || ''}`);
+  let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
@@ -24,10 +25,12 @@
   height={size}
   class={classname}
   {...restProps}
-  aria-label={ariaLabel}
   {role}
-  viewBox="0 0 512 512"
+  {focusable}
+  aria-label={title?.id ? undefined : ariaLabel}
+  aria-labelledby={title?.id || undefined}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 512 512"
 >
   {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
@@ -43,12 +46,12 @@
           id="a"
           d="m8 5-2 2v4l2 1h2v40l3 2h3l43-44V7l-2-2H40l-2 2v4l2 1h2l-1 1-17 16V12h2l2-1V7l-2-2z"
         /></g
-      ><use xlink:href="#a" /><g stroke="#000" stroke-width="2.5"
+      ><use href="#a" /><g stroke="#000" stroke-width="2.5"
         ><path
           id="b"
           d="m31 36h3v3h-3zm-.5 6-.5-1h4l-4 11.5h1V54h-5v-1.5h1zm7.5-1h5l1 1 1-1h4l1 1 1-1h5l1 1v3l-3 7.5h1V54h-5v-1.5h1l3-7.5h-5l-3 7.5h1V54h-5v-1.5h1l3-7.5h-5l-3 7.5h1V54h-5v-1.5h1L38.5 42z"
         /></g
-      ><use xlink:href="#b" /></g
+      ><use href="#b" /></g
     ></g
   >
 </svg>
@@ -59,9 +62,10 @@
 ## Props
 @prop size = ctx.size || '24'
 @prop role = ctx.role || 'img'
-@prop ariaLabel = 'vim'
 @prop class: classname
 @prop title
 @prop desc
+@prop focusable = 'false'
+@prop ariaLabel
 @prop ...restProps
 -->

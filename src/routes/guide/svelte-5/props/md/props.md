@@ -4,5 +4,6 @@
 - desc
 - ariaLabel
 - class: classname
-- ariaLabel = file-name
-- ...restProps
+- focusable = 'false',
+- ariaLabel,
+- ...restProps 

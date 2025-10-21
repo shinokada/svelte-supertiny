@@ -7,14 +7,15 @@
   let {
     size = ctx.size || '24',
     role = ctx.role || 'img',
-    ariaLabel = 'typescript',
     class: classname,
     title,
     desc,
+    focusable = 'false',
+    ariaLabel,
     ...restProps
   }: Props = $props();
 
-  let ariaDescribedby = $state(`${title?.id || ''} ${desc?.id || ''}`);
+  let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
@@ -24,10 +25,12 @@
   height={size}
   class={classname}
   {...restProps}
-  aria-label={ariaLabel}
   {role}
-  viewBox="0 0 512 512"
+  {focusable}
+  aria-label={title?.id ? undefined : ariaLabel}
+  aria-labelledby={title?.id || undefined}
   aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 512 512"
 >
   {#if title?.id && title.title}
     <title id={title.id}>{title.title}</title>
@@ -36,8 +39,8 @@
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
   <path d="m0 0H512V512H0" fill="#3178c6" /><path
+    d="m250 278h42v-27H173v27h42v121h34zm56 115c12 6 28 8 42 8 12 0 28-2 41-10 5-4 10-8 13-14s5-13 5-21c0-27-19-36-39-45-9-4-28-10-28-23 0-10 11-15 25-15 11 0 26 4 35 10v-31c-12-5-26-6-37-6-33 0-58 13-58 44 0 23 14 33 35 43 11 5 32 11 32 25 0 13-16 15-25 15-14 0-29-5-40-14z"
     fill="#fff"
-    d="m233 284h64V243H118v41h64v183h51zm84 173c18.03 9.21 42.31 12.5 64 12.5 18.7 0 42.93-2.43 62-14.4 8.1-5.3 15-12 19-21s7.1-19 7.1-32c-.09-41.15-29.29-54.79-58.1-68-13.08-5.95-42.5-15.56-42.5-34.1 0-14.94 16.81-22.53 38.2-22.6 16.68 0 39.1 5.43 53 15.64v-47c-18.77-7.21-38.44-8.56-56-8.6-49.25 0-87.66 20.32-88 66.8.49 35.11 21.32 50.44 52 65 16.71 7.56 47.57 17.24 47.8 38.2-.73 19.57-24.58 22.55-38.4 22.7-21.56 0-44.36-8.19-60.1-21.14z"
   />
 </svg>
 
@@ -47,9 +50,10 @@
 ## Props
 @prop size = ctx.size || '24'
 @prop role = ctx.role || 'img'
-@prop ariaLabel = 'typescript'
 @prop class: classname
 @prop title
 @prop desc
+@prop focusable = 'false'
+@prop ariaLabel
 @prop ...restProps
 -->
