@@ -66,7 +66,7 @@
             div3Class
           )}
         >
-          {#each filteredEntries as [name, Component]}
+          {#each filteredEntries as [name, Component] (name)}
             <div class="flex flex-wrap items-center">
               <Component size={size.toString()} {variation} {...restProps} />
               <Copy iconName={name}>{name}</Copy>

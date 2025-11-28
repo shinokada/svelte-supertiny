@@ -48,9 +48,7 @@
     ><text font-size="256" x="256" y="400">29</text><text font-size="64" x="256" y="480"
       >Sunday</text
     ></g
-  ><script>
-<![CDATA[c=0;for(i in e={month:"short",day:"numeric",weekday:"long"})document.querySelectorAll("text")[c++].innerHTML=(new Date).toLocaleString(0,{[i]:e[i]})]]>
-  </script>
+  >
 </svg>
 
 <!--
