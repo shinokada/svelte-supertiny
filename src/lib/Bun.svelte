@@ -10,13 +10,12 @@
     class: classname,
     title,
     desc,
-    focusable = 'false',
+    focusable = ctx.focusable || 'false',
     ariaLabel,
     ...restProps
   }: Props = $props();
 
-  let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
-  const hasDescription = $derived(!!(title?.id || desc?.id));
+  const ariaDescribedby = $derived([title?.id, desc?.id].filter(Boolean).join(' ') || undefined);
 </script>
 
 <svg
@@ -27,9 +26,9 @@
   {...restProps}
   {role}
   {focusable}
-  aria-label={title?.id ? undefined : ariaLabel}
+  aria-label={ariaLabel || undefined}
   aria-labelledby={title?.id || undefined}
-  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  aria-describedby={ariaDescribedby}
   viewBox="0 0 512 512"
 >
   {#if title?.id && title.title}
@@ -41,7 +40,6 @@
   <path d="m0 0H512V512H0" fill="none" /><path
     d="m150 139c50-27 78-51 102-51s52 24 102 51a182 145 0 11-204 0z"
     fill="#fbf0df"
-    stroke="#000"
     stroke-width="12"
   /><path d="m126 356a199 167 9 00298-126A176 139 0 01126 356" fill="#f6dece" /><path
     d="m224 114q-18 36-54 46 44 0 54-46zm15-7q0 38-29 64 39-16 29-64zm11-1q19 30 9 69 24-36-9-69zm14-1q31 24 35 60 9-42-35-60z"
@@ -54,13 +52,11 @@
   /><path
     d="m76 265c31-108 86-116 109-130s54-40 82-38c-30-11-57 16-101 40s-90 57-90 128m105-37a10 10 0 101 0h123a10 10 0 101 0"
     fill="#fff"
-  /><g stroke="#000"
-    ><path d="M284 292c10 0-8 35-32 37-24-2-42-37-32-37Z" fill="#b71422" stroke-width="6" /><path
-      d="m229 316a31 31 0 0149-3q-25 30-49 3"
-      fill="#ff6164"
-      stroke-width="5"
-    /></g
-  >
+  /><path d="M284 292c10 0-8 35-32 37-24-2-42-37-32-37Z" fill="#b71422" stroke-width="6" /><path
+    d="m229 316a31 31 0 0149-3q-25 30-49 3"
+    fill="#ff6164"
+    stroke-width="5"
+  />
 </svg>
 
 <!--
@@ -72,7 +68,7 @@
 @prop class: classname
 @prop title
 @prop desc
-@prop focusable = 'false'
+@prop focusable = ctx.focusable || 'false'
 @prop ariaLabel
 @prop ...restProps
 -->

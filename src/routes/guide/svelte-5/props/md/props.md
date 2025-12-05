@@ -4,6 +4,6 @@
 - desc
 - ariaLabel
 - class: classname
-- focusable = 'false',
+- focusable = ctx.focusable || 'false'
 - ariaLabel,
 - ...restProps 

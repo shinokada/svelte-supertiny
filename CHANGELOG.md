@@ -1,5 +1,11 @@
 # svelte-supertiny
 
+## 3.0.1
+
+### Patch Changes
+
+- fix: change let to const, update ariaDescribedby, prop, and type
+
 ## 3.0.0
 
 ### Major Changes

@@ -10,13 +10,12 @@
     class: classname,
     title,
     desc,
-    focusable = 'false',
+    focusable = ctx.focusable || 'false',
     ariaLabel,
     ...restProps
   }: Props = $props();
 
-  let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
-  const hasDescription = $derived(!!(title?.id || desc?.id));
+  const ariaDescribedby = $derived([title?.id, desc?.id].filter(Boolean).join(' ') || undefined);
 </script>
 
 <svg
@@ -27,9 +26,9 @@
   {...restProps}
   {role}
   {focusable}
-  aria-label={title?.id ? undefined : ariaLabel}
+  aria-label={ariaLabel || undefined}
   aria-labelledby={title?.id || undefined}
-  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  aria-describedby={ariaDescribedby}
   viewBox="0 0 512 512"
 >
   {#if title?.id && title.title}
@@ -38,8 +37,9 @@
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-  <path d="m0 0H512V512H0" fill="none" /><path
-    d="M280 305c0 12-10 22-23 22s-21-7-21-20c0-18 15-33 45-33m96-65c0-34-37-71-113-71-70 0-109 29-109 59 0 24 18 39 47 39 27 0 45-10 45-24l-2-14c0-3 1-14 18-14 19 0 19 16 19 24v42c-39 0-145 4-145 68 0 35 31 58 79 58 28 0 56-14 68-33m11 101A192 192 0 11446.5 232"
+  <path d="m0 0H512V512H0" fill="#01091c" /><path
+    d="M270 247l-34-95-34 95Zm150 91s4 6-2 22c-9 18-9 20-40 20-46 0-67-23-84-69l-14-40c-1 6-7 21-28 21H186l-4 10c-5 13-9 24-9 31 0 9 4 14 24 18l9 2v26H91V353l5-1c21-5 33-17 46-51 0 0 38-100 65-172 17-47 35-53 82-55 0 0 74 202 82 222 7 18 18 41 34 41 8 0 16-1 15 0Z"
+    fill="#fff"
   />
 </svg>
 
@@ -52,7 +52,7 @@
 @prop class: classname
 @prop title
 @prop desc
-@prop focusable = 'false'
+@prop focusable = ctx.focusable || 'false'
 @prop ariaLabel
 @prop ...restProps
 -->

@@ -10,13 +10,12 @@
     class: classname,
     title,
     desc,
-    focusable = 'false',
+    focusable = ctx.focusable || 'false',
     ariaLabel,
     ...restProps
   }: Props = $props();
 
-  let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
-  const hasDescription = $derived(!!(title?.id || desc?.id));
+  const ariaDescribedby = $derived([title?.id, desc?.id].filter(Boolean).join(' ') || undefined);
 </script>
 
 <svg
@@ -27,9 +26,9 @@
   {...restProps}
   {role}
   {focusable}
-  aria-label={title?.id ? undefined : ariaLabel}
+  aria-label={ariaLabel || undefined}
   aria-labelledby={title?.id || undefined}
-  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  aria-describedby={ariaDescribedby}
   viewBox="0 0 512 512"
   fill="#e10098"
 >
@@ -39,15 +38,12 @@
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-  <path d="m0 0H512V512H0" fill="none" /><g id="b" stroke="#e10098"
-    ><g id="a"
-      ><path fill="none" stroke-width="11" d="m256 151-91 52" /><circle
-        cx="256"
-        cy="150.8"
-        r="22"
-      /></g
+  <path d="m0 0H512V512H0" fill="none" /><g
+    id="b"
+    stroke="#e10098"
+    transform="translate(-127 -127) scale(1.5)"
+    ><g id="a"><path stroke-width="11" d="m256 151-91 52" /><circle cx="256" cy="151" r="22" /></g
     ><use href="#a" transform="rotate(60 256 256)" /><path
-      fill="none"
       stroke-width="11"
       d="m256 151-94 162"
     /></g
@@ -66,7 +62,7 @@
 @prop class: classname
 @prop title
 @prop desc
-@prop focusable = 'false'
+@prop focusable = ctx.focusable || 'false'
 @prop ariaLabel
 @prop ...restProps
 -->

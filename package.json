@@ -1,6 +1,6 @@
 {
   "name": "svelte-supertiny",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Supertinyicons components for Sveltejs",
   "license": "MIT",
   "homepage": "https://svelte-supertiny.codewithshin.com/",
@@ -65,12 +65,12 @@
     "svelte": "^5.0.0"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.29.7",
+    "@changesets/cli": "^2.29.8",
     "@eslint/compat": "^2.0.0",
     "@eslint/js": "^9.39.1",
     "@playwright/test": "^1.57.0",
     "@sveltejs/adapter-auto": "^7.0.0",
-    "@sveltejs/kit": "^2.49.0",
+    "@sveltejs/kit": "^2.49.1",
     "@sveltejs/package": "^2.5.7",
     "@sveltejs/vite-plugin-svelte": "^6.2.1",
     "@svitejs/changesets-changelog-github-compact": "^1.2.0",
@@ -79,20 +79,20 @@
     "@testing-library/svelte": "^5.2.9",
     "eslint": "^9.39.1",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-svelte": "^3.13.0",
+    "eslint-plugin-svelte": "^3.13.1",
     "flowbite": "^3.1.2",
-    "flowbite-svelte": "^1.28.3",
+    "flowbite-svelte": "^1.29.1",
     "globals": "^16.5.0",
     "highlight.js": "^11.11.1",
     "jsdom": "^27.2.0",
-    "prettier": "3.6.2",
+    "prettier": "^3.7.4",
     "prettier-plugin-svelte": "^3.4.0",
-    "prettier-plugin-tailwindcss": "^0.7.1",
+    "prettier-plugin-tailwindcss": "^0.7.2",
     "publint": "^0.3.15",
     "runatics": "^0.1.4",
     "runes-meta-tags": "^0.4.5",
-    "runes-webkit": "^0.12.0",
-    "svelte": "^5.45.2",
+    "runes-webkit": "^0.12.1",
+    "svelte": "^5.45.5",
     "svelte-check": "^4.3.4",
     "svelte-lib-helpers": "^0.4.31",
     "svelte-rune-highlight": "^0.11.1",
@@ -100,10 +100,10 @@
     "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.1.17",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.48.0",
-    "vite": "^7.2.4",
+    "typescript-eslint": "^8.48.1",
+    "vite": "^7.2.6",
     "vite-plugin-devtools-json": "^1.0.0",
-    "vitest": "^4.0.14"
+    "vitest": "^4.0.15"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
@@ -139,6 +139,10 @@
     "./Adobe.svelte": {
       "types": "./dist/Adobe.svelte.d.ts",
       "svelte": "./dist/Adobe.svelte"
+    },
+    "./Adyen.svelte": {
+      "types": "./dist/Adyen.svelte.d.ts",
+      "svelte": "./dist/Adyen.svelte"
     },
     "./Airbnb.svelte": {
       "types": "./dist/Airbnb.svelte.d.ts",
@@ -316,6 +320,10 @@
       "types": "./dist/Calendar.svelte.d.ts",
       "svelte": "./dist/Calendar.svelte"
     },
+    "./Cash_app.svelte": {
+      "types": "./dist/Cash_app.svelte.d.ts",
+      "svelte": "./dist/Cash_app.svelte"
+    },
     "./Centos.svelte": {
       "types": "./dist/Centos.svelte.d.ts",
       "svelte": "./dist/Centos.svelte"
@@ -452,9 +460,17 @@
       "types": "./dist/Docker.svelte.d.ts",
       "svelte": "./dist/Docker.svelte"
     },
+    "./Dolibarr.svelte": {
+      "types": "./dist/Dolibarr.svelte.d.ts",
+      "svelte": "./dist/Dolibarr.svelte"
+    },
     "./Dovecot.svelte": {
       "types": "./dist/Dovecot.svelte.d.ts",
       "svelte": "./dist/Dovecot.svelte"
+    },
+    "./Downpour.svelte": {
+      "types": "./dist/Downpour.svelte.d.ts",
+      "svelte": "./dist/Downpour.svelte"
     },
     "./Drawio.svelte": {
       "types": "./dist/Drawio.svelte.d.ts",
@@ -804,6 +820,10 @@
       "types": "./dist/Grafana_loki.svelte.d.ts",
       "svelte": "./dist/Grafana_loki.svelte"
     },
+    "./Grapheneos.svelte": {
+      "types": "./dist/Grapheneos.svelte.d.ts",
+      "svelte": "./dist/Grapheneos.svelte"
+    },
     "./Graphql.svelte": {
       "types": "./dist/Graphql.svelte.d.ts",
       "svelte": "./dist/Graphql.svelte"
@@ -888,6 +908,10 @@
       "types": "./dist/Imgur.svelte.d.ts",
       "svelte": "./dist/Imgur.svelte"
     },
+    "./Inkscape.svelte": {
+      "types": "./dist/Inkscape.svelte.d.ts",
+      "svelte": "./dist/Inkscape.svelte"
+    },
     "./Instagram.svelte": {
       "types": "./dist/Instagram.svelte.d.ts",
       "svelte": "./dist/Instagram.svelte"
@@ -960,6 +984,10 @@
       "types": "./dist/Kaggle.svelte.d.ts",
       "svelte": "./dist/Kaggle.svelte"
     },
+    "./Kagi.svelte": {
+      "types": "./dist/Kagi.svelte.d.ts",
+      "svelte": "./dist/Kagi.svelte"
+    },
     "./Keepassdx.svelte": {
       "types": "./dist/Keepassdx.svelte.d.ts",
       "svelte": "./dist/Keepassdx.svelte"
@@ -992,9 +1020,17 @@
       "types": "./dist/Kotlin.svelte.d.ts",
       "svelte": "./dist/Kotlin.svelte"
     },
+    "./LanguageIcon.svelte": {
+      "types": "./dist/LanguageIcon.svelte.d.ts",
+      "svelte": "./dist/LanguageIcon.svelte"
+    },
     "./Laravel.svelte": {
       "types": "./dist/Laravel.svelte.d.ts",
       "svelte": "./dist/Laravel.svelte"
+    },
+    "./Lastfm.svelte": {
+      "types": "./dist/Lastfm.svelte.d.ts",
+      "svelte": "./dist/Lastfm.svelte"
     },
     "./Lastpass.svelte": {
       "types": "./dist/Lastpass.svelte.d.ts",
@@ -1103,6 +1139,10 @@
     "./Mcdonald_s.svelte": {
       "types": "./dist/Mcdonald_s.svelte.d.ts",
       "svelte": "./dist/Mcdonald_s.svelte"
+    },
+    "./Mediawiki.svelte": {
+      "types": "./dist/Mediawiki.svelte.d.ts",
+      "svelte": "./dist/Mediawiki.svelte"
     },
     "./Medium.svelte": {
       "types": "./dist/Medium.svelte.d.ts",
@@ -1288,6 +1328,10 @@
       "types": "./dist/Phone.svelte.d.ts",
       "svelte": "./dist/Phone.svelte"
     },
+    "./Photoshop.svelte": {
+      "types": "./dist/Photoshop.svelte.d.ts",
+      "svelte": "./dist/Photoshop.svelte"
+    },
     "./Php.svelte": {
       "types": "./dist/Php.svelte.d.ts",
       "svelte": "./dist/Php.svelte"
@@ -1348,6 +1392,10 @@
       "types": "./dist/Postman.svelte.d.ts",
       "svelte": "./dist/Postman.svelte"
     },
+    "./Postmarketos.svelte": {
+      "types": "./dist/Postmarketos.svelte.d.ts",
+      "svelte": "./dist/Postmarketos.svelte"
+    },
     "./Powershell.svelte": {
       "types": "./dist/Powershell.svelte.d.ts",
       "svelte": "./dist/Powershell.svelte"
@@ -1371,6 +1419,10 @@
     "./Prometheus.svelte": {
       "types": "./dist/Prometheus.svelte.d.ts",
       "svelte": "./dist/Prometheus.svelte"
+    },
+    "./Proton_drive.svelte": {
+      "types": "./dist/Proton_drive.svelte.d.ts",
+      "svelte": "./dist/Proton_drive.svelte"
     },
     "./Proton_vpn.svelte": {
       "types": "./dist/Proton_vpn.svelte.d.ts",
@@ -1560,10 +1612,6 @@
       "types": "./dist/Sqlite.svelte.d.ts",
       "svelte": "./dist/Sqlite.svelte"
     },
-    "./Square_cash.svelte": {
-      "types": "./dist/Square_cash.svelte.d.ts",
-      "svelte": "./dist/Square_cash.svelte"
-    },
     "./Stackexchange.svelte": {
       "types": "./dist/Stackexchange.svelte.d.ts",
       "svelte": "./dist/Stackexchange.svelte"
@@ -1599,6 +1647,10 @@
     "./Subscribestar.svelte": {
       "types": "./dist/Subscribestar.svelte.d.ts",
       "svelte": "./dist/Subscribestar.svelte"
+    },
+    "./Supabase.svelte": {
+      "types": "./dist/Supabase.svelte.d.ts",
+      "svelte": "./dist/Supabase.svelte"
     },
     "./Svelte.svelte": {
       "types": "./dist/Svelte.svelte.d.ts",
@@ -1763,6 +1815,10 @@
     "./Uplay.svelte": {
       "types": "./dist/Uplay.svelte.d.ts",
       "svelte": "./dist/Uplay.svelte"
+    },
+    "./Upstash.svelte": {
+      "types": "./dist/Upstash.svelte.d.ts",
+      "svelte": "./dist/Upstash.svelte"
     },
     "./Upwork.svelte": {
       "types": "./dist/Upwork.svelte.d.ts",

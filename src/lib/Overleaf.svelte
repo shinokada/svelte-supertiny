@@ -10,13 +10,12 @@
     class: classname,
     title,
     desc,
-    focusable = 'false',
+    focusable = ctx.focusable || 'false',
     ariaLabel,
     ...restProps
   }: Props = $props();
 
-  let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
-  const hasDescription = $derived(!!(title?.id || desc?.id));
+  const ariaDescribedby = $derived([title?.id, desc?.id].filter(Boolean).join(' ') || undefined);
 </script>
 
 <svg
@@ -27,9 +26,9 @@
   {...restProps}
   {role}
   {focusable}
-  aria-label={title?.id ? undefined : ariaLabel}
+  aria-label={ariaLabel || undefined}
   aria-labelledby={title?.id || undefined}
-  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  aria-describedby={ariaDescribedby}
   viewBox="0 0 512 512"
 >
   {#if title?.id && title.title}
@@ -40,7 +39,7 @@
   {/if}
   <path d="m0 0H512V512H0" fill="none" /><path
     d="M118 304c0 41 23 79 60 99 37 19 81 17 115-7 34-23 52-64 47-105s-32-76-71-91c-13-5-26-8-40-7.5-24 16-44 39-56 65 41-43 99-30 123 16 21 52-16 103-67 104-54-2.7-85-55-77-100 14-86 117-135 193-154-35 17-69 36-101 58 92 35 107-42 149-76-43-17-197-25-198 68-44 28-75 72-77 130z"
-    fill="#46a247"
+    fill="#04652f"
   />
 </svg>
 
@@ -53,7 +52,7 @@
 @prop class: classname
 @prop title
 @prop desc
-@prop focusable = 'false'
+@prop focusable = ctx.focusable || 'false'
 @prop ariaLabel
 @prop ...restProps
 -->

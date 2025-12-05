@@ -10,13 +10,12 @@
     class: classname,
     title,
     desc,
-    focusable = 'false',
+    focusable = ctx.focusable || 'false',
     ariaLabel,
     ...restProps
   }: Props = $props();
 
-  let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
-  const hasDescription = $derived(!!(title?.id || desc?.id));
+  const ariaDescribedby = $derived([title?.id, desc?.id].filter(Boolean).join(' ') || undefined);
 </script>
 
 <svg
@@ -27,9 +26,9 @@
   {...restProps}
   {role}
   {focusable}
-  aria-label={title?.id ? undefined : ariaLabel}
+  aria-label={ariaLabel || undefined}
   aria-labelledby={title?.id || undefined}
-  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  aria-describedby={ariaDescribedby}
   viewBox="0 0 512 512"
 >
   {#if title?.id && title.title}
@@ -38,10 +37,12 @@
   {#if desc?.id && desc.desc}
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
-  <path d="m0 0H512V512H0" fill="#27282c" /><path fill="#09d" d="M410 410H102V102h154v154" /><path
-    fill="#f80"
-    d="M410 102H256L102 267v143"
-  />
+  <path d="m0 0H512V512H0" fill="#000" /><linearGradient id="a" y1="1"
+    ><stop offset="0" style="stop-color:#7F52FF" /><stop
+      offset="0.53"
+      style="stop-color:#C711E1"
+    /><stop offset="1" style="stop-color:#E44857" /></linearGradient
+  ><path fill="url(#a)" d="M120 120H392L256 256 392 392H120Z" />
 </svg>
 
 <!--
@@ -53,7 +54,7 @@
 @prop class: classname
 @prop title
 @prop desc
-@prop focusable = 'false'
+@prop focusable = ctx.focusable || 'false'
 @prop ariaLabel
 @prop ...restProps
 -->
