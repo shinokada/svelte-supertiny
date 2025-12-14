@@ -38,7 +38,10 @@
   const downloads: NpmDownloadPropsType = {
     packageName: 'svelte-supertiny',
     logo: 'npm',
-    link: ['https://www.npmjs.com/package/svelte-supertiny']
+    link: [
+      'https://www.npmjs.com/package/svelte-supertiny',
+      'https://svelte-supertiny.codewithshin.com/'
+    ]
   };
 
   const modules = import.meta.glob('./md/*.md', {
