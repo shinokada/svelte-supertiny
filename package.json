@@ -26,7 +26,8 @@
   "contributors": [
     {
       "name": "edent/SuperTinyIcons",
-      "url": "https://github.com/edent/SuperTinyIcons"
+      "url": "https://github.com/edent/SuperTinyIcons",
+      "iconVersion": "0.6.0"
     }
   ],
   "scripts": {
